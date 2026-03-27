@@ -1,0 +1,36 @@
+.backgroundContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Keep it behind main content */
+  pointer-events: none; /* Let clicks pass through to content by default */
+}
+
+/* Ensure particles div takes full space */
+.backgroundContainer > div {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: auto; /* Enable particle interaction */
+}
+
+.gradientOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    var(--bg-primary) 80%
+  );
+  z-index: 1; /* In front of particles, behind content */
+  pointer-events: none; /* Let interactions pass to particles underneath */
+}
