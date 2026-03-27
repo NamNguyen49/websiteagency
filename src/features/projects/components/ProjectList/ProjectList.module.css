@@ -1,0 +1,113 @@
+.portfolio {
+  padding: 120px 0;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.sectionTitle {
+  font-size: 3.5rem;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+}
+
+.sectionSubtext {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.projectCard {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 16/10;
+  box-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.4);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.08);
+}
+
+.projectOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 48px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition-smooth);
+}
+
+.projectCard:hover .projectOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projectCategory {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.projectTitle {
+  font-size: 2.25rem;
+  margin-bottom: 32px;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.viewProjectBtn {
+  width: fit-content;
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.viewProjectBtn:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .portfolioGrid { grid-template-columns: 1fr; }
+  .projectTitle { font-size: 1.75rem; }
+  .projectOverlay { padding: 32px; }
+}

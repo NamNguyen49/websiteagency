@@ -1,0 +1,37 @@
+.servicesPage {
+  min-height: 100vh;
+  padding-top: 180px;
+  background-color: var(--bg-primary);
+}
+
+.pageHero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pageTitle {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+}
+
+.pageSubtext {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gridContainer {
+  padding: 100px 0 120px;
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 3rem;
+  }
+  .pageSubtext {
+    font-size: 1.1rem;
+  }
+}

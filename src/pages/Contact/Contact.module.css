@@ -1,0 +1,193 @@
+.contactPage {
+  min-height: 100vh;
+  padding-bottom: 120px;
+  background-color: var(--bg-primary);
+}
+
+.heroSection {
+  padding-top: 180px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  margin-bottom: 100px;
+}
+
+.infoCard {
+  margin-bottom: 40px;
+}
+
+.cardTitle {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--text-primary);
+}
+
+.methods {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.method {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.iconBox {
+  width: 50px;
+  height: 50px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+}
+
+.methodText span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.methodText p {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.statusCard {
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.statusIcon {
+  color: var(--accent-primary);
+  margin-bottom: 24px;
+}
+
+.statusCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.statusCard p {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.formCol {
+  padding: 60px;
+  border-radius: 32px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.submitBtn {
+  width: fit-content;
+  align-self: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formGroup label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  padding: 14px 20px;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-family: var(--font-secondary);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.mapPlaceholder {
+  height: 400px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--bg-secondary);
+}
+
+.mapPoint {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-gradient);
+  border-radius: 50% 50% 50% 8%;
+  transform: rotate(-45deg);
+  margin-bottom: 24px;
+  box-shadow: 0 0 20px var(--accent-primary);
+}
+
+@media (max-width: 1024px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .formCol {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}
