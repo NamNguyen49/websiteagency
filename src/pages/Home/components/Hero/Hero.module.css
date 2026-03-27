@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 1;
   overflow: hidden;
   text-align: left;
   padding-top: 120px;
@@ -81,7 +82,8 @@
   height: 1000px;
 }
 
-.glow1, .glow2 {
+.glow1,
+.glow2 {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
@@ -105,15 +107,33 @@
 }
 
 @media (max-width: 1024px) {
-  .heroTitle { font-size: 4rem; letter-spacing: -1.5px; }
-  .heroSubtext { font-size: 1.2rem; }
+  .heroTitle {
+    font-size: 4rem;
+    letter-spacing: -1.5px;
+  }
+  .heroSubtext {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero { text-align: center; }
-  .heroContainer { align-items: center; }
-  .heroTitle { font-size: 3rem; }
-  .heroSubtext { font-size: 1.1rem; }
-  .heroActions { flex-direction: column; width: 100%; }
-  .btnSecondary { width: 100%; }
+  .hero {
+    text-align: center;
+  }
+  .heroContainer {
+    align-items: center;
+  }
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .heroSubtext {
+    font-size: 1.1rem;
+  }
+  .heroActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btnSecondary {
+    width: 100%;
+  }
 }

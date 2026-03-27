@@ -1,13 +1,18 @@
 .home {
   position: relative;
+  z-index: 10;
 }
 
 .sectionPadding {
+  position: relative;
+  z-index: 1;
   padding: 120px 0;
 }
 
 .altBg {
-  background-color: var(--bg-secondary);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .sectionBorder {

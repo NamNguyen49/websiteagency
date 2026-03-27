@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ArrowRight, Sparkles, Activity } from 'lucide-react';
-import Background3D from '../../../../components/common/Background3D/Background3D';
 import styles from './Hero.module.css';
 
 const Hero = () => {
@@ -31,7 +30,6 @@ const Hero = () => {
 
   return (
     <section className={styles.hero} ref={containerRef}>
-      <Background3D />
       <div className={`container ${styles.heroContainer}`}>
         <div className={styles.heroBadge}>
           <Activity size={14} className={styles.badgeIcon} />
