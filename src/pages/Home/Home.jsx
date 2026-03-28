@@ -11,6 +11,7 @@ import TechShowcase from "./components/TechShowcase/TechShowcase";
 import Enterprise from "./components/Enterprise/Enterprise";
 import CaseStudies from "./components/CaseStudies/CaseStudies";
 import Background3D from "../../components/common/Background3D/Background3D";
+import { Helmet } from "react-helmet-async";
 import styles from "./Home.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,6 +23,10 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Synvia Solutions | High-Performance Digital Agency</title>
+        <meta name="description" content="Mission-critical digital products with stunning design and industrial-grade performance. Design. Develop. Accelerate Growth." />
+      </Helmet>
       <Background3D />
       <div className={styles.home}>
         <Hero />
