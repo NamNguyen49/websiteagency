@@ -5,19 +5,21 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: 0; /* Changed from -1 to avoid hiding behind body background */
-  pointer-events: none; /* Let clicks pass through to content by default */
+  z-index: 0; 
+  pointer-events: none;
 }
 
-/* Ensure particles div takes full space */
-.backgroundContainer > div:not(.gradientOverlay) {
-  position: absolute !important;
+.particlesWrapper {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw !important;
-  height: 100vh !important;
+  width: 100%;
+  height: 100%;
   z-index: 0;
-  pointer-events: auto; /* Enable particle interaction */
+}
+
+.particlesWrapper canvas {
+  pointer-events: auto !important;
 }
 
 .gradientOverlay {
@@ -29,8 +31,8 @@
   background: radial-gradient(
     circle at center,
     transparent 20%,
-    rgba(0, 0, 0, 0.4) 100%
+    rgba(0, 0, 0, 0.8) 100%
   );
-  z-index: 1; /* In front of particles, behind content */
-  pointer-events: none; /* Let interactions pass to particles underneath */
+  z-index: 1;
+  pointer-events: none;
 }

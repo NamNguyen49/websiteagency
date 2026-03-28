@@ -5,7 +5,7 @@
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .sectionTitle {
@@ -60,11 +60,19 @@
 }
 
 @media (max-width: 1024px) {
-  .servicesGrid { grid-template-columns: repeat(2, 1fr); }
-  .sectionTitle { font-size: 2.75rem; }
+  .servicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sectionTitle {
+    font-size: 2.75rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .servicesGrid { grid-template-columns: 1fr; }
-  .serviceCard { padding: 40px; }
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  .serviceCard {
+    padding: 40px;
+  }
 }

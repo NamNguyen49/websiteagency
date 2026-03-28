@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight } from 'lucide-react';
 import styles from './Process.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,22 +45,24 @@ const Process = () => {
 
       <div className={styles.stepsWrapper}>
         {steps.map((step, i) => (
-          <div 
-            key={i} 
-            className={styles.step}
-            ref={el => elementsRef.current[i + 1] = el}
-          >
-            <div className={styles.stepNumber}>{step.num}</div>
-            <div className={styles.stepContent}>
-              <h3 className={styles.stepTitle}>{step.title}</h3>
-              <p className={styles.stepText}>{step.text}</p>
+          <React.Fragment key={i}>
+            <div
+              className={`${styles.step} glass-morphism`}
+              ref={el => elementsRef.current[i + 1] = el}
+            >
+              <div className={styles.stepNumber}>{step.num}</div>
+              <div className={styles.stepContent}>
+                <h3 className={styles.stepTitle}>{step.title}</h3>
+                <p className={styles.stepText}>{step.text}</p>
+              </div>
             </div>
             {i !== steps.length - 1 && (
               <div className={styles.stepConnector}>
-                <ArrowRight className={styles.connectorIcon} size={24} />
+                <div className={styles.connectorLine}></div>
+                <div className={styles.connectorArrow}></div>
               </div>
             )}
-          </div>
+          </React.Fragment>
         ))}
       </div>
     </div>
@@ -69,3 +70,4 @@ const Process = () => {
 };
 
 export default Process;
+
