@@ -1,8 +1,7 @@
 .processContainer {
   text-align: center;
-  
   width: 100%;
-  padding: 0 4rem;
+  padding: 0 1.5rem;
 }
 
 .processHeader {
@@ -125,64 +124,60 @@
 
 .connectorArrow {
   flex-shrink: 0;
-  
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 16px solid var(--accent-secondary);
-  
-  filter: drop-shadow(0 0 6px var(--accent-secondary))
-          drop-shadow(0 0 12px rgba(129, 140, 248, 0.7));
+  border-left: 16px solid var(--accent-primary);
+  filter: drop-shadow(0 0 6px var(--accent-primary))
+          drop-shadow(0 0 12px rgba(56, 189, 248, 0.6));
   margin-left: -1px; 
 }
 
 @keyframes lineSweep {
-  0% {
-    left: -100%;
-  }
-  60% {
-    left: 150%;
-  }
-  100% {
-    left: 150%;
-  }
+  0% { left: -100%; }
+  60% { left: 150%; }
+  100% { left: 150%; }
 }
 
 @media (max-width: 1200px) {
-  .processContainer {
-    padding: 0 2rem;
-  }
-  .title {
-    font-size: 3rem;
-  }
-  .stepsWrapper {
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-  .step {
-    flex: 1 1 calc(50% - 12px);
-  }
-  .stepConnector {
-    display: none;
-  }
+  .processContainer { padding: 0 1.5rem; }
+  .title { font-size: 2.8rem; }
+  .stepsWrapper { flex-wrap: wrap; gap: 24px; }
+  .step { flex: 1 1 calc(50% - 12px); }
+  .stepConnector { display: none; }
 }
 
 @media (max-width: 768px) {
-  .processContainer {
-    padding: 0 1.5rem;
-  }
+  .processContainer { padding: 0 1rem; }
+  .title { font-size: 2.2rem; letter-spacing: -1px; }
   .stepsWrapper {
     flex-direction: column;
-    align-items: stretch;
-    gap: 16px;
+    align-items: center;
+    gap: 48px; 
   }
   .step {
     flex: 1 1 100%;
     text-align: center;
     align-items: center;
+    padding: 30px 20px; 
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
   }
   .stepText {
-    max-width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .stepNumber {
+    font-size: 4rem;
+    margin-bottom: 16px;
+  }
+  .stepConnector {
+    display: flex;
+    transform: rotate(90deg); 
+    width: 40px;
+    margin: -10px auto; 
+    z-index: 5;
   }
 }

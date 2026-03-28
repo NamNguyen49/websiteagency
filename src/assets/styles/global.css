@@ -25,8 +25,8 @@
   --text-primary: #0f172a;
   --text-secondary: #334155; 
   --accent-primary: #0284c7; 
-  --accent-secondary: #4f46e5; 
-  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+  --accent-secondary: #0ea5e9; 
+  --accent-gradient: linear-gradient(135deg, #0284c7 0%, #0ea5e9 100%);
   --border-color: rgba(15, 23, 42, 0.1);
   --glass-bg: rgba(245, 250, 255, 0.82); 
   --glass-border: rgba(2, 132, 199, 0.15); 
@@ -104,5 +104,5 @@ h1, h2, h3, h4 {
 a { text-decoration: none; color: inherit; }
 
 @media (max-width: 768px) {
-  .container { padding: 0 1.5rem; }
+  .container { padding: 0 1rem; }
 }

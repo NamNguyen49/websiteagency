@@ -34,8 +34,10 @@ const Background3D = () => {
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseout", handleMouseLeave);
 
-    const particleColor = theme === 'light' ? 'rgba(37, 99, 235, 0.8)' : 'rgba(56, 189, 248, 0.8)';
-    const lineColor = theme === 'light' ? 'rgba(124, 58, 237, ' : 'rgba(129, 140, 248, ';
+    const particleColor =
+      theme === "light" ? "rgba(2, 132, 199, 0.25)" : "rgba(56, 189, 248, 0.8)";
+    const lineColor =
+      theme === "light" ? "rgba(2, 132, 199, " : "rgba(56, 189, 248, ";
 
     class Particle {
       constructor() {
@@ -45,9 +47,8 @@ const Background3D = () => {
         this.vy = (Math.random() - 0.5) * 1.2;
         this.radius = Math.random() * 1.5 + 1;
       }
-      
-      update() {
 
+      update() {
         if (mouse.x != null && mouse.y != null) {
           const dx = mouse.x - this.x;
           const dy = mouse.y - this.y;
@@ -58,7 +59,7 @@ const Background3D = () => {
             this.y -= (dy / dist) * force * 3;
           }
         }
-        
+
         this.x += this.vx;
         this.y += this.vy;
 
@@ -67,7 +68,7 @@ const Background3D = () => {
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
       }
-      
+
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -82,7 +83,7 @@ const Background3D = () => {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
+
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
@@ -91,12 +92,12 @@ const Background3D = () => {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          
+
           if (dist < 120) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            const opacity = 1 - (dist / 120);
+            const opacity = 1 - dist / 120;
             ctx.strokeStyle = `${lineColor}${opacity * 0.5})`;
             ctx.lineWidth = 1;
             ctx.stroke();
@@ -118,10 +119,7 @@ const Background3D = () => {
 
   return (
     <div className={styles.backgroundContainer}>
-      <canvas
-        ref={canvasRef}
-        className={styles.particlesWrapper}
-      />
+      <canvas ref={canvasRef} className={styles.particlesWrapper} />
     </div>
   );
 };

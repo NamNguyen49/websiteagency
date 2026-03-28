@@ -223,16 +223,35 @@
 @media (max-width: 900px) {
   .caseGrid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  .caseContent {
+    padding: 24px;
+  }
+  .caseTitle {
+    font-size: 1.3rem;
+  }
+  .feedbackHeader h3 {
+    font-size: 1.7rem;
   }
   .feedbackCard {
-    width: 320px;
+    width: 280px;
     padding: 24px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+  }
+  .quote {
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
 }

@@ -62,7 +62,16 @@ const Header = () => {
             </Link>
           ))}
 
-          {}
+          <Link
+            to="/contact"
+            className={`btn-primary ${styles.headerCta} ${styles.mobileCta}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {t.nav.cta} <ArrowUpRight size={16} />
+          </Link>
+        </div>
+
+        <div className={styles.headerActions}>
           <div className={styles.langSwitcher} ref={langRef}>
             <button
               className={styles.langBtn}
@@ -96,7 +105,6 @@ const Header = () => {
             )}
           </div>
 
-          {}
           <button
             className={styles.themeToggle}
             onClick={toggleTheme}
@@ -107,19 +115,18 @@ const Header = () => {
 
           <Link
             to="/contact"
-            className={`btn-primary ${styles.headerCta}`}
-            onClick={() => setIsMobileMenuOpen(false)}
+            className={`btn-primary ${styles.headerCta} ${styles.desktopCta}`}
           >
             {t.nav.cta} <ArrowUpRight size={16} />
           </Link>
-        </div>
 
-        <button
-          className={styles.mobileToggle}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X /> : <Menu />}
-        </button>
+          <button
+            className={styles.mobileToggle}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
     </header>
   );

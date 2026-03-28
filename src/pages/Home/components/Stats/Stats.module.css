@@ -47,12 +47,27 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .statValue {
+    font-size: 2.8rem;
+  }
+  .statLabel {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
   }
   .statsWrapper {
-    padding: 60px 0;
+    padding: 40px 0;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
