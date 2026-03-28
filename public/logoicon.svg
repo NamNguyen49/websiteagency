@@ -8,12 +8,12 @@
   <!-- Inner Blue Ring (Thicker) -->
   <circle cx="256" cy="256" r="212" fill="none" stroke="#D1D9E1" stroke-width="24"/>
 
-  <!-- Optimized Bold Luxury Serif 'S' - Centered with Glow Effect -->
-  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-family="'Playfair Display', 'Cormorant Garamond', 'Times New Roman', serif" font-size="380" font-weight="700" fill="url(#sHighlightGrad)">S</text>
+  <!-- Bold Luxury Serif 'H' - Centered with Glow Effect -->
+  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" font-family="'Playfair Display', 'Cormorant Garamond', 'Times New Roman', serif" font-size="340" font-weight="700" fill="url(#hHighlightGrad)">H</text>
 
   <defs>
-    <!-- Premium Highlight Gradient for 'S' -->
-    <linearGradient id="sHighlightGrad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+    <!-- Premium Highlight Gradient for 'H' -->
+    <linearGradient id="hHighlightGrad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
       <stop offset="0.2" stop-color="#002A42"/> <!-- Deep Navy -->
       <stop offset="0.7" stop-color="#004675"/> <!-- Brand Corporate Blue -->
       <stop offset="1.0" stop-color="#0284C7"/> <!-- Bright Highlight Blue -->

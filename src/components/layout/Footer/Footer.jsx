@@ -13,7 +13,10 @@ const Footer = () => {
   const footerLinksData = [
     {
       title: t.footer.solutions.title,
-      links: t.footer.solutions.items.map((name) => ({ name, href: "/services" })),
+      links: t.footer.solutions.items.map((name) => ({
+        name,
+        href: "/services",
+      })),
     },
     {
       title: t.footer.company.title,
@@ -42,14 +45,12 @@ const Footer = () => {
             <div className={styles.footerBrand}>
               <Link to="/" className={styles.logoGroup}>
                 <img
-                  src={theme === "dark" ? "/logo.dark.png" : "/logo.light.png"}
-                  alt="SVS Corp Logo"
+                  src={theme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"}
+                  alt="HNT Solutions Logo"
                   className={`${styles.logoImage} ${theme === "dark" ? styles.logoDark : styles.logoLight}`}
                 />
               </Link>
-              <p className={styles.footerTagline}>
-                {t.footer.tagline}
-              </p>
+              <p className={styles.footerTagline}>{t.footer.tagline}</p>
               <div className={styles.socialLinks}>
                 <a href="#" className={styles.socialLink} aria-label="LinkedIn">
                   <CustomIcons.Linkedin size={18} />
@@ -57,7 +58,11 @@ const Footer = () => {
                 <a href="#" className={styles.socialLink} aria-label="Twitter">
                   <CustomIcons.Twitter size={18} />
                 </a>
-                <a href="#" className={styles.socialLink} aria-label="Instagram">
+                <a
+                  href="#"
+                  className={styles.socialLink}
+                  aria-label="Instagram"
+                >
                   <CustomIcons.Instagram size={18} />
                 </a>
                 <a href="#" className={styles.socialLink} aria-label="GitHub">
@@ -89,7 +94,7 @@ const Footer = () => {
           <div className={styles.footerBottom}>
             <div className={styles.copyrightGroup}>
               <p className={styles.copyright}>
-                © {currentYear} SVS Corp. {t.footer.copyright}
+                © {currentYear} HNT Solutions Co., Ltd. {t.footer.copyright}
               </p>
               <div className={styles.legalLinks}>
                 <Link to="/privacy">Privacy</Link>

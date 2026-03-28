@@ -24,8 +24,11 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Synvia Solutions | High-Performance Digital Agency</title>
-        <meta name="description" content="Mission-critical digital products with stunning design and industrial-grade performance. Design. Develop. Accelerate Growth." />
+        <title>HNT Solutions | High-Performance Digital Agency</title>
+        <meta
+          name="description"
+          content="Mission-critical digital products with stunning design and industrial-grade performance. Design. Develop. Accelerate Growth."
+        />
       </Helmet>
       <Background3D />
       <div className={styles.home}>
@@ -39,7 +42,9 @@ const Home = () => {
         </section>
 
         {}
-        <section className={`${styles.sectionPadding} ${styles.altBg} ${styles.sectionBorder}`}>
+        <section
+          className={`${styles.sectionPadding} ${styles.altBg} ${styles.sectionBorder}`}
+        >
           <div className="container">
             <Integrations />
           </div>
@@ -53,7 +58,9 @@ const Home = () => {
         </section>
 
         {}
-        <section className={`${styles.sectionPadding} ${styles.altBg} ${styles.sectionBorder}`}>
+        <section
+          className={`${styles.sectionPadding} ${styles.altBg} ${styles.sectionBorder}`}
+        >
           <div className="container">
             <TechShowcase />
           </div>
@@ -64,7 +71,9 @@ const Home = () => {
         </section>
 
         {}
-        <section className={`${styles.sectionPadding} ${styles.altBg} ${styles.sectionBorder}`}>
+        <section
+          className={`${styles.sectionPadding} ${styles.altBg} ${styles.sectionBorder}`}
+        >
           <div className="container">
             <Enterprise />
           </div>

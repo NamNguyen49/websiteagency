@@ -84,7 +84,7 @@ const TechShowcase = () => {
               <span className={styles.prompt}>$</span>
               <span className={styles.cmd}>
                 {" "}
-                svs deploy --region global --auto-scale
+                hnt deploy --region global --auto-scale
               </span>
             </div>
             <div className={styles.terminalOutput}>

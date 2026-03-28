@@ -53,7 +53,7 @@ const Contact = () => {
                     </div>
                     <div className={styles.methodText}>
                       <span>{t.contact.station.protocol}</span>
-                      <p>hello@svscorp.tech</p>
+                      <p>hntsolution@gmail.com</p>
                     </div>
                   </div>
                   <div className={styles.method}>

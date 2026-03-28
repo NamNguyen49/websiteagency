@@ -31,26 +31,29 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: t.nav.services,  href: "/services" },
+    { name: t.nav.services, href: "/services" },
     { name: t.nav.portfolio, href: "/portfolio" },
-    { name: t.nav.company,   href: "/about" },
-    { name: t.nav.contact,   href: "/contact" },
+    { name: t.nav.company, href: "/about" },
+    { name: t.nav.contact, href: "/contact" },
   ];
 
-  const currentLang = LANGUAGES.find((l) => l.code === language) || LANGUAGES[0];
+  const currentLang =
+    LANGUAGES.find((l) => l.code === language) || LANGUAGES[0];
 
   return (
     <header className={styles.header}>
       <div className={`container ${styles.navContainer}`}>
         <Link to="/" className={styles.logoGroup}>
           <img
-            src={theme === "dark" ? "/logo.dark.png" : "/logo.light.png"}
-            alt="SVS Corp Logo"
+            src={theme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"}
+            alt="HNT Solutions Logo"
             className={`${styles.logoImage} ${theme === "dark" ? styles.logoDark : styles.logoLight}`}
           />
         </Link>
 
-        <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileActive : ""}`}>
+        <div
+          className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileActive : ""}`}
+        >
           {navLinks.map((link) => (
             <Link
               key={link.name}
