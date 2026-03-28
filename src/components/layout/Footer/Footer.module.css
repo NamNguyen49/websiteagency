@@ -230,6 +230,9 @@
     padding: 60px 40px;
     border-radius: 30px;
   }
+  .logoLight {
+    height: 60px;
+  }
 }
 
 @media (max-width: 768px) {
