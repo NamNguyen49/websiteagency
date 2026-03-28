@@ -14,9 +14,10 @@
   font-size: 1.25rem;
   color: var(--text-secondary);
   max-width: 700px;
-  margin: 0 auto 60px;
+  margin: 0 auto 52px;
 }
 
+/* ─── Marquee base ─── */
 .marquee {
   position: relative;
   width: 100vw;
@@ -26,61 +27,76 @@
   margin-right: -50vw;
   display: flex;
   overflow: hidden;
-  padding: 20px 0;
-  /* Add fade to edges */
+  padding: 12px 0;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.marqueeContent {
-  display: flex;
-  gap: 30px;
-  animation: scroll 30s linear infinite;
-  padding-left: 30px;
+.marquee + .marquee {
+  margin-top: 16px;
 }
 
-.marquee:hover .marqueeContent {
+.marqueeContent {
+  display: flex;
+  gap: 20px;
+  animation: scrollLeft 35s linear infinite;
+  padding-left: 20px;
+}
+
+/* Row 2 goes right */
+.marqueeContentReverse {
+  animation: scrollRight 35s linear infinite;
+}
+
+.marquee:hover .marqueeContent,
+.marquee:hover .marqueeContentReverse {
   animation-play-state: paused;
 }
 
+/* ─── Tag pill ─── */
 .tag {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px 32px;
+  padding: 14px 28px;
   border-radius: 99px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
   white-space: nowrap;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
   cursor: default;
+  flex-shrink: 0;
 }
 
 .tag:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   border-color: var(--accent-primary);
 }
 
-.icon {
-  display: flex;
-  color: var(--accent-primary);
+/* Actual logo image */
+.logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  /* Keep logos white/visible on dark backgrounds */
+  filter: brightness(1) invert(0);
+  flex-shrink: 0;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - 15px));
-  }
+/* ─── Keyframes ─── */
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 10px)); }
+}
+
+@keyframes scrollRight {
+  0%   { transform: translateX(calc(-50% - 10px)); }
+  100% { transform: translateX(0); }
 }
 
 @media (max-width: 768px) {
-  .sectionTitle {
-    font-size: 2rem;
-  }
-  .tag {
-    padding: 12px 24px;
-    font-size: 1rem;
-  }
+  .sectionTitle { font-size: 2rem; }
+  .tag { padding: 12px 20px; font-size: 0.9rem; }
+  .logo { width: 18px; height: 18px; }
 }
+
