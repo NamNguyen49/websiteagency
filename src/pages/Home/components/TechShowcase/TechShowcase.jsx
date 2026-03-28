@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Terminal, Layout, Activity, Code2 } from 'lucide-react';
+import { Terminal, Zap, ShieldCheck, RefreshCw, GitBranch, Layers } from 'lucide-react';
 import styles from './TechShowcase.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -11,15 +11,13 @@ const TechShowcase = () => {
   const elementsRef = useRef([]);
 
   useEffect(() => {
-    const elts = elementsRef.current;
-    
+    const elts = elementsRef.current.filter(Boolean);
     gsap.fromTo(elts,
       { y: 50, opacity: 0 },
       {
-        y: 0,
-        opacity: 1,
+        y: 0, opacity: 1,
         duration: 0.8,
-        stagger: 0.2,
+        stagger: 0.15,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: containerRef.current,
@@ -29,6 +27,14 @@ const TechShowcase = () => {
       }
     );
   }, []);
+
+  const tags = [
+    { icon: <Zap size={20} />, label: 'Lightning performance' },
+    { icon: <ShieldCheck size={20} />, label: 'Security by default' },
+    { icon: <RefreshCw size={20} />, label: 'Zero-downtime deploys' },
+    { icon: <GitBranch size={20} />, label: 'Git-based workflows' },
+    { icon: <Layers size={20} />, label: 'Multi-stack support' },
+  ];
 
   return (
     <div className={styles.showcaseContainer} ref={containerRef}>
@@ -41,65 +47,87 @@ const TechShowcase = () => {
         </p>
       </div>
 
-      <div className={styles.bentoGrid}>
-        <div 
-          className={`${styles.bentoItem} ${styles.itemLarge} glass-morphism`}
-          ref={el => elementsRef.current[1] = el}
-        >
-          <div className={styles.iconWrapper}><Terminal size={24} /></div>
-          <h3>Native Engineering</h3>
-          <p>Write robust TypeScript, Python, or Go exactly where complex business logic demands it.</p>
-          <div className={styles.codeSnippet}>
-            <pre>
-              <code>
-{`const accelerate = async () => {
-  await scaleInfrastructure({
-    autoScale: true,
-    region: 'global'
-  });
-};`}
-              </code>
-            </pre>
+      {/* Row 1: Code card (left) + Feature list (right) */}
+      <div className={styles.bentoRow} ref={el => elementsRef.current[1] = el}>
+
+        {/* Left — Code terminal card */}
+        <div className={`${styles.codeCard} glass-morphism`}>
+          <div className={styles.cardHeader}>
+            <div className={styles.iconWrapper}><Terminal size={20} /></div>
+            <div className={styles.dots}>
+              <span className={`${styles.dot} ${styles.dotRed}`}></span>
+              <span className={`${styles.dot} ${styles.dotYellow}`}></span>
+              <span className={`${styles.dot} ${styles.dotGreen}`}></span>
+            </div>
           </div>
-        </div>
-
-        <div 
-          className={`${styles.bentoItem} glass-morphism`}
-          ref={el => elementsRef.current[2] = el}
-        >
-          <div className={styles.iconWrapper}><Layout size={24} /></div>
-          <h3>Stunning Interfaces</h3>
-          <p>See the inputs and outputs right next to your configurations. High-end visual fidelity on every screen.</p>
-        </div>
-
-        <div 
-          className={`${styles.bentoItem} glass-morphism`}
-          ref={el => elementsRef.current[3] = el}
-        >
-          <div className={styles.iconWrapper}><Activity size={24} /></div>
-          <h3>Real-time Testing</h3>
-          <p>Test complex workflows with live environments to improve accuracy before your customers experience it.</p>
-        </div>
-
-        <div 
-          className={`${styles.bentoItem} ${styles.itemWide} glass-morphism`}
-          ref={el => elementsRef.current[4] = el}
-        >
-          <div className={styles.iconWrapper}><Code2 size={24} /></div>
-          <div className={styles.wideContent}>
-            <div>
-              <h3>Move fast. Break nothing.</h3>
-              <ul className={styles.featureList}>
-                <li>Re-run single modules, not your entire system</li>
-                <li>Evaluate dynamically to optimize performance</li>
-                <li>Avoid endless debugging with centralized logs</li>
-              </ul>
+          <h3 className={styles.cardTitle}>Native Engineering</h3>
+          <p className={styles.cardDesc}>Write robust TypeScript, Python, or Go exactly where complex business logic demands it.</p>
+          <div className={styles.terminalBlock}>
+            <div className={styles.terminalLine}>
+              <span className={styles.prompt}>$</span>
+              <span className={styles.cmd}> svs deploy --region global --auto-scale</span>
+            </div>
+            <div className={styles.terminalOutput}>
+              <span className={styles.ok}>✔</span> Building production bundle...
+            </div>
+            <div className={styles.terminalOutput}>
+              <span className={styles.ok}>✔</span> Spinning up 12 edge nodes...
+            </div>
+            <div className={styles.terminalOutput}>
+              <span className={styles.ok}>✔</span> Deploy complete in <span className={styles.highlight}>1.4s</span>
+            </div>
+            <div className={styles.codeBlock}>
+              <pre><code>{`const deploy = async () => {
+  await scaleInfra({
+    autoScale: true,
+    region: 'global',
+    redundancy: 3,
+  });
+};`}</code></pre>
             </div>
           </div>
         </div>
+
+        {/* Right — three feature cards stacked */}
+        <div className={styles.featureStack}>
+          <div className={`${styles.featureCard} glass-morphism`} ref={el => elementsRef.current[2] = el}>
+            <div className={styles.featureTop}>
+              <div className={styles.featureNumber}>01</div>
+              <h4>Move fast. Break nothing.</h4>
+            </div>
+            <p>Re-run single modules, replay real data, evaluate AI accuracy — without touching your entire pipeline.</p>
+          </div>
+
+          <div className={`${styles.featureCard} glass-morphism`} ref={el => elementsRef.current[3] = el}>
+            <div className={styles.featureTop}>
+              <div className={styles.featureNumber}>02</div>
+              <h4>Real-time Visibility</h4>
+            </div>
+            <p>See inputs, outputs, and execution steps side-by-side. No more black-box debugging or unnecessary context switches.</p>
+          </div>
+
+          <div className={`${styles.featureCard} glass-morphism`} ref={el => elementsRef.current[4] = el}>
+            <div className={styles.featureTop}>
+              <div className={styles.featureNumber}>03</div>
+              <h4>Stunning Interfaces</h4>
+            </div>
+            <p>High-fidelity UI/UX engineered for maximum retention. Every component pixel-perfect, every interaction delightful.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Row 2: capability tags */}
+      <div className={styles.tagsRow} ref={el => elementsRef.current[5] = el}>
+        {tags.map((tag, i) => (
+          <div key={i} className={`${styles.tagPill} glass-morphism`}>
+            <span className={styles.tagIcon}>{tag.icon}</span>
+            {tag.label}
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
 export default TechShowcase;
+

@@ -1,9 +1,13 @@
 .processContainer {
   text-align: center;
+  /* Full width — stretch past container */
+  width: 100%;
+  padding: 0 4rem;
 }
 
 .processHeader {
-  margin-bottom: 60px;
+  max-width: 1400px;
+  margin: 0 auto 60px;
 }
 
 .title {
@@ -19,21 +23,26 @@
 
 .stepsWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
-  text-align: left;
+  text-align: center;
   gap: 0;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
-/* Step card - now a proper card with glass */
+/* Step card */
 .step {
   flex: 1;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 32px 28px;
+  align-items: center;
+  padding: 20px 20px;
   border-radius: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .step:hover {
@@ -42,47 +51,46 @@
 }
 
 .stepNumber {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 900;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0.4;
+  opacity: 0.45;
   line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   transition: opacity 0.4s ease;
 }
 
 .step:hover .stepNumber {
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .stepTitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   color: var(--text-primary);
 }
 
 .stepText {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.6;
+  max-width: 220px;
 }
 
-/* Premium connector */
+/* ─── Premium Connector ──────────────────────── */
 .stepConnector {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-  width: 48px;
-  margin-top: 48px;
+  width: 80px; /* Wider so it's visible */
+  margin-top: 58px; /* Align vertically with number center */
   position: relative;
 }
 
-/* Glowing line with animated shimmer */
 .connectorLine {
   position: relative;
   width: 100%;
@@ -95,16 +103,15 @@
     transparent
   );
   border-radius: 2px;
-  /* Soft glow */
   box-shadow:
     0 0 6px var(--accent-primary),
-    0 0 12px rgba(56, 189, 248, 0.3);
+    0 0 14px rgba(56, 189, 248, 0.35);
   overflow: hidden;
 }
 
-/* Animated light sweep across the line */
+/* Animated shimmer sweep */
 .connectorLine::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -113,33 +120,43 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.85),
     transparent
   );
   animation: lineSweep 2.5s ease-in-out infinite;
 }
 
-/* Stylish chevron arrowhead */
+/* Larger chevron arrowhead — solid triangle */
 .connectorArrow {
   flex-shrink: 0;
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid var(--accent-secondary);
-  border-top: 2px solid var(--accent-secondary);
-  transform: rotate(45deg) translateX(-2px);
-  border-radius: 1px;
-  box-shadow:
-    2px -2px 6px var(--accent-secondary),
-    2px -2px 12px rgba(129, 140, 248, 0.4);
+  /* Solid CSS triangle pointing right */
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid var(--accent-secondary);
+  /* Strong glow so it's clearly visible */
+  filter: drop-shadow(0 0 6px var(--accent-secondary))
+          drop-shadow(0 0 12px rgba(129, 140, 248, 0.7));
+  margin-left: -1px; /* Touch the line end */
 }
 
 @keyframes lineSweep {
-  0%   { left: -100%; }
-  60%  { left: 150%; }
-  100% { left: 150%; }
+  0% {
+    left: -100%;
+  }
+  60% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .processContainer {
+    padding: 0 2rem;
+  }
   .title {
     font-size: 3rem;
   }
@@ -156,14 +173,20 @@
 }
 
 @media (max-width: 768px) {
+  .processContainer {
+    padding: 0 1.5rem;
+  }
   .stepsWrapper {
     flex-direction: column;
     align-items: stretch;
-    gap: 20px;
+    gap: 16px;
   }
   .step {
     flex: 1 1 100%;
-    text-align: left;
+    text-align: center;
+    align-items: center;
+  }
+  .stepText {
+    max-width: 100%;
   }
 }
-

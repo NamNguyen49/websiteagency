@@ -76,9 +76,7 @@ const Home = () => {
         </section>
 
         <section className={styles.sectionPadding}>
-          <div className="container">
-            <Process />
-          </div>
+          <Process />
         </section>
 
         {/* New Enterprise Section */}
