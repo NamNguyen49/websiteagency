@@ -105,7 +105,6 @@
   line-height: 1.6;
 }
 
-/* Right Column */
 .rightCol {
   position: relative;
   height: 100%;
@@ -156,7 +155,7 @@
   width: 380px;
   padding: 32px;
   border-radius: 24px;
-  background: rgba(18, 18, 20, 0.85); /* Darker glass */
+  background: rgba(18, 18, 20, 0.85); 
   border: 1px solid rgba(255,255,255,0.1);
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
   backdrop-filter: blur(20px);
@@ -219,7 +218,7 @@
     grid-template-columns: 1fr;
   }
   .rightCol {
-    display: none; /* Hide visual on small screens to match focus on text */
+    display: none; 
   }
   .featureRow {
     grid-template-columns: 1fr;

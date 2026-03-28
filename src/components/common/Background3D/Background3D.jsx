@@ -47,7 +47,7 @@ const Background3D = () => {
       }
       
       update() {
-        // Mouse repulse
+
         if (mouse.x != null && mouse.y != null) {
           const dx = mouse.x - this.x;
           const dy = mouse.y - this.y;
@@ -61,8 +61,7 @@ const Background3D = () => {
         
         this.x += this.vx;
         this.y += this.vy;
-        
-        // Wrap around screen
+
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
@@ -77,7 +76,6 @@ const Background3D = () => {
       }
     }
 
-    // Init
     for (let i = 0; i < numParticles; i++) {
       particles.push(new Particle());
     }
@@ -88,8 +86,7 @@ const Background3D = () => {
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
-        
-        // Connect points
+
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;

@@ -24,13 +24,13 @@ const Enterprise = () => {
 
     tl.fromTo(leftRef.current, { x: -30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8, ease: 'power3.out' })
       .fromTo(rightRef.current, { x: 30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }, "-=0.6");
-  }, [t]); // Added [t] as dependency for translation change refresh
+  }, [t]);
 
   return (
     <div className={styles.enterpriseContainer} ref={containerRef}>
       <div className={styles.grid}>
         
-        {/* Left Column */}
+        {}
         <div className={styles.leftCol} ref={leftRef}>
           <div className={styles.badge}>
             < Zap size={14} /> {t.enterprise.badge}
@@ -63,7 +63,7 @@ const Enterprise = () => {
           </div>
         </div>
 
-        {/* Right Column */}
+        {}
         <div className={styles.rightCol} ref={rightRef}>
           <div className={styles.serverVisual}>
             <img 
@@ -71,11 +71,11 @@ const Enterprise = () => {
               alt="Server Infrastructure" 
               className={styles.serverImage}
             />
-            {/* Fade overlays */}
+            {}
             <div className={styles.imageOverlayTop}></div>
             <div className={styles.imageOverlaySide}></div>
             
-            {/* Floating Testimonial Card */}
+            {}
             <div className={`${styles.floatingCard} glass-morphism`}>
               <p className={styles.quoteText}>
                 {t.enterprise.quoteText}

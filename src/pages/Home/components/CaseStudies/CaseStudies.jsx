@@ -40,7 +40,7 @@ const CaseStudies = () => {
   return (
     <div className={styles.caseContainer} ref={containerRef}>
       
-      {/* Case Studies Section */}
+      {}
       <div className={styles.header} ref={el => elementsRef.current[0] = el}>
         <h2 className={styles.title}>
           {t.caseStudies.title} <span className="gradient-text">{t.caseStudies.highlight}</span>
@@ -74,7 +74,7 @@ const CaseStudies = () => {
         ))}
       </div>
 
-      {/* Customer Feedback Section */}
+      {}
       <div className={styles.feedbackSection} ref={el => elementsRef.current[t.caseStudies.cases.length + 1] = el}>
         <div className={styles.feedbackHeader}>
           <MessageSquareQuote size={32} className={styles.feedbackIcon} />
@@ -92,7 +92,7 @@ const CaseStudies = () => {
                 </div>
               </div>
             ))}
-            {/* Duplicate for infinite scroll loop */}
+            {}
             {t.caseStudies.feedbacks.map((fb, idx) => (
               <div key={`dup-${idx}`} className={styles.feedbackCard}>
                 <p className={styles.quote}>"{fb.quote}"</p>

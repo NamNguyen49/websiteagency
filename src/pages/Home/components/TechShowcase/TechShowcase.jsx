@@ -60,12 +60,12 @@ const TechShowcase = () => {
         <p className={styles.subtitle}>{t.techShowcase.subtitle}</p>
       </div>
 
-      {/* Row 1: Code card (left) + Feature list (right) */}
+      {}
       <div
         className={styles.bentoRow}
         ref={(el) => (elementsRef.current[1] = el)}
       >
-        {/* Left — Code terminal card */}
+        {}
         <div className={`${styles.codeCard} glass-morphism`}>
           <div className={styles.cardHeader}>
             <div className={styles.iconWrapper}>
@@ -111,7 +111,7 @@ const TechShowcase = () => {
           </div>
         </div>
 
-        {/* Right — three feature cards stacked */}
+        {}
         <div className={styles.featureStack}>
           {t.techShowcase.features.map((feature, i) => (
             <div
@@ -129,7 +129,7 @@ const TechShowcase = () => {
         </div>
       </div>
 
-      {/* Row 2: capability tags */}
+      {}
       <div
         className={styles.tagsRow}
         ref={(el) => (elementsRef.current[5] = el)}

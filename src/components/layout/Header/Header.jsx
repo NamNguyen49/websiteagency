@@ -13,7 +13,6 @@ const LANGUAGES = [
 ];
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
@@ -21,13 +20,6 @@ const Header = () => {
   const location = useLocation();
   const langRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (langRef.current && !langRef.current.contains(e.target)) {
@@ -48,7 +40,7 @@ const Header = () => {
   const currentLang = LANGUAGES.find((l) => l.code === language) || LANGUAGES[0];
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+    <header className={styles.header}>
       <div className={`container ${styles.navContainer}`}>
         <Link to="/" className={styles.logoGroup}>
           <img
@@ -70,7 +62,7 @@ const Header = () => {
             </Link>
           ))}
 
-          {/* Language Switcher */}
+          {}
           <div className={styles.langSwitcher} ref={langRef}>
             <button
               className={styles.langBtn}
@@ -104,7 +96,7 @@ const Header = () => {
             )}
           </div>
 
-          {/* Theme Toggle */}
+          {}
           <button
             className={styles.themeToggle}
             onClick={toggleTheme}
@@ -115,7 +107,7 @@ const Header = () => {
 
           <Link
             to="/contact"
-            className="btn-primary"
+            className={`btn-primary ${styles.headerCta}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             {t.nav.cta} <ArrowUpRight size={16} />

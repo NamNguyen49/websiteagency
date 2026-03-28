@@ -1,6 +1,6 @@
 .processContainer {
   text-align: center;
-  /* Full width — stretch past container */
+  
   width: 100%;
   padding: 0 4rem;
 }
@@ -31,7 +31,6 @@
   margin: 0 auto;
 }
 
-/* Step card */
 .step {
   flex: 1;
   position: relative;
@@ -81,13 +80,12 @@
   max-width: 220px;
 }
 
-/* ─── Premium Connector ──────────────────────── */
 .stepConnector {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  width: 80px; /* Wider so it's visible */
-  margin-top: 58px; /* Align vertically with number center */
+  width: 80px; 
+  margin-top: 58px; 
   position: relative;
 }
 
@@ -109,7 +107,6 @@
   overflow: hidden;
 }
 
-/* Animated shimmer sweep */
 .connectorLine::after {
   content: "";
   position: absolute;
@@ -126,19 +123,18 @@
   animation: lineSweep 2.5s ease-in-out infinite;
 }
 
-/* Larger chevron arrowhead — solid triangle */
 .connectorArrow {
   flex-shrink: 0;
-  /* Solid CSS triangle pointing right */
+  
   width: 0;
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 16px solid var(--accent-secondary);
-  /* Strong glow so it's clearly visible */
+  
   filter: drop-shadow(0 0 6px var(--accent-secondary))
           drop-shadow(0 0 12px rgba(129, 140, 248, 0.7));
-  margin-left: -1px; /* Touch the line end */
+  margin-left: -1px; 
 }
 
 @keyframes lineSweep {

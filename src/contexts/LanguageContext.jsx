@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState } from 'react';
 const LanguageContext = createContext();
 
 export const translations = {
-  /* ───────────── ENGLISH ───────────── */
+  
   en: {
     nav: { services: 'Services', portfolio: 'Portfolio', company: 'Company', contact: 'Contact', cta: "Let's Talk" },
     footer: {
@@ -182,7 +182,6 @@ export const translations = {
     }
   },
 
-  /* ───────────── TIẾNG VIỆT ───────────── */
   vi: {
     nav: { services: 'Dịch vụ', portfolio: 'Dự án', company: 'Công ty', contact: 'Liên hệ', cta: 'Tư vấn ngay' },
     footer: {
@@ -361,7 +360,6 @@ export const translations = {
     }
   },
 
-  /* ───────────── 日本語 ───────────── */
   ja: {
     nav: { services: 'サービス', portfolio: '実績', company: '会社概要', contact: 'お問合せ', cta: '無料相談' },
     footer: {
@@ -540,7 +538,6 @@ export const translations = {
     }
   },
 
-  /* ───────────── 中文 ───────────── */
   zh: {
     nav: { services: '服务', portfolio: '案例', company: '公司', contact: '联系', cta: '立即咨询' },
     footer: {
