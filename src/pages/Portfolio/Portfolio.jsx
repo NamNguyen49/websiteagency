@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import ProjectList from '../../features/projects/components/ProjectList/ProjectList';
 import { useLanguage } from '../../contexts/LanguageContext';
+import Background3D from '../../components/common/Background3D/Background3D';
 import styles from './Portfolio.module.css';
 
 const Portfolio = () => {
@@ -10,17 +11,20 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className={styles.portfolioPage}>
-      <div className={styles.pageHero}>
+    <>
+      <Background3D />
+      <div className={styles.portfolioPage}>
+        <div className={styles.pageHero}>
+          <div className="container">
+            <h1 className={styles.pageTitle}>{t.portfolio.title} <span className="gradient-text">{t.portfolio.highlight}</span></h1>
+            <p className={styles.pageSubtext}>{t.portfolio.subtitle}</p>
+          </div>
+        </div>
         <div className="container">
-          <h1 className={styles.pageTitle}>{t.portfolio.title} <span className="gradient-text">{t.portfolio.highlight}</span></h1>
-          <p className={styles.pageSubtext}>{t.portfolio.subtitle}</p>
+          <ProjectList />
         </div>
       </div>
-      <div className="container">
-        <ProjectList />
-      </div>
-    </div>
+    </>
   );
 };
 
