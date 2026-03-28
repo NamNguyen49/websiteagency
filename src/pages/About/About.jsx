@@ -1,9 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { Target, Shield, Zap, Users } from 'lucide-react';
+import { useLanguage } from '../../contexts/LanguageContext';
 import styles from './About.module.css';
 
+const ICONS = [<Zap size={32} />, <Shield size={32} />, <Target size={32} />, <Users size={32} />];
+
 const About = () => {
+  const { t } = useLanguage();
   const headerRef = useRef(null);
   const contentRef = useRef(null);
 
@@ -22,37 +26,14 @@ const About = () => {
     );
   }, []);
 
-  const values = [
-    {
-      title: 'Innovation First',
-      description: 'We push the boundaries of what’s possible with cutting-edge tech.',
-      icon: <Zap size={32} />
-    },
-    {
-      title: 'Reliability',
-      description: 'Mission-critical systems that SVS Corp partners can depend on 24/7.',
-      icon: <Shield size={32} />
-    },
-    {
-      title: 'User-Centric',
-      description: 'Every line of code and pixel at Synvia Solutions is for the end user.',
-      icon: <Target size={32} />
-    },
-    {
-      title: 'Co-Creation',
-      description: 'We don’t just work for you; we work with you to scale empires.',
-      icon: <Users size={32} />
-    }
-  ];
-
   return (
     <div className={styles.aboutPage}>
       <section className={styles.heroSection} ref={headerRef}>
         <div className="container">
-          <span className={styles.badge}>Our Story</span>
-          <h1 className={styles.title}>Synvia Solutions <span className="gradient-text">Corp</span></h1>
+          <span className={styles.badge}>{t.about.badge}</span>
+          <h1 className={styles.title}>{t.about.title} <span className="gradient-text">{t.about.highlight}</span></h1>
           <p className={styles.subtitle}>
-            A collective of visionary engineers and designers dedicated to building the future of industrial-grade digital ecosystems.
+            {t.about.subtitle}
           </p>
         </div>
       </section>
@@ -60,36 +41,36 @@ const About = () => {
       <section className="container" ref={contentRef}>
         <div className={styles.gridSection}>
           <div className={`${styles.card} glass-morphism`}>
-            <h2 className={styles.sectionTitle}>Our Mission</h2>
+            <h2 className={styles.sectionTitle}>{t.about.mission.title}</h2>
             <p className={styles.text}>
-              To empower global brands with scalable, mission-critical digital products that drive growth and institutional reliability in an ever-evolving technological landscape.
+              {t.about.mission.text}
             </p>
           </div>
           <div className={`${styles.card} glass-morphism`}>
-            <h2 className={styles.sectionTitle}>Our Vision</h2>
+            <h2 className={styles.sectionTitle}>{t.about.vision.title}</h2>
             <p className={styles.text}>
-              Becoming the world's most trusted partner for enterprise-grade digital architecture and visionary design by 2030, fueling the next wave of industrial revolutions.
+              {t.about.vision.text}
             </p>
           </div>
         </div>
 
         <div className={styles.valuesSection}>
-          <h2 className={styles.centeredTitle}>The Core <span className="gradient-text">Values</span></h2>
+          <h2 className={styles.centeredTitle}>{t.about.valuesTitle} <span className="gradient-text">{t.about.valuesHighlight}</span></h2>
           <div className={styles.valuesGrid}>
-            {values.map((value, i) => (
+            {t.about.valuesItems.map((value, i) => (
               <div key={i} className={styles.valueItem}>
-                <div className={styles.valueIcon}>{value.icon}</div>
+                <div className={styles.valueIcon}>{ICONS[i]}</div>
                 <h3 className={styles.valueTitle}>{value.title}</h3>
-                <p className={styles.valueDescription}>{value.description}</p>
+                <p className={styles.valueDescription}>{value.desc}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className={`${styles.historyCard} glass-morphism`}>
-          <h2 className={styles.sectionTitle}>A Decade of Scale</h2>
+          <h2 className={styles.sectionTitle}>{t.about.history.title}</h2>
           <p className={styles.text}>
-            Founded with a passion for high-performance computing, SVS Corp has evolved from a small design studio into a full-scale digital engineering firm. We've weathered market shifts and technological disruptions, emerge stronger and more specialized in building "impossible" solutions for "visionary" problems.
+            {t.about.history.text}
           </p>
         </div>
       </section>

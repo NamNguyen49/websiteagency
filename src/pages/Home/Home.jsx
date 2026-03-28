@@ -11,11 +11,13 @@ import TechShowcase from "./components/TechShowcase/TechShowcase";
 import Enterprise from "./components/Enterprise/Enterprise";
 import CaseStudies from "./components/CaseStudies/CaseStudies";
 import Background3D from "../../components/common/Background3D/Background3D";
+import { useLanguage } from "../../contexts/LanguageContext";
 import styles from "./Home.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+  const { t } = useLanguage();
   const ctaRef = useRef(null);
 
   useEffect(() => {
@@ -99,14 +101,13 @@ const Home = () => {
             <div className={styles.ctaBanner} ref={ctaRef}>
               <div className={`${styles.ctaInner} glass-morphism`}>
                 <h2 className={styles.ctaTitle}>
-                  Ready to transform your{" "}
-                  <span className="gradient-text">ecosystem</span>?
+                  {t.cta.title}{" "}
+                  <span className="gradient-text">{t.cta.highlight}</span>?
                 </h2>
                 <p className={styles.ctaSubtext}>
-                  Partner with Synvia Solutions Corp for your next breakthrough
-                  digital project.
+                  {t.cta.subtitle}
                 </p>
-                <button className="btn-primary">Connect With Us</button>
+                <button className="btn-primary">{t.cta.btn}</button>
               </div>
             </div>
           </div>

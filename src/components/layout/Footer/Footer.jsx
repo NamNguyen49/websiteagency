@@ -1,39 +1,35 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
-import { CustomIcons } from "../../common/CustomIcons";
 import { useTheme } from "../../../contexts/ThemeContext";
+import { useLanguage } from "../../../contexts/LanguageContext";
+import { CustomIcons } from "../../common/CustomIcons";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const { theme } = useTheme();
+  const { t } = useLanguage();
 
-  const footerLinks = [
+  const footerLinksData = [
     {
-      title: "Solutions",
+      title: t.footer.solutions.title,
+      links: t.footer.solutions.items.map((name) => ({ name, href: "/services" })),
+    },
+    {
+      title: t.footer.company.title,
       links: [
-        { name: "Web Design", href: "/services" },
-        { name: "Architecture", href: "/services" },
-        { name: "SEO Strategy", href: "/services" },
-        { name: "Mobile Apps", href: "/services" },
+        { name: t.footer.company.items[0], href: "/about" },
+        { name: t.footer.company.items[1], href: "/portfolio" },
+        { name: t.footer.company.items[2], href: "/careers" },
+        { name: t.footer.company.items[3], href: "/contact" },
       ],
     },
     {
-      title: "Company",
+      title: t.footer.legal.title,
       links: [
-        { name: "About SVS", href: "/about" },
-        { name: "Ecosystem", href: "/portfolio" },
-        { name: "Careers", href: "/careers" },
-        { name: "Contact", href: "/contact" },
-      ],
-    },
-    {
-      title: "Legal",
-      links: [
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Service", href: "/terms" },
-        { name: "Cookie Policy", href: "/cookies" },
+        { name: t.footer.legal.items[0], href: "/privacy" },
+        { name: t.footer.legal.items[1], href: "/terms" },
+        { name: t.footer.legal.items[2], href: "/cookies" },
       ],
     },
   ];
@@ -51,8 +47,7 @@ const Footer = () => {
               />
             </Link>
             <p className={styles.footerTagline}>
-              Synvia Solutions Corp delivers mission-critical digital products
-              that combine stunning design with industrial-grade performance.
+              {t.footer.tagline}
             </p>
             <div className={styles.socialLinks}>
               <a href="#" className={styles.socialLink}>
@@ -71,7 +66,7 @@ const Footer = () => {
           </div>
 
           <div className={styles.footerNav}>
-            {footerLinks.map((group) => (
+            {footerLinksData.map((group) => (
               <div key={group.title} className={styles.footerNavGroup}>
                 <h4 className={styles.footerNavTitle}>{group.title}</h4>
                 <ul className={styles.footerNavList}>
@@ -90,11 +85,11 @@ const Footer = () => {
 
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>
-            © {currentYear} Synvia Solutions Corp. All rights reserved.
+            © {currentYear} Synvia Solutions Corp. {t.footer.copyright}
           </p>
           <div className={styles.footerStatus}>
             <span className={styles.statusDot}></span>
-            Systems Operational
+            {t.footer.status}
           </div>
         </div>
       </div>

@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import ProjectList from '../../features/projects/components/ProjectList/ProjectList';
+import { useLanguage } from '../../contexts/LanguageContext';
 import styles from './Portfolio.module.css';
 
 const Portfolio = () => {
+  const { t } = useLanguage();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -11,8 +13,8 @@ const Portfolio = () => {
     <div className={styles.portfolioPage}>
       <div className={styles.pageHero}>
         <div className="container">
-          <h1 className={styles.pageTitle}>Our <span className="gradient-text">Ecosystem</span></h1>
-          <p className={styles.pageSubtext}>Explore the collection of industrial-grade digital products designed and engineered by Synvia Solutions Corp.</p>
+          <h1 className={styles.pageTitle}>{t.portfolio.title} <span className="gradient-text">{t.portfolio.highlight}</span></h1>
+          <p className={styles.pageSubtext}>{t.portfolio.subtitle}</p>
         </div>
       </div>
       <div className="container">

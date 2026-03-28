@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock } from "lucide-react";
+import { useLanguage } from "../../contexts/LanguageContext";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const formRef = useRef(null);
   const infoRef = useRef(null);
 
@@ -28,11 +30,10 @@ const Contact = () => {
       <section className={styles.heroSection}>
         <div className="container">
           <h1 className={styles.title}>
-            Let’s <span className="gradient-text">Connect</span>
+            {t.contact.title} <span className="gradient-text">{t.contact.highlight}</span>
           </h1>
           <p className={styles.subtitle}>
-            Scale your digital presence with SVS Corp's industrial-grade
-            engineering.
+            {t.contact.subtitle}
           </p>
         </div>
       </section>
@@ -41,14 +42,14 @@ const Contact = () => {
         <div className={styles.contactGrid}>
           <div className={styles.infoCol} ref={infoRef}>
             <div className={styles.infoCard}>
-              <h2 className={styles.cardTitle}>Station Details</h2>
+              <h2 className={styles.cardTitle}>{t.contact.station.title}</h2>
               <div className={styles.methods}>
                 <div className={styles.method}>
                   <div className={styles.iconBox}>
-                    <Mail size={24} />
+                    < Mail size={24} />
                   </div>
                   <div className={styles.methodText}>
-                    <span>Protocol</span>
+                    <span>{t.contact.station.protocol}</span>
                     <p>hello@svscorp.tech</p>
                   </div>
                 </div>
@@ -57,7 +58,7 @@ const Contact = () => {
                     <Phone size={24} />
                   </div>
                   <div className={styles.methodText}>
-                    <span>Hotline</span>
+                    <span>{t.contact.station.hotline}</span>
                     <p>+84 355 331 494</p>
                   </div>
                 </div>
@@ -66,7 +67,7 @@ const Contact = () => {
                     <MapPin size={24} />
                   </div>
                   <div className={styles.methodText}>
-                    <span>Headquarters</span>
+                    <span>{t.contact.station.hq}</span>
                     <p>Dist 1, Ho Chi Minh City, VN</p>
                   </div>
                 </div>
@@ -75,8 +76,8 @@ const Contact = () => {
                     <Clock size={24} />
                   </div>
                   <div className={styles.methodText}>
-                    <span>Operational Hours</span>
-                    <p>Mon - Fri, 09:00 - 18:00 (GMT+7)</p>
+                    <span>{t.contact.station.hours}</span>
+                    <p>{t.contact.station.hoursVal}</p>
                   </div>
                 </div>
               </div>
@@ -84,30 +85,29 @@ const Contact = () => {
 
             <div className={`${styles.statusCard} glass-morphism`}>
               <MessageCircle size={32} className={styles.statusIcon} />
-              <h3>Direct Consultation</h3>
+              <h3>{t.contact.consult.title}</h3>
               <p>
-                Looking for an immediate solution? Talk to our chief architects
-                today.
+                {t.contact.consult.text}
               </p>
-              <button className="btn-primary">Book an Appointment</button>
+              <button className="btn-primary">{t.contact.consult.btn}</button>
             </div>
           </div>
 
           <div className={`${styles.formCol} glass-morphism`} ref={formRef}>
-            <h2 className={styles.cardTitle}>Transmission Protocol</h2>
+            <h2 className={styles.cardTitle}>{t.contact.form.title}</h2>
             <form className={styles.form}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
-                  <label>Full Name</label>
-                  <input type="text" placeholder="Identity name" required />
+                  <label>{t.contact.form.name}</label>
+                  <input type="text" placeholder={t.contact.form.placeholderName} required />
                 </div>
                 <div className={styles.formGroup}>
-                  <label>Email Address</label>
-                  <input type="email" placeholder="Contact email" required />
+                  <label>{t.contact.form.email}</label>
+                  <input type="email" placeholder={t.contact.form.placeholderEmail} required />
                 </div>
               </div>
               <div className={styles.formGroup}>
-                <label>Industry / Sector</label>
+                <label>{t.contact.form.industry}</label>
                 <select>
                   <option>Fintech</option>
                   <option>E-commerce</option>
@@ -117,10 +117,10 @@ const Contact = () => {
                 </select>
               </div>
               <div className={styles.formGroup}>
-                <label>Operational Message</label>
+                <label>{t.contact.form.message}</label>
                 <textarea
                   rows="6"
-                  placeholder="Project details or inquiry"
+                  placeholder={t.contact.form.placeholderMsg}
                   required
                 ></textarea>
               </div>
@@ -128,7 +128,7 @@ const Contact = () => {
                 type="submit"
                 className={`btn-primary ${styles.submitBtn}`}
               >
-                Send Transmission <Send size={20} />
+                {t.contact.form.btn} <Send size={20} />
               </button>
             </form>
           </div>
@@ -139,7 +139,7 @@ const Contact = () => {
         <div className="container">
           <div className={`${styles.mapPlaceholder} glass-morphism`}>
             <div className={styles.mapPoint}></div>
-            <p>Interactive Station Map Loading...</p>
+            <p>{t.contact.map}</p>
           </div>
         </div>
       </section>

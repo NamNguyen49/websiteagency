@@ -1,29 +1,51 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ArrowUpRight, Moon, Sun } from "lucide-react";
+import { Menu, X, ArrowUpRight, Moon, Sun, ChevronDown } from "lucide-react";
 import { useTheme } from "../../../contexts/ThemeContext";
+import { useLanguage } from "../../../contexts/LanguageContext";
 import styles from "./Header.module.css";
+
+const LANGUAGES = [
+  { code: "en", label: "EN", flag: "🇺🇸", full: "English" },
+  { code: "vi", label: "VI", flag: "🇻🇳", full: "Tiếng Việt" },
+  { code: "ja", label: "JA", flag: "🇯🇵", full: "日本語" },
+  { code: "zh", label: "ZH", flag: "🇨🇳", full: "中文" },
+];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
+  const langRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (langRef.current && !langRef.current.contains(e.target)) {
+        setIsLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const navLinks = [
-    { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Company", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: t.nav.services,  href: "/services" },
+    { name: t.nav.portfolio, href: "/portfolio" },
+    { name: t.nav.company,   href: "/about" },
+    { name: t.nav.contact,   href: "/contact" },
   ];
+
+  const currentLang = LANGUAGES.find((l) => l.code === language) || LANGUAGES[0];
 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
@@ -36,9 +58,7 @@ const Header = () => {
           />
         </Link>
 
-        <div
-          className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileActive : ""}`}
-        >
+        <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileActive : ""}`}>
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -50,6 +70,41 @@ const Header = () => {
             </Link>
           ))}
 
+          {/* Language Switcher */}
+          <div className={styles.langSwitcher} ref={langRef}>
+            <button
+              className={styles.langBtn}
+              onClick={() => setIsLangOpen(!isLangOpen)}
+              aria-label="Select language"
+            >
+              <span className={styles.langFlag}>{currentLang.flag}</span>
+              <span className={styles.langLabel}>{currentLang.label}</span>
+              <ChevronDown
+                size={14}
+                className={`${styles.langChevron} ${isLangOpen ? styles.langChevronOpen : ""}`}
+              />
+            </button>
+
+            {isLangOpen && (
+              <div className={`${styles.langDropdown} glass-morphism`}>
+                {LANGUAGES.map((lang) => (
+                  <button
+                    key={lang.code}
+                    className={`${styles.langOption} ${language === lang.code ? styles.langOptionActive : ""}`}
+                    onClick={() => {
+                      setLanguage(lang.code);
+                      setIsLangOpen(false);
+                    }}
+                  >
+                    <span>{lang.flag}</span>
+                    <span className={styles.langOptionFull}>{lang.full}</span>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Theme Toggle */}
           <button
             className={styles.themeToggle}
             onClick={toggleTheme}
@@ -63,7 +118,7 @@ const Header = () => {
             className="btn-primary"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Let's Talk <ArrowUpRight size={16} />
+            {t.nav.cta} <ArrowUpRight size={16} />
           </Link>
         </div>
 

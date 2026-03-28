@@ -1,7 +1,7 @@
 import React from 'react';
+import { useLanguage } from '../../../../contexts/LanguageContext';
 import styles from './Integrations.module.css';
 
-// Local brand-colored logos (saved in /public/logos/)
 const row1 = [
   { name: "PostgreSQL",  logo: "/logos/postgresql.svg" },
   { name: "AWS",         logo: "/logos/aws.svg" },
@@ -36,16 +36,14 @@ const Tag = ({ item }) => (
 );
 
 const Integrations = () => {
+  const { t } = useLanguage();
   return (
     <div className={styles.integrationsContainer}>
       <h2 className={styles.sectionTitle}>
-        Plug into your own data &amp; <span className="gradient-text">500+ integrations</span>
+        {t.integrations.title} <span className="gradient-text">{t.integrations.highlight}</span>
       </h2>
-      <p className={styles.subtitle}>
-        Use pre-built connectors for leading enterprise platforms. Custom API integrations for everything else.
-      </p>
+      <p className={styles.subtitle}>{t.integrations.subtitle}</p>
 
-      {/* Row 1 — scrolls left */}
       <div className={styles.marquee}>
         <div className={styles.marqueeContent}>
           {row1.map((item, i) => <Tag key={i} item={item} />)}
@@ -53,7 +51,6 @@ const Integrations = () => {
         </div>
       </div>
 
-      {/* Row 2 — scrolls right */}
       <div className={`${styles.marquee} ${styles.marqueeReverse}`}>
         <div className={`${styles.marqueeContent} ${styles.marqueeContentReverse}`}>
           {row2.map((item, i) => <Tag key={i} item={item} />)}
