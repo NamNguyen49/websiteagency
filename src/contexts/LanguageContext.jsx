@@ -6,10 +6,43 @@ export const translations = {
   en: {
     nav: {
       services: "Services",
-      portfolio: "Portfolio",
-      company: "Company",
+      caseStudy: "Case Study",
+      pricing: "Pricing",
+      blog: "Blog",
       contact: "Contact",
-      cta: "Let's Talk",
+      cta: "Consult Now",
+      services_groups: {
+        web: {
+          title: "Web Design",
+          items: [
+            "Corporate Website",
+            "E-commerce Website",
+            "Landing Page",
+            "UI/UX Design",
+          ],
+        },
+        seo: {
+          title: "SEO",
+          items: ["Overall SEO", "Keyword SEO", "Website Audit"],
+        },
+        ads: {
+          title: "Ads",
+          items: ["Facebook Ads", "Google Ads", "TikTok Ads"],
+        },
+        advanced: {
+          title: "Marketing & AI",
+          items: ["Automation Marketing", "AI Content", "Chatbot"],
+        },
+      },
+      caseStudy_items: ["Website Projects", "SEO Results", "Ads Campaigns"],
+      pricing_items: ["Web Design", "SEO", "Ads"],
+      blog_items: [
+        "Web Knowledge",
+        "SEO Knowledge",
+        "Digital Marketing",
+        "Case Study",
+        "AI & Automation",
+      ],
     },
     footer: {
       tagline:
@@ -142,26 +175,30 @@ export const translations = {
       ],
     },
     process: {
-      title: "The Delivery",
-      highlight: "Matrix",
+      title: "Design",
+      highlight: "Process",
       subtitle:
-        "Our systematic approach to engineering world-class digital products.",
+        "Our systematic approach to building world-class digital products.",
       steps: [
         {
-          title: "Discovery & Blueprint",
-          text: "Deep architectural analysis and strategic planning mapping every touchpoint of your digital ecosystem.",
+          title: "Consultation & Survey",
+          text: "Conduct surveys and direct discussions with clients to capture essential project requirements.",
         },
         {
-          title: "UI/UX Engineering",
-          text: "Crafting high-conversion, award-winning interfaces designed for maximum user retention.",
+          title: "Planning & Sketching",
+          text: "Build wireframes for website structure, layouts, and required functionalities; identify necessary elements.",
         },
         {
-          title: "Fullstack Development",
-          text: "Deploying robust, scalable codebases utilizing modern, future-proof technologies.",
+          title: "Implementation",
+          text: "Execute UX/UI design, programming, and development of website features.",
         },
         {
-          title: "Testing & Launch",
-          text: "Rigorous QA and seamless deployment protocols guaranteeing a flawless go-live.",
+          title: "Testing & QA",
+          text: "Test the website across different browsers and devices to ensure compatibility, loading speed, and functionality.",
+        },
+        {
+          title: "Handover & Launch",
+          text: "Deliver the website to the client after completing step 4 and officially launch the project.",
         },
       ],
     },
@@ -342,15 +379,215 @@ export const translations = {
         "A glimpse into the mission-critical products we've engineered.",
       viewProject: "View Ecosystem",
     },
+    webDesignDetail: {
+      "corporate-website": {
+        title: "Corporate/Business Website",
+        tagline: "WEB DESIGN SERVICES",
+        description:
+          "Targeted platform to help businesses build a brand and attract customers. Especially for ads, a website is where visitors convert into real customers.",
+        features: [
+          "Easy Management",
+          "Cost Optimization",
+          "Revenue Growth",
+          "Building Trust",
+          "Customer Utilities",
+          "Effective Marketing",
+        ],
+      },
+      "landing-page": {
+        title: "Landing Page",
+        tagline: "Optimal Landing Page for Ads Campaigns",
+        description:
+          "An independent website designed specifically to focus on a single goal, aiming to increase the ability to convert visitors into customers or leads.",
+      },
+      "e-commerce-website": {
+        title: "E-Commerce Website",
+        tagline: "Provide customers with a convenient shopping experience",
+        description:
+          "Helping them easily find, select, and pay for the products they want to buy.",
+      },
+      common: {
+        stats: [
+          { label: "Optimal Landing Pages for Ads Campaigns", value: "500+" },
+          { label: "Average Conversion Rate for Clients", value: "+34%" },
+          { label: "Years of Experience in Digital Marketing", value: "5+" },
+          { label: "Successful Projects Delivered", value: "800+" },
+        ],
+        benefits: [
+          {
+            title: "Easy Management",
+            desc: "Modern tools integrated to help track orders and business operations effortlessly.",
+          },
+          {
+            title: "Cost Optimization",
+            desc: "Save on marketing, business, and management costs while connecting with customers effectively.",
+          },
+          {
+            title: "Revenue Growth",
+            desc: "24/7 online sales, easy online payment without waiting for manual closing.",
+          },
+          {
+            title: "Building Trust",
+            desc: "Confirm the professionalism and prestige of your business through a company website.",
+          },
+          {
+            title: "Customer Utilities",
+            desc: "Integrated support channels help businesses advise users in the easiest way.",
+          },
+          {
+            title: "Effective Marketing",
+            desc: "Promote your brand, products, and services to many potential customers on the internet.",
+          },
+        ],
+        labels: {
+          heroTitle: "WEB DESIGN",
+          heroTitleSub: "SERVICES",
+          heroDesc1:
+            "An important tool for businesses to build their brand and attract customers.",
+          heroDesc2:
+            "Especially for ads, a website is where visitors convert into real customers.",
+          heroBtn: "Get Free Advice",
+          benefitsTitle: "Benefits of owning a Professional - Modern Website",
+          packagesTitle: "Website Design Services",
+          packagesDesc:
+            "We provide flexible and diverse service packages to meet all your needs and budget",
+          customBanner: "Custom Website Design",
+          portfolioTitle: "Websites designed specifically for our clients",
+          finalQuoteBtn: "Get Custom Design Consulting",
+        },
+      },
+    },
   },
 
   vi: {
     nav: {
       services: "Dịch vụ",
-      portfolio: "Dự án",
-      company: "Công ty",
+      caseStudy: "Case Study",
+      pricing: "Bảng giá",
+      blog: "Blog",
       contact: "Liên hệ",
-      cta: "Tư vấn ngay",
+      cta: "Nhận tư vấn",
+      services_groups: {
+        web: {
+          title: "Thiết kế website",
+          items: [
+            "Website doanh nghiệp",
+            "Website bán hàng",
+            "Landing page",
+            "UI/UX Design",
+          ],
+        },
+        seo: {
+          title: "SEO",
+          items: ["SEO tổng thể", "SEO từ khóa", "Audit website"],
+        },
+        ads: {
+          title: "Quảng cáo",
+          items: ["Facebook Ads", "Google Ads", "TikTok Ads"],
+        },
+        advanced: {
+          title: "Tự động hóa & AI",
+          items: ["Automation Marketing", "AI Content", "Chatbot"],
+        },
+      },
+      caseStudy_items: ["Website projects", "SEO results", "Ads campaigns"],
+      pricing_items: ["Thiết kế website", "SEO", "Ads"],
+      blog_items: [
+        "Kiến thức Website",
+        "SEO",
+        "Digital Marketing",
+        "Case study",
+        "AI & Automation",
+      ],
+    },
+    webDesignDetail: {
+      "corporate-website": {
+        title: "Website Công ty/Doanh nghiệp",
+        tagline: "DỊCH VỤ THIẾT KẾ WEBSITE",
+        description:
+          "Công cụ quan trọng giúp doanh nghiệp xây dựng thương hiệu và thu hút khách hàng. Đặc biệt đối với quảng cáo, website là nơi chuyển đổi khách truy cập thành khách hàng thực sự.",
+        features: [
+          "Quản trị dễ dàng",
+          "Tối ưu chi phí",
+          "Tăng trưởng doanh thu",
+          "Xây dựng uy tín",
+          "Tiện ích khách hàng",
+          "Marketing hiệu quả",
+        ],
+      },
+      "landing-page": {
+        title: "Landingpage",
+        tagline: "Landing page tối ưu cho các chiến dịch quảng cáo",
+        description:
+          "Trang web độc lập được thiết kế đặc biệt tập trung vào mục tiêu duy nhất, nhằm tăng khả năng chuyển đổi người truy cập thành khách hàng hoặc người dùng tiềm năng.",
+      },
+      "e-commerce-website": {
+        title: "Web Bán Hàng",
+        tagline: "Cung cấp cho khách hàng một trải nghiệm mua sắm thuận tiện",
+        description:
+          "Giúp họ dễ dàng tìm kiếm, lựa chọn và thanh toán cho sản phẩm mình muốn mua.",
+      },
+      common: {
+        stats: [
+          {
+            label: "Landing page tối ưu cho các chiến dịch quảng cáo",
+            value: "500+",
+          },
+          {
+            label: "Tỷ lệ chuyển đổi trung bình cho khách hàng",
+            value: "+34%",
+          },
+          {
+            label: "năm kinh nghiệm trong ngành digital marketing",
+            value: "5+",
+          },
+          { label: "Dự án thành công", value: "800+" },
+        ],
+        benefits: [
+          {
+            title: "Quản trị dễ dàng",
+            desc: "Tool hiện đại tích hợp trên website giúp việc thống kê đơn hàng, kinh doanh trở nên dễ dàng hơn.",
+          },
+          {
+            title: "Tối ưu chi phí",
+            desc: "Tiết kiệm chi phí marketing, kinh doanh và quản lý, có thể kết nối với khách hàng hiệu quả.",
+          },
+          {
+            title: "Tăng trưởng doanh thu",
+            desc: "Bán hàng online 24/7 thuận tiện, thanh toán online dễ dàng và không cần chờ chốt đơn.",
+          },
+          {
+            title: "Xây dựng uy tín",
+            desc: "Khẳng định sự chuyên nghiệp và uy tín của doanh nghiệp qua website của công ty.",
+          },
+          {
+            title: "Tiện ích khách hàng",
+            desc: "Tích hợp các kênh hỗ trợ khách hàng giúp doanh nghiệp tư vấn người dùng 1 cách dễ dàng nhất.",
+          },
+          {
+            title: "Marketing hiệu quả",
+            desc: "Quảng bá thương hiệu, sản phẩm và dịch vụ của bạn đến với nhiều khách hàng tiềm năng trên internet.",
+          },
+        ],
+        labels: {
+          heroTitle: "DỊCH VỤ THIẾT KẾ",
+          heroTitleSub: "WEBSITE",
+          heroDesc1:
+            "Công cụ quan trọng giúp doanh nghiệp xây dựng thương hiệu và thu hút khách hàng.",
+          heroDesc2:
+            "Đặc biệt đối với quảng cáo, website là nơi chuyển đổi khách truy cập thành khách hàng thực sự.",
+          heroBtn: "Nhận tư vấn ngay",
+          benefitsTitle:
+            "Lợi ích của việc sở hữu Website Chuyên Nghiệp - Hiện Đại",
+          packagesTitle: "Dịch Vụ Thiết Kế Website",
+          packagesDesc:
+            "Chúng tôi cung cấp các gói dịch vụ linh hoạt và đa dạng để đáp ứng mọi nhu cầu và ngân sách của bạn",
+          customBanner: "Thiết Kế Website Theo Yêu Cầu",
+          portfolioTitle:
+            "Các website được thiết kế theo yêu cầu của khách hàng",
+          finalQuoteBtn: "Nhận Tư vấn thiết kế theo yêu cầu",
+        },
+      },
     },
     footer: {
       tagline:
@@ -492,26 +729,30 @@ export const translations = {
       ],
     },
     process: {
-      title: "Ma trận",
-      highlight: "Triển khai",
+      title: "Quy trình",
+      highlight: "Thiết Kế & Phát Triển",
       subtitle:
-        "Phương pháp hệ thống của chúng tôi để xây dựng sản phẩm số đẳng cấp thế giới.",
+        "Quy trình xây dựng sản phẩm kỹ thuật số chuẩn quốc tế của chúng tôi.",
       steps: [
         {
-          title: "Khám phá & Lập kế hoạch",
-          text: "Phân tích kiến trúc chuyên sâu và lập kế hoạch chiến lược bao quát mọi điểm chạm của hệ sinh thái số.",
+          title: "Tư vấn - khảo sát",
+          text: "Tiến hành khảo sát và trao đổi trực tiếp với khách hàng, nắm bắt các yếu tố thiết yếu cho dự án.",
         },
         {
-          title: "Thiết kế UI/UX",
-          text: "Tạo giao diện chuyển đổi cao, đoạt giải thưởng, thiết kế để tối đa hóa tỷ lệ giữ chân người dùng.",
+          title: "Lập kế hoạch - phác thảo",
+          text: "Xây dựng bản phác thảo giao diện (Wireframe) về cấu trúc website, bố cục các trang và các chức năng cần có.",
         },
         {
-          title: "Phát triển Fullstack",
-          text: "Triển khai codebase mạnh mẽ, có khả năng mở rộng sử dụng công nghệ hiện đại, tương lai.",
+          title: "Thực hiện thiết kế",
+          text: "Tiến hành thiết kế giao diện (UX/UI), lập trình và phát triển các tính năng cho website.",
         },
         {
-          title: "Kiểm thử & Ra mắt",
-          text: "QA nghiêm ngặt và triển khai liền mạch đảm bảo go-live hoàn hảo.",
+          title: "Kiểm tra - kiểm định",
+          text: "Kiểm tra website trên các trình duyệt và thiết bị khác nhau để đảm bảo tính tương thích và tốc độ.",
+        },
+        {
+          title: "Bàn giao - khởi chạy",
+          text: "Bàn giao website với khách hàng sau khi đã hoàn tất bước 4 và chính thức khởi chạy dự án.",
         },
       ],
     },
@@ -700,10 +941,122 @@ export const translations = {
   ja: {
     nav: {
       services: "サービス",
-      portfolio: "実績",
-      company: "会社概要",
+      caseStudy: "導入事例",
+      pricing: "料金プラン",
+      blog: "ブログ",
       contact: "お問合せ",
       cta: "無料相談",
+      services_groups: {
+        web: {
+          title: "Webデザイン",
+          items: [
+            "コーポレートサイト",
+            "ECサイト制作",
+            "ランディングページ",
+            "UI/UX設計",
+          ],
+        },
+        seo: {
+          title: "SEO対策",
+          items: ["総合SEO", "キーワードSEO", "現状診断"],
+        },
+        ads: {
+          title: "広告運用",
+          items: ["Facebook広告", "Google広告", "TikTok広告"],
+        },
+        advanced: {
+          title: "AI & 自動化",
+          items: ["オートメーション", "AIコンテンツ制作", "チャットボット"],
+        },
+      },
+      caseStudy_items: ["Web制作実績", "SEO実績", "広告運用実績"],
+      pricing_items: ["Webデザイン", "SEO", "広告"],
+      blog_items: [
+        "Web制作ノウハウ",
+        "SEO知識",
+        "デジタルマーケティング",
+        "導入事例",
+        "AI・自動化",
+      ],
+    },
+    webDesignDetail: {
+      "corporate-website": {
+        title: "コーポレート/ビジネスサイト",
+        tagline: "ウェブデザインサービス",
+        description:
+          "ブランドを構築し、顧客を引き付けるためのターゲットプラットフォーム。特に広告において、ウェブサイトは訪問者が実際の顧客に転換する場所です。",
+        features: [
+          "簡単な管理",
+          "コストの最適化",
+          "収益の向上",
+          "信頼の醸成",
+          "顧客用ユーティリティ",
+          "効果的なマーケティング",
+        ],
+      },
+      "landing-page": {
+        title: "ランディングページ",
+        tagline: "広告キャンペーンに最適なLP",
+        description:
+          "単一の目標に焦点を当てて設計された独立したウェブサイトで、訪問者を顧客やリードに転換する能力を高めることを目的としています。",
+      },
+      "e-commerce-website": {
+        title: "ECサイト",
+        tagline: "顧客に便利なショッピング体験を提供",
+        description:
+          "顧客が買いたい商品を簡単に見つけ、選択し、支払うことができるように支援します。",
+      },
+      common: {
+        stats: [
+          { label: "広告キャンペーン向けの最適化LP", value: "500+" },
+          { label: "クライアントの平均転換率", value: "+34%" },
+          { label: "デジタルマーケティングの経験年数", value: "5+" },
+          { label: "納品済みの成功プロジェクト", value: "800+" },
+        ],
+        benefits: [
+          {
+            title: "簡単な管理",
+            desc: "注文や業務運営を簡単に追跡できる最新のツールが統合されています。",
+          },
+          {
+            title: "コストの最適化",
+            desc: "マーケティング、業務、管理コストを削減しながら、顧客と効果的に繋がります。",
+          },
+          {
+            title: "収益の向上",
+            desc: "24時間365日のオンライン販売、手動での締め作業を待たずに簡単にオンライン決済。",
+          },
+          {
+            title: "信頼の醸成",
+            desc: "企業ウェブサイトを通じて、ビジネスの専門性と威信を確認します。",
+          },
+          {
+            title: "顧客用ユーティリティ",
+            desc: "統合されたサポートチャネルにより、企業は最も簡単な方法でユーザーにアドバイスを提供できます。",
+          },
+          {
+            title: "効果的なマーケティング",
+            desc: "インターネット上の多くの潜在顧客に、ブランド、製品、サービスを宣伝します。",
+          },
+        ],
+        labels: {
+          heroTitle: "ウェブデザイン",
+          heroTitleSub: "サービス",
+          heroDesc1:
+            "ビジネスがブランドを構築し、顧客を引き付けるための重要なツール。",
+          heroDesc2:
+            "特に広告において、ウェブサイトは訪問者が実際の顧客に転換する場所です。",
+          heroBtn: "無料相談を受ける",
+          benefitsTitle:
+            "プロフェッショナルでモダンなウェブサイトを所有するメリット",
+          packagesTitle: "ウェブサイトデザインサービス",
+          packagesDesc:
+            "ニーズや予算に合わせて、柔軟で多様なサービスパッケージを提供します。",
+          customBanner: "カスタムウェブサイトデザイン",
+          portfolioTitle: "クライアントのために特別に設計されたウェブサイト",
+          finalQuoteBtn: "カスタムデザインのコンサルティングを受ける",
+        },
+      },
     },
     footer: {
       tagline:
@@ -836,25 +1189,29 @@ export const translations = {
       ],
     },
     process: {
-      title: "デリバリー",
-      highlight: "マトリックス",
+      title: "設計・開発",
+      highlight: "プロセス",
       subtitle: "世界クラスのデジタル製品を構築するための体系的なアプローチ。",
       steps: [
         {
-          title: "発見 & ブループリント",
-          text: "デジタルエコシステムのすべてのタッチポイントをマッピングする深いアーキテクチャ分析と戦略的計画。",
+          title: "相談・調査",
+          text: "顧客との直接の調査と協議を行い、プロジェクトに不可欠な要素を把握します。",
         },
         {
-          title: "UI/UXエンジニアリング",
-          text: "最大のユーザー保持を目指した、高コンバージョンの受賞歴あるインターフェースを構築。",
+          title: "計画・スケッチ",
+          text: "サイト構造、レイアウト、必要な機能のワイヤーフレームを構築し、必要事項を特定します。",
         },
         {
-          title: "フルスタック開発",
-          text: "現代的で将来性のある技術を活用した、堅牢でスケーラブルなコードベースを展開。",
+          title: "設計・開発",
+          text: "UX/UIデザイン、プログラミング、およびウェブサイト機能の開発を実施します。",
         },
         {
-          title: "テスト & ローンチ",
-          text: "完璧なゴーライブを保証する厳格なQAとシームレスな展開プロトコル。",
+          title: "テスト・検証",
+          text: "互換性、読み込み速度、機能を確保するため、異なるブラウザやデバイスでテストを行います。",
+        },
+        {
+          title: "引き渡し・ローンチ",
+          text: "ステップ4の完了後、顧客にサイトを引き渡し、プロジェクトを正式にローンチします。",
         },
       ],
     },
@@ -1036,10 +1393,107 @@ export const translations = {
   zh: {
     nav: {
       services: "服务",
-      portfolio: "案例",
-      company: "公司",
+      caseStudy: "案例研究",
+      pricing: "价格方案",
+      blog: "博客",
       contact: "联系",
       cta: "立即咨询",
+      services_groups: {
+        web: {
+          title: "网页设计",
+          items: ["企业网站", "电子商务网站", "落地页", "UI/UX设计"],
+        },
+        seo: {
+          title: "SEO",
+          items: ["全站SEO", "关键字SEO", "网站审计"],
+        },
+        ads: {
+          title: "广告投放",
+          items: ["Facebook 广告", "Google 广告", "TikTok 广告"],
+        },
+        advanced: {
+          title: "营销与AI",
+          items: ["自动化营销", "AI内容创作", "聊天机器人"],
+        },
+      },
+      caseStudy_items: ["网页项目", "SEO成果", "广告系列"],
+      pricing_items: ["网页设计", "SEO", "广告投放"],
+      blog_items: ["网页知识", "SEO知识", "数字营销", "案例研究", "AI与自动化"],
+    },
+    webDesignDetail: {
+      "corporate-website": {
+        title: "企业/商务网站",
+        tagline: "网站设计服务",
+        description:
+          "旨在帮助企业建立品牌并吸引客户的针对性平台。特别是对于广告，网站是访客转化为真实客户的地方。",
+        features: [
+          "易于管理",
+          "成本优化",
+          "收入增长",
+          "建立信任",
+          "客户实用工具",
+          "有效营销",
+        ],
+      },
+      "landing-page": {
+        title: "落地页",
+        tagline: "广告系列的优化落地页",
+        description:
+          "专门为关注单一目标而设计的独立网站，旨在提高将访客转化为客户或潜在客户的能力。",
+      },
+      "e-commerce-website": {
+        title: "电子商务网站",
+        tagline: "为客户提供便捷的购物体验",
+        description: "帮助他们轻松找到、选择并支付他们想要购买的产品。",
+      },
+      common: {
+        stats: [
+          { label: "广告系列的优化落地页", value: "500+" },
+          { label: "客户平均转化率", value: "+34%" },
+          { label: "数字营销经验年数", value: "5+" },
+          { label: "成功交付的项目数", value: "800+" },
+        ],
+        benefits: [
+          {
+            title: "易于管理",
+            desc: "集成现代工具，帮助轻松跟踪订单和商业运营。",
+          },
+          {
+            title: "成本优化",
+            desc: "在有效连接客户的同时，节省营销、业务和管理成本。",
+          },
+          {
+            title: "收入增长",
+            desc: "24/7 在线销售，无需等待手动结账即可轻松在线支付。",
+          },
+          {
+            title: "建立信任",
+            desc: "通过公司网站确认您业务的专业性和声望。",
+          },
+          {
+            title: "客户实用工具",
+            desc: "集成的支持渠道帮助企业以最简单的方式为用户提供咨询。",
+          },
+          {
+            title: "有效营销",
+            desc: "向互联网上的许多潜在客户推广您的品牌、产品和服务。",
+          },
+        ],
+        labels: {
+          heroTitle: "网页设计",
+          heroTitleSub: "服务",
+          heroDesc1: "企业建立品牌和吸引客户的重要工具。",
+          heroDesc2: "特别是对于广告，网站是访客转化为真实客户的地方。",
+          heroBtn: "获取免费建议",
+          benefitsTitle: "拥有专业现代网站的益处",
+          packagesTitle: "网站设计服务",
+          packagesDesc:
+            "我们提供灵活多样的服务套餐，以满足您的所有需求和预算。",
+          customBanner: "自定义网站设计",
+          portfolioTitle: "专为我们客户设计的网站",
+          finalQuoteBtn: "获取自定义设计咨询",
+        },
+      },
     },
     footer: {
       tagline:
@@ -1158,25 +1612,29 @@ export const translations = {
       tags: ["闪电性能", "默认安全", "零停机部署", "Git工作流", "多栈支持"],
     },
     process: {
-      title: "交付",
-      highlight: "矩阵",
+      title: "设计与开发",
+      highlight: "流程",
       subtitle: "我们打造世界级数字产品的系统化方法。",
       steps: [
         {
-          title: "探索与蓝图",
-          text: "深度架构分析和战略规划，映射您数字生态系统的每个接触点。",
+          title: "咨询与调研",
+          text: "与客户进行直接调研和交流，把握项目的核心要素。",
         },
         {
-          title: "UI/UX工程",
-          text: "打造高转化率、屡获殊荣的界面，专为最大化用户留存率而设计。",
+          title: "规划与草图",
+          text: "构建网站结构、页面布局和功能需求的草图（线框图）；确定必要元素。",
         },
         {
-          title: "全栈开发",
-          text: "利用现代、面向未来的技术部署强大、可扩展的代码库。",
+          title: "设计实施",
+          text: "进行UX/UI设计、编程以及网站功能的开发。",
         },
         {
-          title: "测试与发布",
-          text: "严格的质量保证和无缝部署协议，确保完美上线。",
+          title: "测试与验证",
+          text: "在不同浏览器和设备上测试网站，以确保兼容性、加载速度和功能完整。",
+        },
+        {
+          title: "交付与上线",
+          text: "完成第4步后向客户交付网站并正式启动项目。",
         },
       ],
     },
