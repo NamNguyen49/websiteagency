@@ -259,7 +259,7 @@ const Header = () => {
             </button>
 
             {isLangOpen && (
-              <div className={`${styles.langDropdown} glass-morphism`}>
+              <div className={`${styles.langDropdown} `}>
                 {LANGUAGES.map((lang) => (
                   <button
                     key={lang.code}

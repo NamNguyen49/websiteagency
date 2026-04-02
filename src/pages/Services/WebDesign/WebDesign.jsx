@@ -12,6 +12,7 @@ import {
   ArrowRight,
   CheckCircle2,
   ChevronDown,
+  Check,
 } from "lucide-react";
 import styles from "./WebDesign.module.css";
 
@@ -20,6 +21,46 @@ const VISUAL_META = {
   "e-commerce-website": { icon: <Smartphone size={48} />, color: "#818cf8" },
   "landing-page": { icon: <Layout size={48} />, color: "#fbbf24" },
   "uiux-design": { icon: <PenTool size={48} />, color: "#f472b6" },
+};
+
+const formatFeature = (text) => {
+  const keywords = [
+    ".com",
+    "SEO",
+    "SSL",
+    "1",
+    "2",
+    "3",
+    "5",
+    "10",
+    "3GB",
+    "5GB",
+    "7GB",
+  ];
+
+  // Sort keywords by length descending to match "10" before "1"
+  const sortedKeywords = [...keywords].sort((a, b) => b.length - a.length);
+
+  // Join keywords with | and escape dots for regex
+  const regex = new RegExp(
+    `(${sortedKeywords.map((kw) => kw.replace(".", "\\.")).join("|")})`,
+    "gi",
+  );
+  const parts = text.split(regex);
+
+  return parts.map((part, i) => {
+    const isKeyword = keywords.some(
+      (kw) => part.toLowerCase() === kw.toLowerCase(),
+    );
+    if (isKeyword) {
+      return (
+        <strong key={i} className={styles.pkgKeyword}>
+          {part}
+        </strong>
+      );
+    }
+    return part;
+  });
 };
 
 const WebDesign = () => {
@@ -115,40 +156,6 @@ const WebDesign = () => {
                 <p>{benefit.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Packages */}
-      <section className={styles.packagesSection}>
-        <div className="container">
-          <div className={styles.adsSectionHeader}>
-            <h2>
-              {language === "vi" ? "Dịch Vụ Thiết Kế" : "Service Design"}{" "}
-              <span className={styles.highlightRed}>Website</span>
-            </h2>
-            <p>{t.webDesignDetail.common.labels.packagesDesc}</p>
-          </div>
-
-          <div className={styles.adsPackagesGrid}>
-            {["corporate-website", "landing-page", "e-commerce-website"].map(
-              (id) => {
-                const item = t.webDesignDetail[id];
-                return (
-                  <div key={id} className={styles.adsPackageCard}>
-                    <div className={styles.adsCardIcon}>
-                      {VISUAL_META[id]?.icon}
-                    </div>
-                    <h3>{item?.title}</h3>
-                    <p>{item?.description}</p>
-                    <button className={styles.viewDetailBtn}>
-                      {language === "vi" ? "Xem chi tiết" : "View Details"}{" "}
-                      <ArrowRight size={18} />
-                    </button>
-                  </div>
-                );
-              },
-            )}
           </div>
         </div>
       </section>
@@ -289,6 +296,190 @@ const WebDesign = () => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Pricing Section - Updated to match User Design */}
+      <section className={styles.packagesSection}>
+        <div className={styles.pricingHeaderArea}>
+          <div className="container">
+            <h2 className={styles.pricingMainTitle}>
+              {language === "vi" && "Bảng Giá Dịch Vụ"}
+              {language === "en" && "Service Price List"}
+              {language === "ja" && "サービス価格表"}
+              {language === "zh" && "服务价格表"}
+            </h2>
+            <h3 className={styles.pricingSubTitle}>
+              {language === "vi" && (
+                <>
+                  Thiết Kế{" "}
+                  <span className={styles.highlightRed}>
+                    Website tại HNT Solution
+                  </span>
+                </>
+              )}
+              {language === "en" && (
+                <>
+                  <span className={styles.highlightRed}>
+                    HNT Solution Website
+                  </span>{" "}
+                  Design
+                </>
+              )}
+              {language === "ja" && (
+                <>
+                  <span className={styles.highlightRed}>
+                    HNT Solution ウェブサイト
+                  </span>{" "}
+                  設計
+                </>
+              )}
+              {language === "zh" && (
+                <>
+                  <span className={styles.highlightRed}>HNT Solution 网页</span>{" "}
+                  设计
+                </>
+              )}
+            </h3>
+          </div>
+        </div>
+
+        <div className={styles.pricingCardsArea}>
+          <div className={`container ${styles.adsPackagesGrid}`}>
+            {(t.webDesignDetail.common.packages || []).map((pkg, i) => (
+              <div key={i} className={styles.pkgCard}>
+                <div className={styles.pkgBadgeWrapper}>
+                  <span className={styles.pkgBadge}>{pkg.name}</span>
+                </div>
+                <div className={styles.pkgPrice}>{pkg.price}</div>
+                <p className={styles.pkgDesc}>{pkg.desc}</p>
+
+                <ul className={styles.pkgFeatures}>
+                  {pkg.features.map((feat, fIdx) => (
+                    <li key={fIdx}>
+                      <span className={styles.pkgDot}>•</span>
+                      <span>{formatFeature(feat)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className={styles.testimonialsSection}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>
+            {t.webDesignDetail.common.labels.testimonialsTitle}
+          </h2>
+          <div className={styles.testimonialsGrid}>
+            {(t.webDesignDetail.common.testimonials || []).map((item, idx) => (
+              <div key={idx} className={styles.testimonialCard}>
+                <div className={styles.testimonialRating}>
+                  {[...Array(item.rating)].map((_, i) => (
+                    <span key={i} className={styles.star}>
+                      ★
+                    </span>
+                  ))}
+                </div>
+                <p className={styles.testimonialContent}>"{item.content}"</p>
+                <div className={styles.testimonialAuthor}>
+                  <img
+                    src={item.avatar}
+                    alt={item.name}
+                    className={styles.authorAvatar}
+                  />
+                  <div className={styles.authorInfo}>
+                    <h4 className={styles.authorName}>{item.name}</h4>
+                    <p className={styles.authorRole}>{item.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className={styles.faqSection}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>
+            {t.webDesignDetail.common.labels.faqTitle}
+          </h2>
+          <div className={styles.faqList}>
+            {(t.webDesignDetail.common.faq || []).map((item, idx) => (
+              <details key={idx} className={styles.faqItem}>
+                <summary className={styles.faqQuestion}>
+                  {item.question}
+                  <span className={styles.faqIcon}>+</span>
+                </summary>
+                <div className={styles.faqAnswer}>
+                  <p>{item.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Contact Section */}
+      <section className={styles.serviceContactSection}>
+        <div className="container">
+          <div className={styles.contactFlex}>
+            <div className={styles.contactTextSide}>
+              <h2 className={styles.contactTitle}>
+                {t.webDesignDetail.common.labels.contactTitle}
+              </h2>
+              <p className={styles.contactSubtitle}>
+                {t.webDesignDetail.common.labels.contactSubtitle}
+              </p>
+            </div>
+
+            <div className={styles.contactFormSide}>
+              <form className={styles.serviceForm}>
+                <div className={styles.formRow}>
+                  <input
+                    type="text"
+                    placeholder={t.webDesignDetail.common.labels.formName}
+                    className={styles.glassInput}
+                  />
+                  <input
+                    type="text"
+                    placeholder={t.webDesignDetail.common.labels.formPhone}
+                    className={styles.glassInput}
+                  />
+                  <input
+                    type="email"
+                    placeholder={t.webDesignDetail.common.labels.formEmail}
+                    className={styles.glassInput}
+                  />
+                </div>
+                <textarea
+                  placeholder={t.webDesignDetail.common.labels.formMessage}
+                  className={styles.glassTextarea}
+                ></textarea>
+
+                <div className={styles.formBottom}>
+                  <div className={styles.captchaPlaceholder}>
+                    <div className={styles.captchaBox}></div>
+                    <span>I'm not a robot</span>
+                    <div className={styles.captchaLogo}>
+                      <img
+                        src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
+                        alt="reCAPTCHA"
+                      />
+                      <p>reCAPTCHA</p>
+                      <span>Privacy - Terms</span>
+                    </div>
+                  </div>
+                  <button type="submit" className={styles.formSubmitBtn}>
+                    {t.webDesignDetail.common.labels.formBtn}
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
