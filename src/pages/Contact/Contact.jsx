@@ -50,7 +50,7 @@ const Contact = () => {
         import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_laraj8c",
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_geaqz0u",
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8D6-WaoplxTodXOpl9hfK",
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "WXnj6WhHjtm1mQRLF",
       );
       setStatus("success");
       formRef.current.reset();
