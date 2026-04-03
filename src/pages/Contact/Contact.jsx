@@ -36,11 +36,10 @@ const Contact = () => {
         <section className={styles.heroSection}>
           <div className="container">
             <h1 className={styles.title}>
-              {t.contact.title} <span className="gradient-text">{t.contact.highlight}</span>
+              {t.contact.title}{" "}
+              <span className="gradient-text">{t.contact.highlight}</span>
             </h1>
-            <p className={styles.subtitle}>
-              {t.contact.subtitle}
-            </p>
+            <p className={styles.subtitle}>{t.contact.subtitle}</p>
           </div>
         </section>
 
@@ -92,9 +91,7 @@ const Contact = () => {
               <div className={`${styles.statusCard} glass-morphism`}>
                 <MessageCircle size={32} className={styles.statusIcon} />
                 <h3>{t.contact.consult.title}</h3>
-                <p>
-                  {t.contact.consult.text}
-                </p>
+                <p>{t.contact.consult.text}</p>
                 <button className="btn-primary">{t.contact.consult.btn}</button>
               </div>
             </div>
@@ -105,11 +102,19 @@ const Contact = () => {
                 <div className={styles.formRow}>
                   <div className={styles.formGroup}>
                     <label>{t.contact.form.name}</label>
-                    <input type="text" placeholder={t.contact.form.placeholderName} required />
+                    <input
+                      type="text"
+                      placeholder={t.contact.form.placeholderName}
+                      required
+                    />
                   </div>
                   <div className={styles.formGroup}>
                     <label>{t.contact.form.email}</label>
-                    <input type="email" placeholder={t.contact.form.placeholderEmail} required />
+                    <input
+                      type="email"
+                      placeholder={t.contact.form.placeholderEmail}
+                      required
+                    />
                   </div>
                 </div>
                 <div className={styles.formGroup}>
@@ -132,7 +137,7 @@ const Contact = () => {
                 </div>
                 <div className={styles.recaptchaContainer}>
                   <ReCAPTCHA
-                    sitekey="6LddGqQsAAAAAFBmT6kpclbGVNjsr6ohDOUeYTzx"
+                    sitekey="6LeCHKQsAAAAABBtITNVPh-xLl9NEs0YF2z-ZucS"
                     theme={theme === "dark" ? "dark" : "light"}
                   />
                 </div>
