@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { useTheme } from "../../contexts/ThemeContext";
 import Background3D from "../../components/common/Background3D/Background3D";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
@@ -12,6 +13,9 @@ const Contact = () => {
   const { theme } = useTheme();
   const formRef = useRef(null);
   const infoRef = useRef(null);
+  const recaptchaRef = useRef(null);
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState(null); // 'success' | 'error'
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,6 +32,36 @@ const Contact = () => {
       "-=0.8",
     );
   }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const token = recaptchaRef.current.getValue();
+
+    if (!token) {
+      alert("Please complete the reCAPTCHA");
+      return;
+    }
+
+    setIsSending(true);
+    setStatus(null);
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_laraj8c",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_geaqz0u",
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8D6-WaoplxTodXOpl9hfK",
+      );
+      setStatus("success");
+      formRef.current.reset();
+      recaptchaRef.current.reset();
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setStatus("error");
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   return (
     <>
@@ -96,14 +130,19 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className={`${styles.formCol} glass-morphism`} ref={formRef}>
+            <div className={`${styles.formCol} glass-morphism`}>
               <h2 className={styles.cardTitle}>{t.contact.form.title}</h2>
-              <form className={styles.form}>
+              <form
+                className={styles.form}
+                ref={formRef}
+                onSubmit={handleSubmit}
+              >
                 <div className={styles.formRow}>
                   <div className={styles.formGroup}>
                     <label>{t.contact.form.name}</label>
                     <input
                       type="text"
+                      name="user_name"
                       placeholder={t.contact.form.placeholderName}
                       required
                     />
@@ -112,6 +151,7 @@ const Contact = () => {
                     <label>{t.contact.form.email}</label>
                     <input
                       type="email"
+                      name="user_email"
                       placeholder={t.contact.form.placeholderEmail}
                       required
                     />
@@ -131,21 +171,33 @@ const Contact = () => {
                   <label>{t.contact.form.message}</label>
                   <textarea
                     rows="6"
+                    name="message"
                     placeholder={t.contact.form.placeholderMsg}
                     required
                   ></textarea>
                 </div>
                 <div className={styles.recaptchaContainer}>
                   <ReCAPTCHA
+                    ref={recaptchaRef}
                     sitekey="6LeCHKQsAAAAABBtITNVPh-xLl9NEs0YF2z-ZucS"
                     theme={theme === "dark" ? "dark" : "light"}
                   />
                 </div>
+                {status === "success" && (
+                  <p className={styles.successMsg}>Email sent successfully!</p>
+                )}
+                {status === "error" && (
+                  <p className={styles.errorMsg}>
+                    Failed to send email. Try again.
+                  </p>
+                )}
                 <button
                   type="submit"
                   className={`btn-primary ${styles.submitBtn}`}
+                  disabled={isSending}
                 >
-                  {t.contact.form.btn} <Send size={20} />
+                  {isSending ? "Sending..." : t.contact.form.btn}{" "}
+                  {!isSending && <Send size={20} />}
                 </button>
               </form>
             </div>

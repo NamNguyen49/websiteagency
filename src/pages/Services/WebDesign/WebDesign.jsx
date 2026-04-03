@@ -16,6 +16,7 @@ import {
   Check,
 } from "lucide-react";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
 import styles from "./WebDesign.module.css";
 
 const VISUAL_META = {
@@ -76,6 +77,10 @@ const WebDesign = () => {
   const [carouselWidth, setCarouselWidth] = useState(0);
   const carouselRef = useRef(null);
   const trackRef = useRef(null);
+  const formRef = useRef(null);
+  const recaptchaRef = useRef(null);
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState(null); // 'success' | 'error'
 
   useEffect(() => {
     if (trackRef.current && carouselRef.current) {
@@ -104,6 +109,36 @@ const WebDesign = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [subId]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const token = recaptchaRef.current.getValue();
+
+    if (!token) {
+      alert("Please complete the reCAPTCHA");
+      return;
+    }
+
+    setIsSending(true);
+    setStatus(null);
+
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_laraj8c",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_geaqz0u",
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "8D6-WaoplxTodXOpl9hfK",
+      );
+      setStatus("success");
+      formRef.current.reset();
+      recaptchaRef.current.reset();
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setStatus("error");
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -477,39 +512,68 @@ const WebDesign = () => {
             </div>
 
             <div className={styles.contactFormSide}>
-              <form className={styles.serviceForm}>
+              <form
+                className={styles.serviceForm}
+                ref={formRef}
+                onSubmit={handleSubmit}
+              >
                 <div className={styles.formRow}>
                   <input
                     type="text"
+                    name="user_name"
                     placeholder={t.webDesignDetail.common.labels.formName}
                     className={styles.glassInput}
+                    required
                   />
                   <input
                     type="text"
+                    name="user_phone"
                     placeholder={t.webDesignDetail.common.labels.formPhone}
                     className={styles.glassInput}
+                    required
                   />
                   <input
                     type="email"
+                    name="user_email"
                     placeholder={t.webDesignDetail.common.labels.formEmail}
                     className={styles.glassInput}
+                    required
                   />
                 </div>
                 <textarea
+                  name="message"
                   placeholder={t.webDesignDetail.common.labels.formMessage}
                   className={styles.glassTextarea}
+                  required
                 ></textarea>
 
                 <div className={styles.formBottom}>
                   <div className={styles.recaptchaContainer}>
                     <ReCAPTCHA
+                      ref={recaptchaRef}
                       sitekey="6LeCHKQsAAAAABBtITNVPh-xLl9NEs0YF2z-ZucS"
                       theme={theme === "dark" ? "dark" : "light"}
                       onChange={(val) => console.log("Captcha value:", val)}
                     />
                   </div>
-                  <button type="submit" className={styles.formSubmitBtn}>
-                    {t.webDesignDetail.common.labels.formBtn}
+                  {status === "success" && (
+                    <p className={styles.successMsg}>
+                      Email sent successfully!
+                    </p>
+                  )}
+                  {status === "error" && (
+                    <p className={styles.errorMsg}>
+                      Failed to send email. Try again.
+                    </p>
+                  )}
+                  <button
+                    type="submit"
+                    className={styles.formSubmitBtn}
+                    disabled={isSending}
+                  >
+                    {isSending
+                      ? "Sending..."
+                      : t.webDesignDetail.common.labels.formBtn}
                   </button>
                 </div>
               </form>
