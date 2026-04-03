@@ -132,7 +132,7 @@ const Contact = () => {
                 </div>
                 <div className={styles.recaptchaContainer}>
                   <ReCAPTCHA
-                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    sitekey="6LddGqQsAAAAAFBmT6kpclbGVNjsr6ohDOUeYTzx"
                     theme={theme === "dark" ? "dark" : "light"}
                   />
                 </div>
