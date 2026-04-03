@@ -2,11 +2,14 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Mail, Phone, MapPin, Send, MessageCircle, Clock } from "lucide-react";
 import { useLanguage } from "../../contexts/LanguageContext";
+import { useTheme } from "../../contexts/ThemeContext";
 import Background3D from "../../components/common/Background3D/Background3D";
+import ReCAPTCHA from "react-google-recaptcha";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
   const formRef = useRef(null);
   const infoRef = useRef(null);
 
@@ -126,6 +129,12 @@ const Contact = () => {
                     placeholder={t.contact.form.placeholderMsg}
                     required
                   ></textarea>
+                </div>
+                <div className={styles.recaptchaContainer}>
+                  <ReCAPTCHA
+                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    theme={theme === "dark" ? "dark" : "light"}
+                  />
                 </div>
                 <button
                   type="submit"

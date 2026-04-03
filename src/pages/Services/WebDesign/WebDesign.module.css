@@ -922,10 +922,21 @@
   letter-spacing: -0.02em;
 }
 
-.testimonialsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+.testimonialsCarouselContainer {
+  width: 100%;
+  overflow: hidden;
+  cursor: grab;
+  padding: 20px 0 60px;
+}
+
+.testimonialsCarouselContainer:active {
+  cursor: grabbing;
+}
+
+.testimonialsTrack {
+  display: flex;
   gap: 30px;
+  width: max-content;
 }
 
 .testimonialCard {
@@ -933,12 +944,15 @@
   border: 1px solid rgba(0, 243, 255, 0.1);
   padding: 40px;
   border-radius: 30px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: relative;
   overflow: hidden;
+  width: 400px;
+  flex-shrink: 0;
+  user-select: none;
 }
 
 .testimonialCard:hover {
@@ -1172,71 +1186,9 @@
   margin-top: 10px;
 }
 
-.captchaPlaceholder {
-  background: #f9f9f9;
-  border: 1px solid #d3d3d3;
-  padding: 10px 15px;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 300px;
-  height: 74px;
-}
-
-:global([data-theme="dark"]) .captchaPlaceholder {
-  background: #252525;
-  border-color: #333;
-}
-
-.captchaBox {
-  width: 28px;
-  height: 28px;
-  border: 2px solid #c1c1c1;
-  background: #ffffff;
-  border-radius: 2px;
-}
-
-:global([data-theme="dark"]) .captchaBox {
-  background: #111;
-  border-color: #444;
-}
-
-.captchaPlaceholder span {
-  font-size: 14px;
-  color: #000000;
-  flex-grow: 1;
-}
-
-:global([data-theme="dark"]) .captchaPlaceholder span {
-  color: #ffffff;
-}
-
-.captchaLogo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.captchaLogo img {
-  width: 32px;
-}
-
-.captchaLogo p {
-  font-size: 8px;
-  margin: 0;
-  color: #555;
-  font-weight: 600;
-}
-
-:global([data-theme="dark"]) .captchaLogo p,
-:global([data-theme="dark"]) .captchaLogo span {
-  color: #999;
-}
-
-.captchaLogo span {
-  font-size: 7px;
-  color: #555;
+.recaptchaContainer {
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .formSubmitBtn {
@@ -1361,6 +1313,7 @@
 
   .testimonialCard {
     padding: 30px;
+    width: 320px;
   }
 
   .faqQuestion {
@@ -1379,9 +1332,12 @@
     align-items: center;
     gap: 20px;
   }
-  .captchaPlaceholder {
+  .recaptchaContainer {
     width: 100%;
-    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    transform: scale(0.85);
+    transform-origin: center;
   }
 }
 
@@ -1395,5 +1351,8 @@
   }
   .sectionTitle {
     font-size: 1.8rem;
+  }
+  .testimonialCard {
+    width: 280px;
   }
 }

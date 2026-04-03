@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { useLanguage } from "../../../contexts/LanguageContext";
 import { useTheme } from "../../../contexts/ThemeContext";
@@ -14,6 +15,7 @@ import {
   ChevronDown,
   Check,
 } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
 import styles from "./WebDesign.module.css";
 
 const VISUAL_META = {
@@ -71,6 +73,28 @@ const WebDesign = () => {
   // Initialize the ref to fix the ReferenceError
   const ref = useRef(null);
   const [openStep, setOpenStep] = useState(0);
+  const [carouselWidth, setCarouselWidth] = useState(0);
+  const carouselRef = useRef(null);
+  const trackRef = useRef(null);
+
+  useEffect(() => {
+    if (trackRef.current && carouselRef.current) {
+      setCarouselWidth(
+        trackRef.current.scrollWidth - carouselRef.current.offsetWidth,
+      );
+    }
+
+    // Add resize listener
+    const handleResize = () => {
+      if (trackRef.current && carouselRef.current) {
+        setCarouselWidth(
+          trackRef.current.scrollWidth - carouselRef.current.offsetWidth,
+        );
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [t.webDesignDetail.common.testimonials]);
 
   // Guard against missing key
   const effectiveSubId = VISUAL_META[subId] ? subId : "corporate-website";
@@ -369,36 +393,51 @@ const WebDesign = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
       <section className={styles.testimonialsSection}>
         <div className="container">
           <h2 className={styles.sectionTitle}>
             {t.webDesignDetail.common.labels.testimonialsTitle}
           </h2>
-          <div className={styles.testimonialsGrid}>
-            {(t.webDesignDetail.common.testimonials || []).map((item, idx) => (
-              <div key={idx} className={styles.testimonialCard}>
-                <div className={styles.testimonialRating}>
-                  {[...Array(item.rating)].map((_, i) => (
-                    <span key={i} className={styles.star}>
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <p className={styles.testimonialContent}>"{item.content}"</p>
-                <div className={styles.testimonialAuthor}>
-                  <img
-                    src={item.avatar}
-                    alt={item.name}
-                    className={styles.authorAvatar}
-                  />
-                  <div className={styles.authorInfo}>
-                    <h4 className={styles.authorName}>{item.name}</h4>
-                    <p className={styles.authorRole}>{item.role}</p>
+
+          <div
+            className={styles.testimonialsCarouselContainer}
+            ref={carouselRef}
+          >
+            <motion.div
+              ref={trackRef}
+              className={styles.testimonialsTrack}
+              drag="x"
+              dragConstraints={{ right: 0, left: -carouselWidth }}
+              whileTap={{ cursor: "grabbing" }}
+            >
+              {(t.webDesignDetail.common.testimonials || []).map(
+                (item, idx) => (
+                  <div key={idx} className={styles.testimonialCard}>
+                    <div className={styles.testimonialRating}>
+                      {[...Array(item.rating)].map((_, i) => (
+                        <span key={i} className={styles.star}>
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <p className={styles.testimonialContent}>
+                      "{item.content}"
+                    </p>
+                    <div className={styles.testimonialAuthor}>
+                      <img
+                        src={item.avatar}
+                        alt={item.name}
+                        className={styles.authorAvatar}
+                      />
+                      <div className={styles.authorInfo}>
+                        <h4 className={styles.authorName}>{item.name}</h4>
+                        <p className={styles.authorRole}>{item.role}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                ),
+              )}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -462,17 +501,12 @@ const WebDesign = () => {
                 ></textarea>
 
                 <div className={styles.formBottom}>
-                  <div className={styles.captchaPlaceholder}>
-                    <div className={styles.captchaBox}></div>
-                    <span>I'm not a robot</span>
-                    <div className={styles.captchaLogo}>
-                      <img
-                        src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
-                        alt="reCAPTCHA"
-                      />
-                      <p>reCAPTCHA</p>
-                      <span>Privacy - Terms</span>
-                    </div>
+                  <div className={styles.recaptchaContainer}>
+                    <ReCAPTCHA
+                      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                      theme={theme === "dark" ? "dark" : "light"}
+                      onChange={(val) => console.log("Captcha value:", val)}
+                    />
                   </div>
                   <button type="submit" className={styles.formSubmitBtn}>
                     {t.webDesignDetail.common.labels.formBtn}
