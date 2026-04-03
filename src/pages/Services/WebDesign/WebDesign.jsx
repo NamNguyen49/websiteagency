@@ -125,7 +125,7 @@ const WebDesign = () => {
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_laraj8c",
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_geaqz0u",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_lto9tjp",
         formRef.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "WXnj6WhHjtm1mQRLF",
       );
