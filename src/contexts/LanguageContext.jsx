@@ -442,8 +442,10 @@ export const translations = {
         labels: {
           heroTitle: "WEB DESIGN",
           heroTitleSub: "SERVICES",
-          heroDesc1: "An important tool for businesses to build their brand and attract customers.",
-          heroDesc2: "Especially for ads, a website is where visitors convert into real customers.",
+          heroDesc1:
+            "An important tool for businesses to build their brand and attract customers.",
+          heroDesc2:
+            "Especially for ads, a website is where visitors convert into real customers.",
           heroBtn: "Get Free Advice",
           benefitsTitle: "Benefits of owning a Professional - Modern Website",
           pricingTitle: "Service Price List",
@@ -451,12 +453,14 @@ export const translations = {
           testimonialsTitle: "Customer Testimonials",
           faqTitle: "FAQ - Frequently Asked Questions",
           packagesTitle: "Website Design Services",
-          packagesDesc: "We provide flexible and diverse service packages to meet all your needs and budget",
+          packagesDesc:
+            "We provide flexible and diverse service packages to meet all your needs and budget",
           customBanner: "Custom Website Design",
           portfolioTitle: "Websites designed specifically for our clients",
           finalQuoteBtn: "Get Custom Design Consulting",
           contactTitle: "Contact Us",
-          contactSubtitle: "Share your business challenges, and let HNT Solution craft the perfect digital cure.",
+          contactSubtitle:
+            "Share your business challenges, and let HNT Solution craft the perfect digital cure.",
           formName: "Full Name",
           formPhone: "Phone Number",
           formEmail: "Email Address",
@@ -533,44 +537,52 @@ export const translations = {
             role: "Real Estate Marketing",
             avatar: "https://i.pravatar.cc/150?u=julian",
             rating: 5,
-            content: "We needed a website that could grow with our brand, and the team far exceeded expectations. From UX to admin features, everything is smooth and clean. Post-launch, bounce rate dropped 40%."
+            content:
+              "We needed a website that could grow with our brand, and the team far exceeded expectations. From UX to admin features, everything is smooth and clean. Post-launch, bounce rate dropped 40%.",
           },
           {
             name: "Sarah Jenkins",
             role: "Marketing Manager",
             avatar: "https://i.pravatar.cc/150?u=sarah",
             rating: 5,
-            content: "Working with this team was seamless. They understood our business goals and turned them into a modern, responsive site. Leads doubled just 2 weeks after launch."
+            content:
+              "Working with this team was seamless. They understood our business goals and turned them into a modern, responsive site. Leads doubled just 2 weeks after launch.",
           },
           {
             name: "David Wilson",
             role: "Tech Lead",
             avatar: "https://i.pravatar.cc/150?u=david",
             rating: 5,
-            content: "The most reliable tech partner we've had. Fast delivery, clean code, and great support."
-          }
+            content:
+              "The most reliable tech partner we've had. Fast delivery, clean code, and great support.",
+          },
         ],
         faq: [
           {
             question: "What is a website?",
-            answer: "A website is a collection of web pages acting as your business's online office."
+            answer:
+              "A website is a collection of web pages acting as your business's online office.",
           },
           {
             question: "Is the website SEO friendly?",
-            answer: "All HNT Solution websites are built with SEO best practices by default."
+            answer:
+              "All HNT Solution websites are built with SEO best practices by default.",
           },
           {
             question: "How much does it cost?",
-            answer: "Costs vary by features. We have packages fitting all budgets."
+            answer:
+              "Costs vary by features. We have packages fitting all budgets.",
           },
           {
             question: "How long does it take?",
-            answer: "Typically 7-15 days for standard sites, longer for complex projects."
+            answer:
+              "Typically 7-15 days for standard sites, longer for complex projects.",
           },
           {
             question: "What technology do you use?",
-            answer: "We use modern stacks like React, Next.js, or WordPress depending on project needs."
-          }
+            answer:
+              "We use modern stacks like React, Next.js, or WordPress depending on project needs.",
+          },
         ],
       },
     },
@@ -689,21 +701,27 @@ export const translations = {
         labels: {
           heroTitle: "DỊCH VỤ THIẾT KẾ",
           heroTitleSub: "WEBSITE",
-          heroDesc1: "Công cụ quan trọng giúp doanh nghiệp xây dựng thương hiệu và thu hút khách hàng.",
-          heroDesc2: "Đặc biệt đối với quảng cáo, website là nơi chuyển đổi khách truy cập thành khách hàng thực sự.",
+          heroDesc1:
+            "Công cụ quan trọng giúp doanh nghiệp xây dựng thương hiệu và thu hút khách hàng.",
+          heroDesc2:
+            "Đặc biệt đối với quảng cáo, website là nơi chuyển đổi khách truy cập thành khách hàng thực sự.",
           heroBtn: "Nhận tư vấn ngay",
-          benefitsTitle: "Lợi ích của việc sở hữu Website Chuyên Nghiệp - Hiện Đại",
+          benefitsTitle:
+            "Lợi ích của việc sở hữu Website Chuyên Nghiệp - Hiện Đại",
           pricingTitle: "Bảng Giá Dịch Vụ",
           pricingSubtitle: "Thiết Kế Website HNT Solution",
           testimonialsTitle: "Đánh Giá Từ Khách Hàng",
           faqTitle: "FAQ - Câu Hỏi Thường Gặp",
           packagesTitle: "Dịch Vụ Thiết Kế Website",
-          packagesDesc: "Chúng tôi cung cấp các gói dịch vụ linh hoạt và đa dạng để đáp ứng mọi nhu cầu và ngân sách của bạn",
+          packagesDesc:
+            "Chúng tôi cung cấp các gói dịch vụ linh hoạt và đa dạng để đáp ứng mọi nhu cầu và ngân sách của bạn",
           customBanner: "Thiết Kế Website Theo Yêu Cầu",
-          portfolioTitle: "Các website được thiết kế theo yêu cầu của khách hàng",
+          portfolioTitle:
+            "Các website được thiết kế theo yêu cầu của khách hàng",
           finalQuoteBtn: "Nhận Tư vấn thiết kế theo yêu cầu",
           contactTitle: "Liên hệ với Chúng tôi",
-          contactSubtitle: "Hãy share những 'nỗi đau' của bạn để HNT Solution 'chữa lành' chúng.",
+          contactSubtitle:
+            "Hãy share những 'nỗi đau' của bạn để HNT Solution 'chữa lành' chúng.",
           formName: "Họ và tên",
           formPhone: "Số điện thoại",
           formEmail: "Email",
@@ -780,44 +798,52 @@ export const translations = {
             role: "Marketing BĐS",
             avatar: "https://i.pravatar.cc/150?u=vinh",
             rating: 5,
-            content: "Chúng tôi cần một website có thể phát triển cùng thương hiệu, và đội ngũ đã làm vượt xa mong đợi. Từ thiết kế trải nghiệm người dùng đến chức năng quản trị, mọi thứ đều mượt mà và tinh gọn. Sau khi triển khai, tỷ lệ thoát trang giảm 40% và lượng tương tác của khách hàng tăng đáng kể."
+            content:
+              "Chúng tôi cần một website có thể phát triển cùng thương hiệu, và đội ngũ đã làm vượt xa mong đợi. Từ thiết kế trải nghiệm người dùng đến chức năng quản trị, mọi thứ đều mượt mà và tinh gọn. Sau khi triển khai, tỷ lệ thoát trang giảm 40% và lượng tương tác của khách hàng tăng đáng kể.",
           },
           {
             name: "Nguyễn Văn Luật",
             role: "Marketing BĐS",
             avatar: "https://i.pravatar.cc/150?u=luat",
             rating: 5,
-            content: "Làm việc với đội ngũ này rất trôi chảy. Họ thật sự hiểu mục tiêu kinh doanh và biến nó thành một website hiện đại, chuẩn responsive. Giao diện đẹp, dễ dùng và mang lại hiệu quả rõ rệt. Chỉ sau 2 tuần ra mắt, số lượng khách hàng gửi form liên hệ đã tăng gấp đôi, đồng thời mình nhận được rất nhiều lời khen từ đối tác."
+            content:
+              "Làm việc với đội ngũ này rất trôi chảy. Họ thật sự hiểu mục tiêu kinh doanh và biến nó thành một website hiện đại, chuẩn responsive. Giao diện đẹp, dễ dùng và mang lại hiệu quả rõ rệt. Chỉ sau 2 tuần ra mắt, số lượng khách hàng gửi form liên hệ đã tăng gấp đôi, đồng thời mình nhận được rất nhiều lời khen từ đối tác.",
           },
           {
             name: "Dương Công Thắng",
             role: "Marketing BĐS",
             avatar: "https://i.pravatar.cc/150?u=thang",
             rating: 5,
-            content: "Website được thiết kế cực kỳ hiện đại, tối ưu load rất nhanh. Đội ngũ hỗ trợ nhiệt tình, giải quyết mọi yêu cầu của tôi ngay lập tức. Đây là đối tác công nghệ đáng tin cậy nhất mà tôi từng hợp tác."
-          }
+            content:
+              "Website được thiết kế cực kỳ hiện đại, tối ưu load rất nhanh. Đội ngũ hỗ trợ nhiệt tình, giải quyết mọi yêu cầu của tôi ngay lập tức. Đây là đối tác công nghệ đáng tin cậy nhất mà tôi từng hợp tác.",
+          },
         ],
         faq: [
           {
             question: "Website là gì?",
-            answer: "Website là một tập hợp các trang web bao gồm văn bản, hình ảnh, video... nằm trên một tên miền, đóng vai trò như một văn phòng trực tuyến của doanh nghiệp."
+            answer:
+              "Website là một tập hợp các trang web bao gồm văn bản, hình ảnh, video... nằm trên một tên miền, đóng vai trò như một văn phòng trực tuyến của doanh nghiệp.",
           },
           {
             question: "Website có chuẩn SEO không?",
-            answer: "Tất cả website tại HNT Solution đều được thiết kế tối ưu cấu trúc chuẩn SEO, giúp công cụ tìm kiếm dễ dàng thu thập dữ liệu và xếp hạng cao."
+            answer:
+              "Tất cả website tại HNT Solution đều được thiết kế tối ưu cấu trúc chuẩn SEO, giúp công cụ tìm kiếm dễ dàng thu thập dữ liệu và xếp hạng cao.",
           },
           {
             question: "Chi phí làm website là bao nhiêu?",
-            answer: "Chi phí tùy thuộc vào tính năng và quy mô dự án. Chúng tôi có các gói từ cơ bản đến cao cấp phù hợp với mọi ngân sách doanh nghiệp."
+            answer:
+              "Chi phí tùy thuộc vào tính năng và quy mô dự án. Chúng tôi có các gói từ cơ bản đến cao cấp phù hợp với mọi ngân sách doanh nghiệp.",
           },
           {
             question: "Thời gian hoàn thành website mất bao lâu?",
-            answer: "Thông thường từ 7 - 15 ngày đối với landing page và website doanh nghiệp cơ bản, và lâu hơn đối với dự án phức tạp."
+            answer:
+              "Thông thường từ 7 - 15 ngày đối với landing page và website doanh nghiệp cơ bản, và lâu hơn đối với dự án phức tạp.",
           },
           {
             question: "Website dùng mã nguồn gì?",
-            answer: "Chúng tôi sử dụng các công nghệ hiện đại nhất như React, Next.js, Node.js hoặc WordPress tùy theo nhu cầu và tính chất của dự án."
-          }
+            answer:
+              "Chúng tôi sử dụng các công nghệ hiện đại nhất như React, Next.js, Node.js hoặc WordPress tùy theo nhu cầu và tính chất của dự án.",
+          },
         ],
       },
     },
@@ -1274,21 +1300,26 @@ export const translations = {
         labels: {
           heroTitle: "ウェブデザイン",
           heroTitleSub: "サービス",
-          heroDesc1: "ビジネスがブランドを構築し、顧客を引き付けるための重要なツール。",
-          heroDesc2: "特に広告において、ウェブサイトは訪問者が実際の顧客に転換する場所です。",
+          heroDesc1:
+            "ビジネスがブランドを構築し、顧客を引き付けるための重要なツール。",
+          heroDesc2:
+            "特に広告において、ウェブサイトは訪問者が実際の顧客に転換する場所です。",
           heroBtn: "無料相談を受ける",
-          benefitsTitle: "プロフェッショナルでモダンなウェブサイトを所有するメリット",
+          benefitsTitle:
+            "プロフェッショナルでモダンなウェブサイトを所有するメリット",
           pricingTitle: "サービス価格表",
           pricingSubtitle: "HNT Solution ウェブサイト設計",
           testimonialsTitle: "お客様の声",
           faqTitle: "よくある質問 (FAQ)",
           packagesTitle: "ウェブサイトデザインサービス",
-          packagesDesc: "ニーズや予算に合わせて、柔軟で多様なサービスパッケージを提供します。",
+          packagesDesc:
+            "ニーズや予算に合わせて、柔軟で多様なサービスパッケージを提供します。",
           customBanner: "カスタムウェブサイトデザイン",
           portfolioTitle: "クライアントのために特別に設計されたウェブサイト",
           finalQuoteBtn: "カスタムデザインのコンサルティングを受ける",
           contactTitle: "お問い合わせ",
-          contactSubtitle: "ビジネスの課題を共有してください。HNT Solution が最適なデジタルソリューションを作成します。",
+          contactSubtitle:
+            "ビジネスの課題を共有してください。HNT Solution が最適なデジタルソリューションを作成します。",
           formName: "氏名",
           formPhone: "電話番号",
           formEmail: "メールアドレス",
@@ -1365,44 +1396,52 @@ export const translations = {
             role: "不動産マーケティング",
             avatar: "https://i.pravatar.cc/150?u=sato",
             rating: 5,
-            content: "私たちのブランドと共に成長できるウェブサイトが必要でしたが、チームは期待をはるかに超えてくれました。UXから管理機能まで、すべてがスムーズでクリーンです。"
+            content:
+              "私たちのブランドと共に成長できるウェブサイトが必要でしたが、チームは期待をはるかに超えてくれました。UXから管理機能まで、すべてがスムーズでクリーンです。",
           },
           {
             name: "田中 美恵子",
             role: "マーケティングマネージャー",
             avatar: "https://i.pravatar.cc/150?u=tanaka",
             rating: 5,
-            content: "このチームとの仕事はシームレスでした。彼らは私たちのビジネス目標を理解し、それをモダンでレスポンシブなサイトに変えてくれました。ローンチからわずか2週間でリードが倍増しました。"
+            content:
+              "このチームとの仕事はシームレスでした。彼らは私たちのビジネス目標を理解し、それをモダンでレスポンシブなサイトに変えてくれました。ローンチからわずか2週間でリードが倍増しました。",
           },
           {
             name: "鈴木 一郎",
             role: "技術リーダー",
             avatar: "https://i.pravatar.cc/150?u=suzuki",
             rating: 5,
-            content: "これまでで最も信頼できるテックパートナーです。迅速な納品、クリーンなコード、そして素晴らしいサポート。"
-          }
+            content:
+              "これまでで最も信頼できるテックパートナーです。迅速な納品、クリーンなコード、そして素晴らしいサポート。",
+          },
         ],
         faq: [
           {
             question: "ウェブサイトとは何ですか？",
-            answer: "ウェブサイトは、ビジネスのオンラインオフィスとして機能するウェブページの集合体です。"
+            answer:
+              "ウェブサイトは、ビジネスのオンラインオフィスとして機能するウェブページの集合体です。",
           },
           {
             question: "ウェブサイトはSEOに対応していますか？",
-            answer: "HNT Solutionのすべてのウェブサイトは、デフォルトでSEOのベストプラクティスに基づいて構築されています。"
+            answer:
+              "HNT Solutionのすべてのウェブサイトは、デフォルトでSEOのベストプラクティスに基づいて構築されています。",
           },
           {
             question: "費用はどのくらいかかりますか？",
-            answer: "費用は機能によって異なります。あらゆる予算に合わせたパッケージをご用意しています。"
+            answer:
+              "費用は機能によって異なります。あらゆる予算に合わせたパッケージをご用意しています。",
           },
           {
             question: "完成までにどのくらいかかりますか？",
-            answer: "通常、標準的なサイトの場合は7〜15日、複雑なプロジェクトの場合はそれ以上かかります。"
+            answer:
+              "通常、標準的なサイトの場合は7〜15日、複雑なプロジェクトの場合はそれ以上かかります。",
           },
           {
             question: "どのような技術を使用していますか？",
-            answer: "プロジェクトのニーズに応じて、React、Next.js、WordPressなどのモダンなスタックを使用します。"
-          }
+            answer:
+              "プロジェクトのニーズに応じて、React、Next.js、WordPressなどのモダンなスタックを使用します。",
+          },
         ],
       },
     },
@@ -1839,12 +1878,14 @@ export const translations = {
           testimonialsTitle: "客户评价",
           faqTitle: "常见问题 (FAQ)",
           packagesTitle: "网站设计服务",
-          packagesDesc: "我们提供灵活多样的服务套餐，以满足您的所有需求和预算。",
+          packagesDesc:
+            "我们提供灵活多样的服务套餐，以满足您的所有需求和预算。",
           customBanner: "自定义网站设计",
           portfolioTitle: "专为我们客户设计的网站",
           finalQuoteBtn: "获取自定义设计咨询",
           contactTitle: "联系我们",
-          contactSubtitle: "分享您的业务挑战，让 HNT Solution 为您打造完美的数字解决方案。",
+          contactSubtitle:
+            "分享您的业务挑战，让 HNT Solution 为您打造完美的数字解决方案。",
           formName: "姓名",
           formPhone: "电话号码",
           formEmail: "电子邮件",
@@ -1921,44 +1962,48 @@ export const translations = {
             role: "房地产营销",
             avatar: "https://i.pravatar.cc/150?u=chen",
             rating: 5,
-            content: "我们需要一个能够随品牌共同成长的网站，而团队的表现远远超出了预期。从用户体验到管理功能，一切都非常流畅和简洁。"
+            content:
+              "我们需要一个能够随品牌共同成长的网站，而团队的表现远远超出了预期。从用户体验到管理功能，一切都非常流畅和简洁。",
           },
           {
             name: "林芳",
             role: "运营经理",
             avatar: "https://i.pravatar.cc/150?u=lin",
             rating: 5,
-            content: "与该团队的合作非常顺畅。他们了解我们的业务目标，并将其转化为一个现代化的响应式网站。上线仅两周后，潜在客户数量就翻了一番。"
+            content:
+              "与该团队的合作非常顺畅。他们了解我们的业务目标，并将其转化为一个现代化的响应式网站。上线仅两周后，潜在客户数量就翻了一番。",
           },
           {
             name: "王建国",
             role: "技术负责人",
             avatar: "https://i.pravatar.cc/150?u=wang",
             rating: 5,
-            content: "这是我们合作过的最可靠的技术合作伙伴。交付速度快，代码整洁，支持也很到位。"
-          }
+            content:
+              "这是我们合作过的最可靠的技术合作伙伴。交付速度快，代码整洁，支持也很到位。",
+          },
         ],
         faq: [
           {
             question: "什么是网站？",
-            answer: "网站是充当您业务在线办公室的网页集合。"
+            answer: "网站是充当您业务在线办公室的网页集合。",
           },
           {
             question: "网站是否符合 SEO 标准？",
-            answer: "所有 HNT Solution 的网站默认都根据 SEO 最佳实践构建。"
+            answer: "所有 HNT Solution 的网站默认都根据 SEO 最佳实践构建。",
           },
           {
             question: "费用是多少？",
-            answer: "费用取决于功能。我们提供适合各种预算的套餐。"
+            answer: "费用取决于功能。我们提供适合各种预算的套餐。",
           },
           {
             question: "完成需要多长时间？",
-            answer: "标准网站通常需要 7-15 天，复杂项目则需要更长时间。"
+            answer: "标准网站通常需要 7-15 天，复杂项目则需要更长时间。",
           },
           {
             question: "你们使用什么技术？",
-            answer: "根据项目需求，我们使用 React、Next.js 或 WordPress 等现代技术栈。"
-          }
+            answer:
+              "根据项目需求，我们使用 React、Next.js 或 WordPress 等现代技术栈。",
+          },
         ],
       },
     },
@@ -2268,10 +2313,21 @@ export const translations = {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState(() => {
+    return localStorage.getItem("language") || "vi";
+  });
+
+  const handleSetLanguage = (lang) => {
+    setLanguage(lang);
+    localStorage.setItem("language", lang);
+  };
+
   const t = translations[language];
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider
+      value={{ language, setLanguage: handleSetLanguage, t }}
+    >
       {children}
     </LanguageContext.Provider>
   );
