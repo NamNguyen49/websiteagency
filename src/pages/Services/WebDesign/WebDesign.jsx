@@ -186,8 +186,8 @@ const WebDesign = () => {
         </div>
       </section>
 
-      {/* Benefits Circle Section */}
-      <section className={styles.benefitsSection}>
+      {/* Benefits Circle Section - Desktop only */}
+      <section className={`${styles.benefitsSection} ${styles.desktopOnly}`}>
         <div className="container">
           <div className={styles.circleLayout}>
             {/* Center Hub with Nodes */}
@@ -213,6 +213,31 @@ const WebDesign = () => {
               >
                 <h4>{benefit.title}</h4>
                 <p>{benefit.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits List - Mobile only */}
+      <section
+        className={`${styles.benefitsSectionMobile} ${styles.mobileOnly}`}
+      >
+        <div className="container">
+          <div className={styles.mobileBenefitsHeader}>
+            <h3>{t.webDesignDetail.common.labels.benefitsTitle}</h3>
+            <div className={styles.accentLine}></div>
+          </div>
+          <div className={styles.benefitsListMobile}>
+            {t.webDesignDetail.common.benefits?.map((benefit, i) => (
+              <div key={i} className={styles.benefitCardMobile}>
+                <div className={styles.benefitIconMobile}>
+                  <CheckCircle2 size={24} />
+                </div>
+                <div className={styles.benefitContentMobile}>
+                  <h4>{benefit.title}</h4>
+                  <p>{benefit.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -558,12 +583,12 @@ const WebDesign = () => {
                   </div>
                   {status === "success" && (
                     <p className={styles.successMsg}>
-                      Email sent successfully!
+                      {t.webDesignDetail.common.labels.formSuccess}
                     </p>
                   )}
                   {status === "error" && (
                     <p className={styles.errorMsg}>
-                      Failed to send email. Try again.
+                      {t.webDesignDetail.common.labels.formError}
                     </p>
                   )}
                   <button
@@ -572,7 +597,7 @@ const WebDesign = () => {
                     disabled={isSending}
                   >
                     {isSending
-                      ? "Sending..."
+                      ? t.webDesignDetail.common.labels.formSending
                       : t.webDesignDetail.common.labels.formBtn}
                   </button>
                 </div>

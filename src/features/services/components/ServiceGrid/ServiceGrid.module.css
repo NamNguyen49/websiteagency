@@ -45,6 +45,8 @@
 .serviceIcon {
   margin-bottom: 32px;
   color: var(--accent-primary);
+  display: flex;
+  justify-content: center;
 }
 
 .serviceTitle {

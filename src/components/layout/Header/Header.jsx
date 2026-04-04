@@ -55,13 +55,10 @@ const Header = () => {
           title: t.nav.services_groups.web.title,
           icon: <Globe size={18} />,
           items: t.nav.services_groups.web.items,
-          slugs: [
-            "corporate-website",
-            "e-commerce-website",
-            "landing-page",
-            "ui-ux-design",
-          ],
+          slugs: ["corporate-website", "landing-page"],
+
         },
+
         {
           id: "seo",
           title: t.nav.services_groups.seo.title,

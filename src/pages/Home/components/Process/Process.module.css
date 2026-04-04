@@ -10,7 +10,7 @@
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: var(--h1-size);
   letter-spacing: -2px;
   margin-bottom: 16px;
 }
@@ -149,23 +149,24 @@
 }
 
 @media (max-width: 768px) {
-  .processContainer { padding: 0 1rem; }
-  .title { font-size: 2.2rem; letter-spacing: -1px; }
+  .enterpriseContainer {
+    padding: var(--section-padding);
+  }
+  .title { font-size: var(--h1-size); letter-spacing: -1px; }
   .stepsWrapper {
     flex-direction: column;
     align-items: center;
     gap: 48px; 
   }
-  .step {
-    flex: 1 1 100%;
-    text-align: center;
-    align-items: center;
-    padding: 30px 20px; 
-    width: 100%;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
+  .stepTitle {
+    font-size: var(--h4-size);
+    margin-bottom: 10px;
+    color: var(--text-primary);
   }
   .stepText {
+    color: var(--text-secondary);
+    font-size: var(--p-size);
+    line-height: 1.6;
     max-width: 280px;
     margin: 0 auto;
   }

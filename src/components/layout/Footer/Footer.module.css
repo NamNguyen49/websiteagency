@@ -230,7 +230,8 @@
     padding: 60px 40px;
     border-radius: 30px;
   }
-  .logoLight {
+  .logoLight,
+  .logoDark {
     height: 60px;
   }
 }

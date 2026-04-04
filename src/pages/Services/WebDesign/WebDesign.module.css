@@ -566,11 +566,14 @@
   .pricingSubTitle {
     font-size: 1.6rem;
   }
+  .portfolioShowcase {
+    padding: 60px 0 !important;
+  }
 }
 /* Merged Portfolio Showcase - Theme Aware */
 .portfolioShowcase {
   background: transparent;
-  padding: 120px 0;
+  padding: 0 0 120px 0;
   position: relative;
   text-align: center;
 }
@@ -878,11 +881,16 @@
   }
   .adsStatsGrid {
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
   .statsWrapper {
-    position: static;
-    padding-top: 40px;
+    position: relative;
+    bottom: auto;
+    margin-top: 50px;
+    padding: 0 20px;
+    width: 100%;
   }
+
   .portfolioHeader h2 {
     font-size: 2.5rem;
   }
@@ -906,13 +914,16 @@
 }
 
 /* Testimonials & FAQ Section Styles */
-.testimonialsSection,
-.faqSection {
+.testimonialsSection {
   padding: 100px 0;
   position: relative;
   z-index: 2;
 }
-
+.faqSection {
+  padding: 0px 0 100px 0;
+  position: relative;
+  z-index: 2;
+}
 .sectionTitle {
   font-size: 2.8rem;
   font-weight: 700;
@@ -944,7 +955,10 @@
   border: 1px solid rgba(0, 243, 255, 0.1);
   padding: 40px;
   border-radius: 30px;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.4s ease;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1089,6 +1103,9 @@
     padding: 20px;
     font-size: 1.05rem;
   }
+  .processItem:hover {
+    transform: translateX(0px);
+  }
 }
 
 /* Service Contact Section Styles - Theme Aware */
@@ -1210,149 +1227,252 @@
   box-shadow: 0 15px 30px rgba(0, 243, 255, 0.3);
 }
 
+/* --- Responsive & Mobile Optimization (UI/UX 2020-2026) --- */
+
+.desktopOnly {
+  display: block;
+}
+.mobileOnly {
+  display: none;
+}
+
 @media (max-width: 1024px) {
+  .desktopOnly {
+    display: none !important;
+  }
+  .mobileOnly {
+    display: block !important;
+  }
+
+  .heroAds {
+    min-height: auto;
+    padding: 120px 0 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .heroGrid {
     grid-template-columns: 1fr;
-    text-align: center;
-    padding-bottom: 200px;
+    gap: 40px;
   }
+
+  .heroText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroText h1 {
+    font-size: var(--h1-size);
+    margin-bottom: 20px;
+  }
+
+  .descLine1,
+  .descLine2 {
+    margin: 0 auto 10px;
+  }
+
   .heroVisual {
     display: none;
   }
-  .adsStatsGrid {
-    grid-template-columns: repeat(2, 1fr);
+
+  /* Redundant stats styles removed */
+
+  .adsStatCard {
+    padding: 20px 10px;
+  }
+
+  .adsStatValue {
+    font-size: 1.8rem;
+  }
+
+  .portfolioShowcase {
+    padding: var(--section-padding) !important;
+  }
+
+  /* Portfolio Mobile */
+  .portfolioHeader h2 {
+    font-size: var(--h2-size);
   }
   .portfolioGridOuter {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
   }
-  .processGrid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-  .contactFlex {
-    flex-direction: column;
-    text-align: center;
-    gap: 50px;
-  }
-}
-
-@media (max-width: 768px) {
-  .heroAds {
-    padding-top: 120px;
-  }
-  .heroText h1 {
-    font-size: 2.8rem;
-  }
-  .statsWrapper {
-    bottom: -150px;
-  }
-  .adsStatsGrid {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
+  .sampleProjectThumb {
+    height: 240px;
   }
 
-  /* Benefits Section Mobile Fix */
-  .benefitsSection {
-    padding: 200px 0 80px;
-  }
-  .circleLayout {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .centralCircleWrapper {
-    width: 100%;
-    height: auto;
-    background: transparent;
-  }
-  .centralCircle {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    padding: 30px 20px;
-  }
-  .nodeDot {
-    display: none;
-  }
-  .benefitCard {
-    position: static;
-    transform: none !important;
-    width: 100%;
-    max-width: 100%;
-  }
-  .benefitBox::before {
-    display: none;
-  }
-
-  .packagesSection {
-    padding: 80px 0;
-  }
+  /* Pricing Mobile */
   .pricingMainTitle,
   .pricingSubTitle {
-    font-size: 2.2rem;
+    font-size: var(--h2-size);
+    padding: 0 15px;
   }
   .adsPackagesGrid {
     grid-template-columns: 1fr;
+    gap: 30px;
     padding: 0 20px;
+  }
+
+  /* Process Mobile */
+  .processGrid {
+    grid-template-columns: 1fr;
     gap: 40px;
   }
-  .pkgCard {
-    width: 100%;
+  .processTitle {
+    font-size: var(--h2-size);
+  }
+  .processItemHeader {
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  .processItemBody {
+    padding-left: 0;
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+  .processNum {
+    font-size: 1.8rem;
+    min-width: 40px;
   }
 
-  .sectionTitle {
-    font-size: 2.2rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .portfolioGridOuter {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
-  }
-
-  .testimonialCard {
-    padding: 30px;
-    width: 320px;
-  }
-
-  .faqQuestion {
-    padding: 20px;
-    font-size: 1.05rem;
-  }
-
-  .contactTitle {
-    font-size: 2.5rem;
+  /* Contact Mobile */
+  .contactFlex {
+    flex-direction: column;
+    gap: 40px;
   }
   .formRow {
     grid-template-columns: 1fr;
   }
+}
+
+/* Mobile Benefits List Styling */
+.benefitsSectionMobile {
+  padding: var(--section-padding);
+  background: var(--bg-primary);
+}
+
+.mobileBenefitsHeader {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.mobileBenefitsHeader h3 {
+  font-size: var(--h3-size);
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.accentLine {
+  width: 60px;
+  height: 4px;
+  background: var(--accent-gradient);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.benefitsListMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.benefitCardMobile {
+  display: flex;
+  gap: 20px;
+  background: var(--bg-secondary);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+:global([data-theme="light"]) .benefitCardMobile {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.benefitIconMobile {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--selection-bg);
+  color: var(--accent-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.benefitContentMobile h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.benefitContentMobile p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .heroText h1 {
+    font-size: 2.5rem;
+  }
+
+  .portfolioGridOuter {
+    grid-template-columns: 1fr;
+  }
+
+  .adsStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .statsWrapper {
+    margin-top: 30px;
+  }
+
+  .contactTitle {
+    font-size: 2.2rem;
+  }
+
   .formBottom {
     flex-direction: column;
-    align-items: center;
     gap: 20px;
   }
+
   .recaptchaContainer {
     width: 100%;
     display: flex;
     justify-content: center;
-    transform: scale(0.85);
-    transform-origin: center;
+    transform: scale(0.9);
+  }
+
+  .formSubmitBtn {
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
+  .heroAds {
+    padding: 100px 0 160px;
+  }
   .heroText h1 {
     font-size: 2.2rem;
   }
-  .pricingMainTitle,
-  .pricingSubTitle {
-    font-size: 1.8rem;
-  }
-  .sectionTitle {
-    font-size: 1.8rem;
-  }
-  .testimonialCard {
-    width: 280px;
+  .mobileBenefitsHeader h3 {
+    font-size: 1.6rem;
   }
 }

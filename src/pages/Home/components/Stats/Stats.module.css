@@ -53,7 +53,7 @@
     gap: 30px;
   }
   .statValue {
-    font-size: 2.8rem;
+    font-size: var(--h1-size);
   }
   .statLabel {
     font-size: 0.9rem;

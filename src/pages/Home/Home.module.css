@@ -45,10 +45,10 @@
 
 @media (max-width: 768px) {
   .sectionPadding {
-    padding: 60px 0;
+    padding: var(--section-padding);
   }
   .ctaTitle {
-    font-size: 2.25rem;
+    font-size: var(--h1-size);
   }
   .ctaInner {
     padding: 40px;

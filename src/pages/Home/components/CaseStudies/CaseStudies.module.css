@@ -229,21 +229,21 @@
 
 @media (max-width: 768px) {
   .title {
-    font-size: 2.2rem;
+    font-size: var(--h1-size);
     margin-bottom: 16px;
   }
   .subtitle {
-    font-size: 1.1rem;
+    font-size: var(--p-size);
     padding: 0 1rem;
   }
   .caseContent {
     padding: 24px;
   }
   .caseTitle {
-    font-size: 1.3rem;
+    font-size: var(--h4-size);
   }
   .feedbackHeader h3 {
-    font-size: 1.7rem;
+    font-size: var(--h2-size);
   }
   .feedbackCard {
     width: 280px;

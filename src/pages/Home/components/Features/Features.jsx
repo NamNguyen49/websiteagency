@@ -38,8 +38,10 @@ const Features = () => {
       <div className={styles.grid}>
         {t.features.items.map((feature, i) => (
           <div key={i} className={`${styles.card} glass-morphism`} ref={(el) => (elementsRef.current[i + 1] = el)}>
-            <div className={styles.iconWrapper}>{ICONS[i]}</div>
-            <h3 className={styles.cardTitle}>{feature.title}</h3>
+            <div className={styles.cardHeader}>
+              <div className={styles.iconWrapper}>{ICONS[i]}</div>
+              <h3 className={styles.cardTitle}>{feature.title}</h3>
+            </div>
             <p className={styles.cardDesc}>{feature.desc}</p>
           </div>
         ))}

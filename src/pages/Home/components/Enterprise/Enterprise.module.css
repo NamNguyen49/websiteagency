@@ -260,10 +260,10 @@
 
 @media (max-width: 768px) {
   .title {
-    font-size: 2.2rem;
+    font-size: var(--h1-size);
   }
   .enterpriseContainer {
-    padding: 60px 0 100px;
+    padding: var(--section-padding);
   }
   .serverVisual {
     height: auto;
