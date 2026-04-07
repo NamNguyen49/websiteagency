@@ -16,12 +16,11 @@ import {
   Globe,
   Users,
   Plus,
-  Mail,
-  Phone,
   Layout,
 } from "lucide-react";
 import styles from "./SEO.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "@emailjs/browser";
 import dichVuSeo from "../../../assets/images/dich-vu-seo.png";
 import border1 from "../../../assets/images/border1.png";
 import border2 from "../../../assets/images/border2.png";
@@ -35,6 +34,11 @@ import seoNghienCuuImg from "../../../assets/images/dich-vu-nghien-cuu-tu-khoa.p
 import seoConsultImg from "../../../assets/images/dich-vu-tu-van-SEO.png";
 import seoTongTheImg from "../../../assets/images/dich-vu-seo-tong-the.png";
 
+// Carousel Decoration Images
+import bfBox from "../../../assets/images/bf_box.png";
+import stepImg1 from "../../../assets/images/img_sec_4_step.png";
+import stepImg2 from "../../../assets/images/img_sec_4_step2.png";
+
 const SEO = () => {
   const { t, language } = useLanguage();
   const { theme } = useTheme();
@@ -44,6 +48,7 @@ const SEO = () => {
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState(null);
   const [activeProcessIndex, setActiveProcessIndex] = useState(0);
+  const [activeSol, setActiveSol] = useState(null);
 
   const seoData = t.seoDetail || {
     hero: {
@@ -83,11 +88,17 @@ const SEO = () => {
     setIsSending(true);
     setStatus(null);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_laraj8c",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_lto9tjp",
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "WXnj6WhHjtm1mQRLF",
+      );
       setStatus("success");
       formRef.current.reset();
       recaptchaRef.current.reset();
-    } catch (err) {
+    } catch (error) {
+      console.error("EmailJS Error:", error);
       setStatus("error");
     } finally {
       setIsSending(false);
@@ -446,7 +457,6 @@ const SEO = () => {
                 const isNext =
                   index === (activeProcessIndex + 1) % processSteps.length;
 
-                // Only render active, previous, and next for focus, or all with different styles
                 let position = "hidden";
                 if (isActive) position = "center";
                 else if (isPrevious) position = "left";
@@ -462,23 +472,52 @@ const SEO = () => {
                     animate={position}
                     variants={{
                       center: { x: "0%", scale: 1, opacity: 1, zIndex: 10 },
-                      left: { x: "-70%", scale: 0.8, opacity: 0.5, zIndex: 5 },
-                      right: { x: "70%", scale: 0.8, opacity: 0.5, zIndex: 5 },
+                      left: {
+                        x: "-110%",
+                        scale: 0.75,
+                        opacity: 0.9,
+                        zIndex: 5,
+                      },
+                      right: {
+                        x: "110%",
+                        scale: 0.75,
+                        opacity: 0.9,
+                        zIndex: 5,
+                      },
                     }}
-                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                    transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
                   >
-                    <div className={styles.cardIcon}>
-                      <img src={step.icon} alt={step.title} />
-                    </div>
-                    <div className={styles.cardBody}>
-                      <div className={styles.stepNum}>
-                        {language === "vi"
-                          ? "BƯỚC"
-                          : language === "ja"
-                            ? "ステップ"
-                            : "STEP"}{" "}
-                        {index + 1}
+                    {isActive && (
+                      <img
+                        src={bfBox}
+                        className={styles.decorCube}
+                        alt="decor"
+                      />
+                    )}
+
+                    {!isActive && (
+                      <div className={styles.cardIcon}>
+                        {isPrevious ? (
+                          <img
+                            src={stepImg1}
+                            alt="previous step illustration"
+                          />
+                        ) : (
+                          <img src={stepImg2} alt="next step illustration" />
+                        )}
                       </div>
+                    )}
+                    <div className={styles.cardBody}>
+                      {isActive && (
+                        <div className={styles.stepNum}>
+                          {language === "vi"
+                            ? "BƯỚC"
+                            : language === "ja"
+                              ? "ステップ"
+                              : "STEP"}{" "}
+                          {index + 1}
+                        </div>
+                      )}
                       <h3 className={styles.stepTitle}>{step.title}</h3>
                       {isActive && (
                         <p className={styles.stepDesc}>
@@ -518,6 +557,230 @@ const SEO = () => {
               <ArrowRight size={24} />
             </button>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Section Form - Replicating LandingPage layout */}
+      <section className={styles.serviceContactSection}>
+        <div className="container">
+          <div className={styles.contactFlex}>
+            <div className={styles.contactTextSide}>
+              <h2 className={styles.contactTitle}>
+                {t.webDesignDetail.common.labels.contactTitle}
+              </h2>
+              <p className={styles.contactSubtitle}>
+                {t.webDesignDetail.common.labels.contactSubtitle}
+              </p>
+            </div>
+
+            <div className={styles.contactFormSide}>
+              <form
+                className={styles.serviceForm}
+                ref={formRef}
+                onSubmit={handleSubmit}
+              >
+                <div className={styles.formRow}>
+                  <input
+                    type="text"
+                    name="user_name"
+                    placeholder={t.webDesignDetail.common.labels.formName}
+                    className={styles.glassInput}
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="user_phone"
+                    placeholder={t.webDesignDetail.common.labels.formPhone}
+                    className={styles.glassInput}
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="user_email"
+                    placeholder={t.webDesignDetail.common.labels.formEmail}
+                    className={styles.glassInput}
+                    required
+                  />
+                </div>
+                <textarea
+                  name="message"
+                  placeholder={t.webDesignDetail.common.labels.formMessage}
+                  className={styles.glassTextarea}
+                  required
+                ></textarea>
+
+                <div className={styles.formBottom}>
+                  <div className={styles.recaptchaContainer}>
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey="6LeCHKQsAAAAABBtITNVPh-xLl9NEs0YF2z-ZucS"
+                      theme={theme === "dark" ? "dark" : "light"}
+                      onChange={(val) => console.log("Captcha value:", val)}
+                    />
+                  </div>
+                  {status === "success" && (
+                    <p className={styles.successMsg}>
+                      {t.webDesignDetail.common.labels.formSuccess}
+                    </p>
+                  )}
+                  {status === "error" && (
+                    <p className={styles.errorMsg}>
+                      {t.webDesignDetail.common.labels.formError}
+                    </p>
+                  )}
+                  <button
+                    type="submit"
+                    className={styles.formSubmitBtn}
+                    disabled={isSending}
+                  >
+                    {isSending
+                      ? t.webDesignDetail.common.labels.formSending
+                      : t.webDesignDetail.common.labels.formBtn}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Interactive SEO Solutions (Giải pháp SEO) */}
+      <section className={styles.solutionsSection}>
+        <div className="container">
+          <div className={styles.solutionsHeader}>
+            <h2
+              className={styles.solutionsTitle}
+              dangerouslySetInnerHTML={{
+                __html:
+                  seoData.solutionsSectionTitle ||
+                  "HNT Solution - Cung cấp <span class='styles.stressText'>giải pháp SEO</span> hiệu quả",
+              }}
+            />
+          </div>
+
+          {/* Row 1 Grid */}
+          <div className={styles.solutionsGrid}>
+            {/* Box 0: Logo HNT Solution */}
+            <div
+              className={`${styles.solutionCard} ${styles.logoCard} ${activeSol === 0 ? styles.solActive : ""}`}
+              onClick={() => setActiveSol(0)}
+            >
+              <div className={styles.logoGridContent}>
+                <Globe size={48} className={styles.logoGhostIcon} />
+                <span className={styles.brandName}>HNT Solution</span>
+              </div>
+            </div>
+
+            {(seoData.solutionsSectionItems || [])
+              .slice(0, 3)
+              .map((sol, idx) => {
+                const solId = idx + 1;
+                const icons = [
+                  <TrendingUp size={32} />,
+                  <BarChart3 size={32} />,
+                  <Monitor size={32} />,
+                ];
+                return (
+                  <div
+                    key={solId}
+                    className={`${styles.solutionCard} ${activeSol === solId ? styles.solActive : ""}`}
+                    onClick={() => setActiveSol(solId)}
+                  >
+                    <div className={styles.solIconWrapper}>{icons[idx]}</div>
+                    <h4 className={styles.solCardTitle}>{sol.title}</h4>
+                  </div>
+                );
+              })}
+          </div>
+
+          {/* Detail Box for Row 1 (Visible if 1, 2, 3 selected) */}
+          {activeSol !== null && activeSol >= 1 && activeSol <= 3 && (
+            <motion.div
+              className={styles.solDetailSection}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              transition={{ duration: 0.4 }}
+            >
+              <div className={styles.solDetailCard}>
+                <div className={styles.solDetailVisual}>
+                  <img src={dichVuSeo} alt="Illustration" />
+                </div>
+                <div className={styles.solDetailContent}>
+                  <div className={styles.solDetailIcon}>
+                    {
+                      [
+                        null,
+                        <TrendingUp size={40} />,
+                        <BarChart3 size={40} />,
+                        <Monitor size={40} />,
+                      ][activeSol]
+                    }
+                  </div>
+                  <h3>{seoData.solutionsSectionItems[activeSol - 1]?.title}</h3>
+                  <p>{seoData.solutionsSectionItems[activeSol - 1]?.desc}</p>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Row 2 Grid */}
+          <div className={`${styles.solutionsGrid} ${styles.marginTopGrid}`}>
+            {(seoData.solutionsSectionItems || [])
+              .slice(3, 7)
+              .map((sol, idx) => {
+                const solId = idx + 4;
+                const icons = [
+                  <Search size={32} />,
+                  <Zap size={32} />,
+                  <ShieldCheck size={32} />,
+                  <CheckCircle2 size={32} />,
+                ];
+                return (
+                  <div
+                    key={solId}
+                    className={`${styles.solutionCard} ${activeSol === solId ? styles.solActive : ""}`}
+                    onClick={() => setActiveSol(solId)}
+                  >
+                    <div className={styles.solIconWrapper}>{icons[idx]}</div>
+                    <h4 className={styles.solCardTitle}>{sol.title}</h4>
+                  </div>
+                );
+              })}
+          </div>
+
+          {/* Detail Box for Row 2 (Visible if 4, 5, 6, 7 selected) */}
+          {activeSol !== null && activeSol >= 4 && (
+            <motion.div
+              className={styles.solDetailSection}
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              transition={{ duration: 0.4 }}
+            >
+              <div className={styles.solDetailCard}>
+                <div className={styles.solDetailVisual}>
+                  <img src={dichVuSeo} alt="Illustration" />
+                </div>
+                <div className={styles.solDetailContent}>
+                  <div className={styles.solDetailIcon}>
+                    {
+                      [
+                        null,
+                        null,
+                        null,
+                        null,
+                        <Search size={40} />,
+                        <Zap size={40} />,
+                        <ShieldCheck size={40} />,
+                        <CheckCircle2 size={40} />,
+                      ][activeSol]
+                    }
+                  </div>
+                  <h3>{seoData.solutionsSectionItems[activeSol - 1]?.title}</h3>
+                  <p>{seoData.solutionsSectionItems[activeSol - 1]?.desc}</p>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
     </div>

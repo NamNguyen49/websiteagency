@@ -181,12 +181,12 @@
   top: calc(100% + 5px);
   left: 0;
   transform: none;
-  width: max-content; /* Proportional to content */
-  max-width: calc(100vw - 9rem); /* Absolute safety boundary */
-  background: #0a0a0b; /* 100% Opaque Solid */
+  width: max-content;
+  max-width: calc(100vw - 4rem);
+  background: #0a0a0b;
   border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 40px;
+  border-radius: 20px;
+  padding: 32px;
   box-shadow: 0 50px 100px -10px rgba(0, 0, 0, 1);
   animation: dropdownFadeIn 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 2200;
@@ -195,14 +195,14 @@
 /* Ensure megaMenu does not overflow on the right */
 @media (min-width: 1025px) {
   .megaMenu {
-    max-width: 850px; /* Safe limit for desktop to keep it within header scale */
+    max-width: 720px;
   }
 }
 
 .megaMenuGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
 /* Responsive grid for Laptop/Small Desktop */

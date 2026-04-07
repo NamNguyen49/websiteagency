@@ -14,7 +14,7 @@ export const translations = {
       services_groups: {
         web: {
           title: "Website",
-          items: ["Web Design", "Landing Page"],
+          items: ["Web Design", "Landing Page", "SEO Services"],
         },
 
         seo: {
@@ -380,7 +380,7 @@ export const translations = {
         },
         {
           title: "KEYWORD RESEARCH",
-          desc: "Meticulous keyword research plays an important role in our SEO services. SEORANKLEAD selects keywords with the potential to bring valuable traffic to your website.",
+          desc: "Meticulous keyword research plays an important role in our SEO services. HNT Solution selects keywords with the potential to bring valuable traffic to your website.",
           icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-content-active.png",
         },
         {
@@ -410,8 +410,40 @@ export const translations = {
         },
         {
           title: "SEO RANKING WARRANTY AND MAINTENANCE",
-          desc: "This is a step you should request after KPIs are met. Sustainable white-hat SEO units will provide a warranty of at least 2 months.\n\nAt SEORANKLEAD, we always commit to a free maintenance and warranty for 2 months after project completion.",
+          desc: "This is a step you should request after KPIs are met. Sustainable white-hat SEO units will provide a warranty of at least 2 months.\n\nAt HNT Solution, we always commit to a free maintenance and warranty for 2 months after project completion.",
           icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-total-active.png",
+        },
+      ],
+      solutionsSectionTitle:
+        "HNT Solution - Providing effective <span class='styles.stressText'>SEO solutions</span>",
+      solutionsSectionItems: [
+        {
+          title: "Increase online orders",
+          desc: "HNT Solution will help you increase orders effectively with SEO services focused on optimizing conversion rates - By using exclusive SEO techniques to help your website climb Google's top quickly and maintain sustainably.",
+        },
+        {
+          title: "100% Top-ranking results",
+          desc: "HNT Solution's SEO experts have the ability to prevent unexpected factors, thus always bringing 100% success efficiency, helping save budget.",
+        },
+        {
+          title: "Increase revenue",
+          desc: "Profit is always the ultimate goal of any business and SEO is one of the digital marketing channels with the highest ROI today. HNT Solution ensures multiplied revenue growth for client businesses.",
+        },
+        {
+          title: "Cost optimization",
+          desc: "Our goal is 'Using minimum resources but bringing maximum efficiency'. Our SEO service helps thousands of your keywords rank in the top 10 on Google search results.",
+        },
+        {
+          title: "Brand development",
+          desc: "Ranking top not only brings orders but also helps your business's brand identity become more popular and trustworthy in the eyes of millions of potential customers.",
+        },
+        {
+          title: "Customer development",
+          desc: "Finding new customers is important, but maintaining and understanding old customers through quality SEO content is also a strength that HNT Solution aims for.",
+        },
+        {
+          title: "Long-term results",
+          desc: "Unlike paid advertising (ADS), SEO brings sustainable value. Even when you pause the campaign, the website still continuously appears in front of customers and brings long-term profit.",
         },
       ],
     },
@@ -973,7 +1005,7 @@ export const translations = {
       services_groups: {
         web: {
           title: "Website",
-          items: ["Thiết kế web", "Landing page"],
+          items: ["Thiết kế web", "Landing page", "Dịch vụ SEO"],
         },
 
         seo: {
@@ -1993,7 +2025,7 @@ export const translations = {
         },
         {
           title: "NGHIÊN CỨU TỪ KHÓA",
-          desc: "Quá trình nghiên cứu từ khóa tỉ mỉ đóng vai trò quan trọng trong dịch vụ SEO của chúng tôi. SEORANKLEAD chọn lọc các từ khóa có tiềm năng mang lại lượng truy cập có giá trị cho trang web của bạn.",
+          desc: "Quá trình nghiên cứu từ khóa tỉ mỉ đóng vai trò quan trọng trong dịch vụ SEO của chúng tôi. HNT Solution chọn lọc các từ khóa có tiềm năng mang lại lượng truy cập có giá trị cho trang web của bạn.",
           icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-content-active.png",
         },
         {
@@ -2023,8 +2055,40 @@ export const translations = {
         },
         {
           title: "BẢO HÀNH & DUY TRÌ THỨ HẠNG SEO",
-          desc: "Đây là bước bạn nên yêu cầu các công ty SEO thực hiện sau khi hoàn thành KPIs theo cam kết vì có rất ít dịch vụ SEO top Google có bảo hành về duy trì thứ hạng. Các đơn vị triển khai SEO mũ trắng bền vững và an toàn sẽ không ngại bảo hành thứ hạng dự án SEO ít nhất 2 tháng.\n\nTại SEORANKLEAD, chúng tôi luôn cam kết bảo hành và duy trì kết quả SEO hoàn toàn miễn phí trong vòng 2 tháng sau khi kết thúc dự án.",
+          desc: "Đây là bước bạn nên yêu cầu các công ty SEO thực hiện sau khi hoàn thành KPIs theo cam kết vì có rất ít dịch vụ SEO top Google có bảo hành về duy trì thứ hạng. Các đơn vị triển khai SEO mũ trắng bền vững và an toàn sẽ không ngại bảo hành thứ hạng dự án SEO ít nhất 2 tháng.\n\nTại HNT Solution, chúng tôi luôn cam kết bảo hành và duy trì kết quả SEO hoàn toàn miễn phí trong vòng 2 tháng sau khi kết thúc dự án.",
           icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-total-active.png",
+        },
+      ],
+      solutionsSectionTitle:
+        "HNT Solution - Cung cấp <span class='styles.stressText'>giải pháp SEO</span> hiệu quả",
+      solutionsSectionItems: [
+        {
+          title: "Tăng đơn hàng online",
+          desc: "HNT Solution sẽ giúp bạn tăng đơn hàng hiệu quả với dịch vụ SEO tập trung tối ưu tỉ lệ chuyển đổi - Bằng cách sử dụng các kỹ thuật SEO độc quyền để website của bạn leo top Google một cách nhanh chóng và duy trì bền vững.",
+        },
+        {
+          title: "100% Lên top tìm kiếm",
+          desc: "Các chuyên gia SEO của HNT Solution có khả năng phòng tránh những yếu tố bất ngờ xảy ra bởi vậy luôn mang đến hiệu quả thành công là 100%, giúp tiết kiệm ngân sách.",
+        },
+        {
+          title: "Tăng doanh thu",
+          desc: "Lợi nhuận luôn là đích đến cuối cùng của bất kỳ doanh nghiệp nào và SEO là một trong những kênh digital marketing đem lại ROI cao nhất hiện nay. HNT Solution đảm bảo mang đến doanh thu tăng gấp nhiều lần cho doanh nghiệp khách hàng.",
+        },
+        {
+          title: "Tối ưu hoá chi phí",
+          desc: 'Mục tiêu của chúng tôi là "Sử dụng nguồn lực tối thiểu nhưng lại mang hiệu quả tối đa". Dịch vụ SEO của chúng tôi giúp cho hàng ngàn từ khóa của bạn nằm trong top 10 trên bảng xếp hạng tìm kiếm của Google.',
+        },
+        {
+          title: "Phát triển thương hiệu",
+          desc: "Lên top tìm kiếm không chỉ mang lại đơn hàng và giúp nhận diện thương hiệu của doanh nghiệp bạn trở nên phổ biến và tin cậy hơn trong mắt hàng triệu khách hàng tiềm năng.",
+        },
+        {
+          title: "Phát triển khách hàng",
+          desc: "Tìm kiếm được khách hàng mới là quan trọng, nhưng việc duy trì và thấu hiểu khách hàng cũ thông qua nội dung SEO chất lượng cũng là thế mạnh mà HNT Solution hướng tới.",
+        },
+        {
+          title: "Kết quả dài hạn",
+          desc: "Khác với quảng cáo trả phí (ADS), SEO mang lại giá trị bền vững. Ngay cả khi bạn tạm dừng chiến dịch, website vẫn liên tục xuất hiện trước khách hàng và mang lời về doanh thu dài hạn.",
         },
       ],
     },
@@ -2041,7 +2105,7 @@ export const translations = {
       services_groups: {
         web: {
           title: "Website",
-          items: ["Webデザイン", "ランディングページ"],
+          items: ["Webデザイン", "ランディングページ", "SEO対策"],
         },
 
         seo: {
@@ -2487,52 +2551,60 @@ export const translations = {
       },
       serviceTypes: {
         title: "一般的なSEOサービスの種類",
-        subtitle: "新しいウェブサイトや効果的なSEOエージェンシーをお探しですか？市場にある多くのSEO会社の中で迷っていませんか？",
+        subtitle:
+          "新しいウェブサイトや効果的なSEOエージェンシーをお探しですか？市場にある多くのSEO会社の中で迷っていませんか？",
         desc: "不思議なことは何もありません、すべてはテクニカルなものです。以下は、最も重要なプラットフォームに焦点を当てたHNT Solutionの3つのSEOサービスです。",
         items: [
           {
             id: "tong-the",
             title: "総合SEO<span>サービス</span>",
             img: "https://adsdigi.com/wp-content/uploads/2025/09/seo-total.png",
-            content: "総合SEOは、ウェブサイトの製品やサービスに関連するすべてのキーワードをランク付けするサービスです。これにより、検索市場全体をカバーする膨大な数のキーワードを所有できます。総合SEOを行うと、ウェブサイトは検索エンジン、特にGoogle、Yahoo、および潜在的な市場から膨大なトラフィックを獲得できます。\n\n総合SEOサービスへの投資は、特定のキーワードグループだけに焦点を当てるのではないため、ウェブサイトが安定して持続的に成長するのを助けます。総合SEOは、市場を支配し、ブランドのカバレッジを最適化したい企業にとって最適なソリューションです。"
+            content:
+              "総合SEOは、ウェブサイトの製品やサービスに関連するすべてのキーワードをランク付けするサービスです。これにより、検索市場全体をカバーする膨大な数のキーワードを所有できます。総合SEOを行うと、ウェブサイトは検索エンジン、特にGoogle、Yahoo、および潜在的な市場から膨大なトラフィックを獲得できます。\n\n総合SEOサービスへの投資は、特定のキーワードグループだけに焦点を当てるのではないため、ウェブサイトが安定して持続的に成長するのを助けます。総合SEOは、市場を支配し、ブランドのカバレッジを最適化したい企業にとって最適なソリューションです。",
           },
           {
             id: "tu-khoa",
             title: "キーワードSEO<span>サービス</span>",
             img: "https://adsdigi.com/wp-content/uploads/2025/09/seo-keyword-type.png",
-            content: "現在、多くの企業にキーワードSEOサービスが選ばれています。キーワードによるSEOは、マーケティングと販売の目標を達成しながら、企業がコストを節約するのを助けます。\n\nキーワードSEOは、検索ボリュームが多く、コンバージョンポテンシャルが最も高いキーワードクラスターのみに焦点を当てます。これにより、ランキングをスピードアップし、検索結果を可能な限り迅速に返却するのに役立ちます。"
+            content:
+              "現在、多くの企業にキーワードSEOサービスが選ばれています。キーワードによるSEOは、マーケティングと販売の目標を達成しながら、企業がコストを節約するのを助けます。\n\nキーワードSEOは、検索ボリュームが多く、コンバージョンポテンシャルが最も高いキーワードクラスターのみに焦点を当てます。これにより、ランキングをスピードアップし、検索結果を可能な限り迅速に返却するのに役立ちます。",
           },
           {
             id: "backlink",
             title: "バックリンクSEO<span>サービス</span>",
             img: "https://adsdigi.com/wp-content/uploads/2025/09/seo-backlink.png",
-            content: "バックリンク（オフページ）SEOサービスは、評判の良いウェブサイトからあなたのウェブサイトを指す高品質のリンクを構築するプロセスです。これにより、権威性（Authority）と信頼性が向上し、Googleでのウェブサイトの順位が大幅に改善されます。"
+            content:
+              "バックリンク（オフページ）SEOサービスは、評判の良いウェブサイトからあなたのウェブサイトを指す高品質のリンクを構築するプロセスです。これにより、権威性（Authority）と信頼性が向上し、Googleでのウェブサイトの順位が大幅に改善されます。",
           },
           {
             id: "local",
             title: "ローカルSEO<span>サービス</span>",
             img: "https://adsdigi.com/wp-content/uploads/2025/09/seo-local.png",
             darkTheme: true,
-            content: "ローカルSEOは本質的にキーワードSEOサービスですが、完全に特定のローカルエリアをターゲットとしています。ローカルSEOキャンペーンは多くの場合、特定の地域の製品やサービスを優先します。"
+            content:
+              "ローカルSEOは本質的にキーワードSEOサービスですが、完全に特定のローカルエリアをターゲットとしています。ローカルSEOキャンペーンは多くの場合、特定の地域の製品やサービスを優先します。",
           },
           {
             id: "map",
             title: "Googleマップ<span>SEO</span>",
             img: "https://adsdigi.com/wp-content/uploads/2025/09/seo-map.png",
             darkTheme: true,
-            content: "SEOマップとも呼ばれるGoogleマップSEOは、Googleマップの結果に表示されるビジネス情報（Googleマイビジネス）を最適化し、ユーザーがブランドに関連付けられた場所を簡単に見つけられるようにするサービスです。"
+            content:
+              "SEOマップとも呼ばれるGoogleマップSEOは、Googleマップの結果に表示されるビジネス情報（Googleマイビジネス）を最適化し、ユーザーがブランドに関連付けられた場所を簡単に見つけられるようにするサービスです。",
           },
           {
             id: "ecommerce",
             title: "ECサイト<span>SEO</span>",
             img: "https://adsdigi.com/wp-content/uploads/2025/09/seo-ecommerce.png",
-            content: "ECサイトSEOまたは電子商取引SEOサービスは、オンラインストア向けのSEO最適化サービスであり、販売ウェブサイト（SEO Ecommerce）がコンバージョンの高い製品キーワードやブランドキーワードをターゲットにするのを助けます。"
+            content:
+              "ECサイトSEOまたは電子商取引SEOサービスは、オンラインストア向けのSEO最適化サービスであり、販売ウェブサイト（SEO Ecommerce）がコンバージョンの高い製品キーワードやブランドキーワードをターゲットにするのを助けます。",
           },
           {
             id: "consulting",
             title: "SEO<span>コンサルティング</span>",
             img: "https://adsdigi.com/wp-content/uploads/2025/09/seo-consulting.png",
-            content: "企業向けのSEOコンサルティングは、ウェブサイトの現在のSEO状況の概要を把握し、ウェブサイト開発とSEOへの投資が最も効果的になるように体系的な戦略を提案するのに役立ちます。",
+            content:
+              "企業向けのSEOコンサルティングは、ウェブサイトの現在のSEO状況の概要を把握し、ウェブサイト開発とSEOへの投資が最も効果的になるように体系的な戦略を提案するのに役立ちます。",
           },
         ],
       },
@@ -2620,23 +2692,103 @@ export const translations = {
       ],
       processTitle: "<span>SEOサービス</span>はどのように実施されますか？",
       processSteps: [
-        { title: "情報収集とリクエスト受付", desc: "お客様の製品やサービスに関する情報を収集し、具体的な要件や目標を伺います。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-audit-active.png" },
-        { title: "サイト分析と戦略提案", desc: "製品や対象顧客の調査に基づき、最適なキーワードとウェブサイトの現状分析を提案します。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-tech-active.png" },
-        { title: "お見積り", desc: "キーワードと戦略に基づき、KPIコミットメントと詳細なコストを含む見積書を作成します。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-keywords-active.png" },
-        { title: "キーワード調査", desc: "価値のあるトラフィックをもたらす可能性のあるキーワードを厳選します。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-content-active.png" },
-        { title: "ご契約", desc: "費用と見積もりに合意した後、正式にSEOサービス提供の契約を締結します。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-audit-active.png" },
-        { title: "計画策定", desc: "詳細なタイムラインを含む全体計画を策定し、進捗を可視化します。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-total-active.png" },
-        { title: "プロジェクト実施", desc: "キーワード調査、コンテンツ制作、テクニカル監査、内部・外部SEOを実施します。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-tech-active.png" },
-        { title: "レポートと効果計測", desc: "ランキング、自然トラフィック、コンバージョン率などの定期レポートを作成します。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-keywords-active.png" },
-        { title: "完了と引き継ぎ", desc: "目標達成後、全ての成果物を引き継ぎ、運用方法をレクチャーします。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-content-active.png" },
-        { title: "保証とメンテナンス", desc: "2ヶ月間の成果維持保証を提供し、継続的な成功をサポートします。", icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-total-active.png" },
+        {
+          title: "情報収集とリクエスト受付",
+          desc: "お客様の製品やサービスに関する情報を収集し、具体的な要件や目標を伺います。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-audit-active.png",
+        },
+        {
+          title: "サイト分析と戦略提案",
+          desc: "製品や対象顧客の調査に基づき、最適なキーワードとウェブサイトの現状分析を提案します。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-tech-active.png",
+        },
+        {
+          title: "お見積り",
+          desc: "キーワードと戦略に基づき、KPIコミットメントと詳細なコストを含む見積書を作成します。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-keywords-active.png",
+        },
+        {
+          title: "キーワード調査",
+          desc: "価値のあるトラフィックをもたらす可能性のあるキーワードを厳選します。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-content-active.png",
+        },
+        {
+          title: "ご契約",
+          desc: "費用と見積もりに合意した後、正式にSEOサービス提供の契約を締結します。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-audit-active.png",
+        },
+        {
+          title: "計画策定",
+          desc: "詳細なタイムラインを含む全体計画を策定し、進捗を可視化します。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-total-active.png",
+        },
+        {
+          title: "プロジェクト実施",
+          desc: "キーワード調査、コンテンツ制作、テクニカル監査、内部・外部SEOを実施します。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-tech-active.png",
+        },
+        {
+          title: "レポートと効果計測",
+          desc: "ランキング、自然トラフィック、コンバージョン率などの定期レポートを作成します。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-keywords-active.png",
+        },
+        {
+          title: "完了と引き継ぎ",
+          desc: "目標達成後、全ての成果物を引き継ぎ、運用方法をレクチャーします。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-content-active.png",
+        },
+        {
+          title: "保証とメンテナンス",
+          desc: "2ヶ月間の成果維持保証を提供し、継続的な成功をサポートします。",
+          icon: "https://adsdigi.com/wp-content/uploads/2025/09/seo-total-active.png",
+        },
       ],
       contactTitle: "無料のSEO提案を受ける",
-      contactSub: "あなたのウェブサイトを監査し、ターゲットを絞った成長ロードマップを提供します。",
+      contactSub:
+        "あなたのウェブサイトを監査し、ターゲットを絞った成長ロードマップを提供します。",
       faqTitle: "SEO - よくある質問",
       faqs: [
-        { question: "結果が出るまでどのくらいかかりますか？", answer: "業界の競争状況によりますが、通常3〜6ヶ月かかります。" },
-        { question: "SEOの効果は持続しますか？", answer: "はい。広告を停止しても、検索からの自然流入は継続的にターゲット顧客をもたらします。" },
+        {
+          question: "結果が出るまでどのくらいかかりますか？",
+          answer: "業界の競争状況によりますが、通常3〜6ヶ月かかります。",
+        },
+        {
+          question: "SEOの効果は持続しますか？",
+          answer:
+            "はい。広告を停止しても、検索からの自然流入は継続的にターゲット顧客をもたらします。",
+        },
+      ],
+      solutionsSectionTitle:
+        "HNT Solution - 効果的な <span class='styles.stressText'>SEO ソリューション</span> の提供",
+      solutionsSectionItems: [
+        {
+          title: "オンライン注文の増加",
+          desc: "HNT Solutionは、CVRの最適化に焦点を当てたSEOサービスにより、注文を効果的に増やすお手伝いをします。独自のSEOテクニックを使用して、ウェブサイトをGoogleのトップに素早く導き、持続的に維持します。",
+        },
+        {
+          title: "100% 検索トップ達成",
+          desc: "HNT SolutionのSEOエキスパートは予期せぬ要因を回避する能力を持っており、常に100%の成功効率を実現し、予算の節約に貢献します。",
+        },
+        {
+          title: "収益の向上",
+          desc: "利益は常にビジネスの最終目標であり、SEOは現在、最もROIが高いデジタルマーケティングチャネルの一つです。HNT Solutionは、クライアントビジネスの収益を数倍に成長させることを保証します。",
+        },
+        {
+          title: "コストの最適化",
+          desc: "私たちの目標は「最小のプロソースで最大の効果を得る」ことです。私たちのSEOサービスは、数千のキーワードをGoogle検索結果のトップ10にランクインさせるお手伝いをします。",
+        },
+        {
+          title: "ブランド開発",
+          desc: "トップにランクインすることは注文をもたらすだけでなく、あなたのビジネスブランドが数百万の潜在顧客にとってより有名で信頼できるものになるのを助けます。",
+        },
+        {
+          title: "顧客開発",
+          desc: "新規顧客の獲得も重要ですが、高品質なSEOコンテンツを通じて既存顧客を維持し、理解することもHNT Solutionの強みです。",
+        },
+        {
+          title: "長期的な成果",
+          desc: "有料広告（ADS）とは異なり、SEOは持続的な価値をもたらします。キャンペーンを一時停止しても、ウェブサイトは顧客の前に現れ続け、長期的な利益をもたらします。",
+        },
       ],
     },
     footer: {
@@ -2982,7 +3134,7 @@ export const translations = {
       services_groups: {
         web: {
           title: "Website",
-          items: ["网页设计", "落地页"],
+          items: ["网页设计", "落地页", "SEO服务"],
         },
 
         seo: {
@@ -3785,6 +3937,38 @@ export const translations = {
           question: "SEO 的效果持久吗？",
           answer:
             "是的，即便停止广告投放，自然流量依然会持续为您带来精准客户。",
+        },
+      ],
+      solutionsSectionTitle:
+        "HNT Solution - 提供有效的 <span class='styles.stressText'>SEO 解决方案</span>",
+      solutionsSectionItems: [
+        {
+          title: "增加在线订单",
+          desc: "HNT Solution 将通过专注于优化转化率的 SEO 服务，有效帮助您增加订单 - 通过使用独家 SEO 技术，帮助您的网站快速攀升至 Google 首页并持续保持。",
+        },
+        {
+          title: "100% 搜索引擎登顶",
+          desc: "HNT Solution 的 SEO 专家有能力预防突发因素，从而始带来 100% 的成功效率，有效节省预算。",
+        },
+        {
+          title: "提高收入",
+          desc: "利润始终是任何业务的最终目标，而 SEO 是当今 ROI 最高的数字营销渠道之一。HNT Solution 确保为客户业务带来翻倍的收入增长。",
+        },
+        {
+          title: "成本优化",
+          desc: "我们的目标是“使用最少的资源，带来最大的效率”。我们的 SEO 服务帮助您的数千个关键字在 Google 搜索结果中排名前 10。",
+        },
+        {
+          title: "品牌发展",
+          desc: "排名第一不仅带来订单，还帮助您企业的品牌形象在数百万潜在客户心中变得更受欢迎和值得信赖。",
+        },
+        {
+          title: "客户发展",
+          desc: "开发新客户固然重要，但通过优质的 SEO 内容维护和了解老客户也是 HNT Solution 的强项。",
+        },
+        {
+          title: "长期效果",
+          desc: "与付费广告 (ADS) 不同，SEO 带来持续价值。即使您暂停活动，网站仍会不断出现在客户面前，带来长期利润。",
         },
       ],
     },

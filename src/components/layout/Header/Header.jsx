@@ -55,17 +55,9 @@ const Header = () => {
           title: t.nav.services_groups.web.title,
           icon: <Globe size={18} />,
           items: t.nav.services_groups.web.items,
-          slugs: ["corporate-website", "landing-page"],
-
+          slugs: ["corporate-website", "landing-page", "../seo/tong-the"],
         },
 
-        {
-          id: "seo",
-          title: t.nav.services_groups.seo.title,
-          icon: <Search size={18} />,
-          items: t.nav.services_groups.seo.items,
-          slugs: ["overall-seo", "keyword-seo", "website-audit"],
-        },
         {
           id: "ads",
           title: t.nav.services_groups.ads.title,
