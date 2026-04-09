@@ -4,6 +4,286 @@ const LanguageContext = createContext();
 
 export const translations = {
   en: {
+    adsDetail: {
+      "facebook-ads": {
+        hero: {
+          badge: "Services",
+          title: "Facebook Ads <span>Advertising</span>",
+          desc: "Facebook advertising is a solution that helps you promote your brand, introduce your products / services to the right potential customers quickly and accurately.",
+          features: [
+            "Reach the right potential audience",
+            "Increase sales fastest",
+            "Optimize display and conversion costs",
+          ],
+          btn: "Get Consultation Now",
+        },
+        usp: {
+          title:
+            "Let <span>Facebook</span> Connect Your Products <br /> With Customers",
+        },
+        zigzag: [
+          {
+            num: "01.",
+            title:
+              "Facebook is still the most effective Marketing channel to increase sales",
+            desc: "The world's largest social network with billions of users accessing every day. This is a gold mine for businesses to find customers.",
+            bullets: ["Reach millions of users", "Accurate targeting"],
+          },
+          {
+            num: "02.",
+            title: "Focus on the right customer audience you want to target",
+            desc: "Based on interests, behaviors, and demographics. Facebook allows ads to be displayed accurately in front of people with the highest probability of purchase.",
+          },
+          {
+            num: "03.",
+            title: "The customer funnel is built in a standard and solid way",
+            desc: "It's not just about running ads. We build a customer journey from brand awareness to purchase action.",
+          },
+        ],
+        ctaBanner: {
+          label: "Don't hesitate",
+          title: "Call us now if you want to increase sales",
+          btn: "Register for consultation",
+        },
+        solutions: {
+          title:
+            "Diverse <span>Facebook Advertising</span> <br /> <span>Solutions</span>",
+          subtitle:
+            "But are you facing the following problems that prevent your business from fully exploiting the power of Facebook?",
+          items: [
+            {
+              title: "ENGAGEMENT",
+              desc: "Increase messages, video views, post engagement, Page likes or event responses.",
+              tags: [
+                "Messenger, Instagram, WhatsApp",
+                "Video views",
+                "Post engagement",
+                "Conversions",
+              ],
+            },
+            {
+              title: "WEBSITE TRAFFIC",
+              desc: "Direct people to a destination, such as your website, app or Facebook event.",
+              tags: [
+                "Link clicks",
+                "Landing page views",
+                "Messenger, Instagram, WhatsApp",
+                "Calls",
+              ],
+            },
+            {
+              title: "SALES",
+              desc: "Find people who are likely to buy your product or service.",
+              tags: [
+                "Conversions",
+                "Catalog sales",
+                "Messenger, Instagram, WhatsApp",
+                "Calls",
+              ],
+            },
+            {
+              title: "POTENTIAL CUSTOMERS",
+              desc: "Search for potential customers who take actions to leave contact information and consider the business's products.",
+              tags: [
+                "Instant forms",
+                "Conversions",
+                "Messenger, Instagram",
+                "Calls",
+              ],
+            },
+            {
+              title: "APP PROMOTION",
+              desc: "Attract new users to install and continue using the business's app.",
+              tags: ["App installs", "App events"],
+            },
+            {
+              title: "AWARENESS",
+              desc: "Show ads to people who are most likely to remember your brand.",
+              tags: [
+                "Reach",
+                "Brand awareness",
+                "Video views",
+                "Store location awareness",
+              ],
+            },
+          ],
+        },
+        process: {
+          title:
+            "Facebook Ads <span>Advertising Process at HNT Solution</span>",
+          subtitle:
+            "Always put the goal of efficiency first with the most specific criteria.",
+          steps: [
+            {
+              step: "Step 1",
+              title: "Receive information",
+              desc: [
+                "Analyze products, services, and competitors.",
+                "Consult on advertising packages suitable for budget.",
+              ],
+            },
+            {
+              step: "Step 2",
+              title: "Analysis & Planning",
+              desc: [
+                "Identify exactly the target audience.",
+                "Plan budget, implementation time.",
+              ],
+            },
+            {
+              step: "Step 3",
+              title: "Content & Landing Page",
+              desc: [
+                "Write attractive ad content.",
+                "Design eye-catching image / video banners.",
+              ],
+            },
+            {
+              step: "Step 4",
+              title: "Setup & Tracking",
+              desc: [
+                "Install campaigns on Ads Account.",
+                "Attach pixel codes, tracking to measure efficiency.",
+              ],
+            },
+            {
+              step: "Step 5",
+              title: "Optimization & Reporting",
+              desc: [
+                "Monitor and optimize ad samples daily.",
+                "Transparently report daily figures.",
+              ],
+            },
+            {
+              step: "Step 6",
+              title: "Acceptance & Maintenance",
+              desc: [
+                "Summarize results after each campaign round.",
+                "Propose maintenance and expansion plans.",
+              ],
+            },
+          ],
+        },
+        pricing: {
+          title: "Facebook Ads <span>Advertising Packages HNT Solution</span>",
+          table: {
+            header: [
+              "Implementation budget",
+              "Under 100M",
+              "101 - 500M",
+              "Over 500M",
+            ],
+            fee: "Service fee",
+            values: ["10% / budget", "9% / budget", "8% / budget"],
+          },
+          note: "Note: Service fee does not include VAT",
+        },
+        diagram: {
+          left: "HNT Solution is ready to answer all your questions. <br /> Contact us now for the best support.",
+          title: "Always Aiming For <span>Final Conversion Efficiency</span>",
+        },
+      },
+      "google-ads": {
+        hero: {
+          badge: "Google Ads Specialist",
+          title: "Optimize Your <span>Google Ads</span> Performance",
+          desc: "Reach customers at the exact moment they search for what you offer. Scale your business with precision-targeted Google Advertising.",
+          features: [
+            "Search Network Optimization",
+            "Performance Max Campaigns",
+            "Conversion Tracking Setup",
+            "Remarketing Strategy",
+          ],
+          btn: "Get Free Audit",
+        },
+        types: {
+          title: "Multi-Platform <span>Google Ads</span> Solutions",
+          subtitle:
+            "We reach your customers across the entire Google ecosystem with tailored campaign strategies.",
+          items: [
+            {
+              title: "Search Ads",
+              desc: "Appear at the top of results when customers search for keywords related to your products or services.",
+            },
+            {
+              title: "Display Network",
+              desc: "Broaden your reach with visually striking banner ads on millions of websites and apps.",
+            },
+            {
+              title: "Video Ads (YouTube)",
+              desc: "Engage your audience with compelling video content on the world's largest video platform.",
+            },
+            {
+              title: "Shopping Ads",
+              desc: "Showcase your product inventory directly in search results with price and image.",
+            },
+            {
+              title: "Local Campaigns",
+              desc: "Drive foot traffic to your physical stores by showing ads on Maps and Search.",
+            },
+          ],
+        },
+        process: {
+          title: "Our <span>5-Step</span> Optimization Process",
+          subtitle:
+            "Professional workflow focused on maximizing your return on ad spend (ROAS).",
+          btn: "Contact for Consultation",
+          steps: [
+            {
+              id: "B1",
+              title: "Audit & Strategy",
+              desc: "Analysis of your account, competitors, and defining the optimal target audience.",
+            },
+            {
+              id: "B2",
+              title: "Account Setup",
+              desc: "Technical implementation, conversion tracking, and campaign structure design.",
+            },
+            {
+              id: "B3",
+              title: "Ad Creation",
+              desc: "Crafting high-converting copy and assets aligned with your brand identity.",
+            },
+            {
+              id: "B4",
+              title: "Launch & Monitoring",
+              desc: "Pushing campaigns live with real-time performance tracking and bidding optimization.",
+            },
+            {
+              id: "B5",
+              title: "Scaling & Reporting",
+              desc: "Expanding successful campaigns and providing transparent ROI based reports.",
+            },
+          ],
+        },
+        pricing: {
+          title: "Service <span>Fee structure</span>",
+          desc: "Transparent management fees based on your monthly advertising budget.",
+          features: [
+            "Pro keyword research",
+            "Creative ad copywriting",
+            "Quality score optimization",
+            "Transparent daily reports",
+            "Conversion tracking setup",
+            "24/7 technical support",
+          ],
+          tiers: [
+            { budget: "Under $1,000", label: "15%" },
+            { budget: "$1,000 - $5,000", label: "12%" },
+            { budget: "$5,000 - $10,000", label: "10%" },
+            { budget: "$10,000 - $20,000", label: "8%" },
+            { budget: "Over $20,000", label: "4%" },
+          ],
+          footer:
+            "All plans include 24/7 technical support and weekly optimization reports.",
+        },
+      },
+      "tiktok-ads": { title: "TikTok Ads" },
+      common: {
+        comingSoon: "Coming Soon",
+        backBtn: "View sample Facebook Ads",
+      },
+    },
     nav: {
       services: "Services",
       caseStudy: "Case Study",
@@ -995,6 +1275,282 @@ export const translations = {
   },
 
   vi: {
+    adsDetail: {
+      "facebook-ads": {
+        hero: {
+          badge: "Dịch Vụ",
+          title: "Quảng Cáo <span>Facebook Ads</span>",
+          desc: "Chạy quảng cáo Facebook là giải pháp giúp bạn quảng bá thương hiệu, giới thiệu sản phẩm / dịch vụ của mình đến đúng đối tượng khách hàng tiềm năng một cách nhanh chóng và chính xác.",
+          features: [
+            "Tiếp cận đúng đối tượng tiềm năng",
+            "Tăng doanh số bán hàng nhanh nhất",
+            "Tối ưu chi phí hiển thị, chi phí chuyển đổi",
+          ],
+          btn: "Nhận tư vấn ngay",
+        },
+        usp: {
+          title:
+            "Hãy Để <span>Facebook</span> Kết Nối Sản Phẩm <br /> Của Bạn Với Khách Hàng",
+        },
+        zigzag: [
+          {
+            num: "01.",
+            title:
+              "Facebook vẫn đang là kênh Marketing hiệu quả bậc nhất để gia tăng doanh số",
+            desc: "Mạng xã hội lớn nhất thế giới với hàng tỷ người dùng truy cập mỗi ngày. Đây là mỏ vàng để các doanh nghiệp tìm kiếm khách hàng.",
+            bullets: [
+              "Tiếp cận hàng triệu người dùng",
+              "Target chính xác đối tượng",
+            ],
+          },
+          {
+            num: "02.",
+            title: "Tập trung đúng đối tượng khách hàng mà bạn muốn nhắm tới",
+            desc: "Dựa trên sở thích, hành vi và nhân khẩu học. Facebook cho phép quảng cáo hiển thị chính xác trước mặt những người có khả năng mua hàng cao nhất.",
+          },
+          {
+            num: "03.",
+            title:
+              "Phễu khách hàng được xây dựng một cách chuẩn chỉnh, vững chắc",
+            desc: "Không chỉ đơn thuần là chạy quảng cáo. Chúng tôi xây dựng hành trình khách hàng từ nhận diện thương hiệu đến hành động mua hàng.",
+          },
+        ],
+        ctaBanner: {
+          label: "Đừng ngần ngại",
+          title: "Gọi ngay cho chúng tôi nếu bạn muốn gia tăng doanh số",
+          btn: "Đăng ký nhận tư vấn",
+        },
+        solutions: {
+          title:
+            "Giải Pháp <span>Quảng Cáo</span> <br /> <span>Facebook</span> Đa Dạng",
+          subtitle:
+            "Nhưng bạn có đang gặp phải những vấn đề sau khiến doanh nghiệp không khai thác hết được sức mạnh của Facebook?",
+          items: [
+            {
+              title: "LƯỢT TƯƠNG TÁC",
+              desc: "Tăng số tin nhắn, lượt xem video, lượt tương tác với bài viết, lượt thích Trang hoặc lượt phản hồi sự kiện.",
+              tags: [
+                "Messenger, Instagram, WhatsApp",
+                "Lượt xem video",
+                "Lượt tương tác bài viết",
+                "Lượt chuyển đổi",
+              ],
+            },
+            {
+              title: "LƯU LƯỢNG TRUY CẬP WEBSITE",
+              desc: "Chuyển mọi người tới một đích đến nào đó, chẳng hạn như trang web, ứng dụng hoặc sự kiện của bạn trên Facebook.",
+              tags: [
+                "Lượt click vào liên kết",
+                "Lượt xem trang đích",
+                "Messenger, Instagram, WhatsApp",
+                "Cuộc gọi",
+              ],
+            },
+            {
+              title: "DOANH SỐ",
+              desc: "Tìm những người có khả năng sẽ mua sản phẩm hoặc dịch vụ của bạn.",
+              tags: [
+                "Lượt chuyển đổi",
+                "Doanh số theo hạng mục",
+                "Messenger, Instagram, WhatsApp",
+                "Cuộc gọi",
+              ],
+            },
+            {
+              title: "KHÁCH HÀNG TIỀM NĂNG",
+              desc: "Tìm kiếm khách hàng tiềm năng thực hiện các hành động để lại thông tin liên hệ và cân nhắc đến sản phẩm của doanh nghiệp.",
+              tags: [
+                "Mẫu phản hồi tức thì",
+                "Lượt chuyển đổi",
+                "Messenger, Instagram",
+                "Cuộc gọi",
+              ],
+            },
+            {
+              title: "ỨNG DỤNG",
+              desc: "Thu thu hút những người dùng mới cài đặt và tiếp tục sử dụng ứng dụng của doanh nghiệp.",
+              tags: ["Lượt cài đặt ứng dụng", "Sự kiện trong ứng dụng"],
+            },
+            {
+              title: "MỨC ĐỘ NHẬN BIẾT",
+              desc: "Hiển thị quảng cáo cho những người có nhiều khả năng ghi nhớ đến thương hiệu của bạn nhất.",
+              tags: [
+                "Số người tiếp cận",
+                "Mức độ nhận biết thương hiệu",
+                "Lượt xem video",
+                "Mức độ nhận biết về vị trí cửa hàng",
+              ],
+            },
+          ],
+        },
+        process: {
+          title:
+            "Quy Trình Quảng Cáo <span>Facebook Ads Tại HNT Solution</span>",
+          subtitle:
+            "Luôn đặt mục tiêu hiệu quả lên hàng đầu bằng các tiêu chí cụ thể nhất.",
+          steps: [
+            {
+              step: "Bước 1",
+              title: "Tiếp nhận thông tin",
+              desc: [
+                "Phân tích sản phẩm, dịch vụ và đối thủ.",
+                "Tư vấn gói quảng cáo phù hợp với ngân sách.",
+              ],
+            },
+            {
+              step: "Bước 2",
+              title: "Phân tích & Lập kế hoạch",
+              desc: [
+                "Xác định đối tượng mục tiêu chính xác.",
+                "Lên kế hoạch ngân sách, thời gian triển khai.",
+              ],
+            },
+            {
+              step: "Bước 3",
+              title: "Lên Content & Landing",
+              desc: [
+                "Viết nội dung quảng cáo thu hút.",
+                "Thiết kế banner hình ảnh / video bắt mắt.",
+              ],
+            },
+            {
+              step: "Bước 4",
+              title: "Setup & Tracking",
+              desc: [
+                "Cài đặt chiến dịch trên Account Ads.",
+                "Gắn mã pixel, tracking đo lường hiệu quả.",
+              ],
+            },
+            {
+              step: "Bước 5",
+              title: "Tối ưu hoá & Báo cáo",
+              desc: [
+                "Theo dõi, tối ưu hoá mẫu quảng cáo hằng ngày.",
+                "Báo cáo minh bạch số liệu hằng ngày.",
+              ],
+            },
+            {
+              step: "Bước 6",
+              title: "Nghiệm thu & Duy trì",
+              desc: [
+                "Tổng hợp kết quả sau mỗi đợt chiến dịch.",
+                "Đề xuất phương án duy trì và mở rộng.",
+              ],
+            },
+          ],
+        },
+        pricing: {
+          title:
+            "Gói Dịch Vụ Chạy Quảng Cáo <span>Facebook Ads HNT Solution</span>",
+          table: {
+            header: [
+              "Ngân sách triển khai",
+              "Dưới 100tr",
+              "101 - 500tr",
+              "Trên 500tr",
+            ],
+            fee: "Phí dịch vụ",
+            values: ["10% / ngân sách", "9% / ngân sách", "8% / ngân sách"],
+          },
+          note: "Lưu ý: Phí dịch vụ chưa bao gồm VAT",
+        },
+        diagram: {
+          left: "HNT Solution sẵn sàng giải đáp mọi thắc mắc của bạn. <br /> Liên hệ ngay với chúng tôi để được hỗ trợ tốt nhất nhé.",
+          title:
+            "Luôn Hướng Đến <span>Hiệu Quả</span> <br /> <span>Chuyển Đổi</span> Cuối Cùng",
+        },
+      },
+      "google-ads": {
+        hero: {
+          badge: "Dịch Vụ",
+          title: "Dịch Vụ Chạy <br /> Quảng Cáo <span>Google Ads</span>",
+          desc: "Google là công cụ tìm kiếm số 1 thế giới. Chạy Google Ads giúp sản phẩm của bạn xuất hiện ngay khi khách hàng có nhu cầu tìm kiếm, tối ưu hiệu quả kinh doanh.",
+          btn: "Nhận báo giá ngay",
+        },
+        types: {
+          title: "Các Chiến Dịch Quảng Cáo Tại <span>HNT Solution</span>",
+          items: [
+            {
+              title: "Chiến dịch tìm kiếm (Google Search)",
+              desc: "Hiển thị quảng cáo ngay khi người dùng tìm kiếm từ khóa liên quan đến sản phẩm / dịch vụ của bạn.",
+            },
+            {
+              title: "Chiến dịch hiển thị (Google Display Network)",
+              desc: "Giúp quảng cáo của bạn xuất hiện trên hàng triệu website, ứng dụng là đối tác của Google toàn cầu.",
+            },
+            {
+              title: "Chiến dịch video (Video Youtube)",
+              desc: "Quảng cáo bằng video giúp khách hàng tiếp cận thương hiệu một cách sinh động, ấn tượng và dễ ghi nhớ hơn.",
+            },
+            {
+              title: "Chiến dịch Shopping (Google Shopping)",
+              desc: "Phù hợp cho các doanh nghiệp bán lẻ, hiển thị hình ảnh sản phẩm và giá ngay trên kết quả tìm kiếm.",
+            },
+            {
+              title: "Chiến dịch Maps (Google Maps)",
+              desc: "Giúp khách hàng tìm thấy địa chỉ cửa hàng của bạn một cách nhanh chóng khi họ tìm kiếm các dịch vụ cục bộ.",
+            },
+          ],
+        },
+        process: {
+          title: "Quy Trình Làm Việc Tại <span>HNT Solution</span>",
+          subtitle:
+            "Chúng tôi luôn cam kết mang lại giá trị thật cho doanh nghiệp của bạn thông qua quy trình làm việc chuyên nghiệp và minh bạch.",
+          btn: "Liên hệ tư vấn",
+          steps: [
+            {
+              id: "B1",
+              title: "Nghiên cứu & Tư vấn",
+              desc: "Chúng tôi phân tích thị trường, đối thủ và sản phẩm để đề xuất phương án quảng cáo tối ưu nhất cho ngân sách của bạn.",
+            },
+            {
+              id: "B2",
+              title: "Lên kế hoạch & Lựa chọn phương án",
+              desc: "Xây dựng bảng kế hoạch chi tiết về ngân sách, bộ từ khóa tiềm năng và cam kết KPI rõ ràng.",
+            },
+            {
+              id: "B3",
+              title: "Setup chiến dịch",
+              desc: "Thiết lập tài khoản, viết nội dung quảng cáo sáng tạo và cài đặt các thông số kỹ thuật tối ưu điểm chất lượng.",
+            },
+            {
+              id: "B4",
+              title: "Giám sát quảng cáo",
+              desc: "Theo dõi hiệu quả hàng ngày, tối ưu hóa từ khóa và chi phí (CPC) để đảm bảo chuyển đổi cao nhất.",
+            },
+            {
+              id: "B5",
+              title: "Báo cáo định kỳ",
+              desc: "Gửi báo cáo chi tiết về kết quả đạt được, phân tích hiệu quả và đề xuất hướng phát triển tiếp theo.",
+            },
+          ],
+        },
+        pricing: {
+          title: "Gói Dịch Vụ Chạy Quảng Cáo <span>Google Ads</span>",
+          desc: "Chúng tôi mang lại giải pháp tối ưu với chi phí hợp lý nhất dựa trên quy mô và nhu cầu thực tế của từng khách hàng.",
+          features: [
+            "Tư vấn bộ từ khóa hiệu quả",
+            "Viết mẫu quảng cáo sáng tạo",
+            "Tối ưu điểm chất lượng quảng cáo",
+            "Báo cáo minh bạch hàng ngày",
+            "Gắn mã theo dõi chuyển đổi",
+            "Hỗ trợ kỹ thuật 24/7",
+          ],
+          tiers: [
+            { label: "15%", budget: "NGÂN SÁCH DƯỚI 50 TRIỆU" },
+            { label: "12%", budget: "NGÂN SÁCH TỪ 50 TRIỆU - 200 TRIỆU" },
+            { label: "10%", budget: "NGÂN SÁCH TỪ 200 TRIỆU - 500 TRIỆU" },
+            { label: "8%", budget: "NGÂN SÁCH TỪ 500 TRIỆU - 1 TỶ" },
+            { label: "4%", budget: "NGÂN SÁCH TRÊN 1 TỶ" },
+          ],
+        },
+      },
+      "tiktok-ads": { title: "TikTok Ads" },
+      common: {
+        comingSoon: "Chúng tôi đang hoàn thiện giao diện cho dịch vụ này.",
+        backBtn: "Xem Facebook Ads Mẫu",
+      },
+    },
     nav: {
       services: "Dịch vụ",
       caseStudy: "Case Study",
@@ -2095,6 +2651,281 @@ export const translations = {
   },
 
   ja: {
+    adsDetail: {
+      "facebook-ads": {
+        hero: {
+          badge: "サービス",
+          title: "Facebook広告 <span>運用</span>",
+          desc: "Facebook広告は、ブランドを宣伝し、適切なターゲット顧客に迅速かつ正確に製品・サービスを紹介するためのソリューションです。",
+          features: [
+            "適切な潜在層へのリーチ",
+            "売上の最短最大化",
+            "表示コストとコンバージョンコストの最適化",
+          ],
+          btn: "今すぐ相談する",
+        },
+        usp: {
+          title:
+            "<span>Facebook</span> を通じて製品と <br /> 顧客を繋ぎましょう",
+        },
+        zigzag: [
+          {
+            num: "01.",
+            title:
+              "Facebookは依然として売上向上のための最も効果的なチャネルです",
+            desc: "毎日数十億人が利用する世界最大のSNS。これは企業にとって顧客を見つけるための黄金の山です。",
+            bullets: ["数百万人へのリーチ", "正確なターゲティング"],
+          },
+          {
+            num: "02.",
+            title: "ターゲットにしたい適切な顧客層に集中します",
+            desc: "興味、行動、人口統計に基づいて。Facebookでは、購入の可能性が最も高い人々の前に広告を正確に表示できます。",
+          },
+          {
+            num: "03.",
+            title: "標準的で強固な顧客ファンネルを構築します",
+            desc: "単に広告を出すだけではありません。ブランド認知から購入アクションまでのカスタマージャーニーを構築します。",
+          },
+        ],
+        ctaBanner: {
+          label: "お気軽にご相談ください",
+          title: "売上を上げたい方は今すぐお電話ください",
+          btn: "相談を申し込む",
+        },
+        solutions: {
+          title:
+            "多様な <span>Facebook広告</span> <br /> <span>ソリューション</span>",
+          subtitle:
+            "しかし、Facebookの力を十分に活用できていない次のような問題に直面していませんか？",
+          items: [
+            {
+              title: "エンゲージメント",
+              desc: "メッセージ、動画再生、投稿へのエンゲージメント、ページへのいいね、またはイベントの反応を増やします。",
+              tags: [
+                "Messenger, Instagram, WhatsApp",
+                "動画再生",
+                "投稿エンゲージメント",
+                "コンバージョン",
+              ],
+            },
+            {
+              title: "ウェブサイトトラフィック",
+              desc: "ウェブサイト、アプリ、Facebookイベントなどのリンク先にユーザーを誘導します。",
+              tags: [
+                "リンククリック",
+                "ランディングページ閲覧",
+                "Messenger, Instagram, WhatsApp",
+                "電話",
+              ],
+            },
+            {
+              title: "売上",
+              desc: "製品やサービスを購入する可能性が高い人を見つけます。",
+              tags: [
+                "コンバージョン",
+                "カタログ販売",
+                "Messenger, Instagram, WhatsApp",
+                "電話",
+              ],
+            },
+            {
+              title: "リード獲得",
+              desc: "連絡先情報を残し、ビジネスの製品を検討するアクションをとる潜在顧客を検索します。",
+              tags: [
+                "インスタントフォーム",
+                "コンバージョン",
+                "Messenger, Instagram",
+                "電話",
+              ],
+            },
+            {
+              title: "アプリプロモーション",
+              desc: "ビジネスのアプリをインストールし、継続して利用する新しいユーザーを引き付けます。",
+              tags: ["アプリインストール", "アプリイベント"],
+            },
+            {
+              title: "認知度",
+              desc: "ブランドを最もよく覚えている可能性が高い人々に広告を表示します。",
+              tags: ["リーチ", "ブランド認知", "動画再生", "店舗の認知"],
+            },
+          ],
+        },
+        process: {
+          title: "HNT Solutionにおける <span>Facebook広告運用プロセス</span>",
+          subtitle:
+            "最も具体的な基準を持って、効率の目標を常に第一に考えます。",
+          steps: [
+            {
+              step: "ステップ1",
+              title: "情報の受け取り",
+              desc: [
+                "製品、サービス、競合他社を分析します。",
+                "予算に合わせた広告パッケージを提案します。",
+              ],
+            },
+            {
+              step: "ステップ2",
+              title: "分析と計画",
+              desc: [
+                "ターゲット層を正確に特定します。",
+                "予算と実施時期を計画します。",
+              ],
+            },
+            {
+              step: "ステップ3",
+              title: "コンテンツとLP制作",
+              desc: [
+                "魅力的な広告文を作成します。",
+                "目を引く画像や動画バナーをデザインします。",
+              ],
+            },
+            {
+              step: "ステップ4",
+              title: "セットアップと追跡",
+              desc: [
+                "広告アカウントでキャンペーンを設定します。",
+                "効率を測定するためにピクセルコードやトラッキングを設定します。",
+              ],
+            },
+            {
+              step: "ステップ5",
+              title: "最適化と報告",
+              desc: [
+                "広告サンプルを毎日監視し、最適化します。",
+                "日々の数値を透明性を持って報告します。",
+              ],
+            },
+            {
+              step: "ステップ6",
+              title: "検収と維持",
+              desc: [
+                "各キャンペーン終了後に結果をまとめます。",
+                "維持および拡大計画を提案します。",
+              ],
+            },
+          ],
+        },
+        pricing: {
+          title: "HNT Solution <span>Facebook広告運用パッケージ</span>",
+          table: {
+            header: [
+              "実施予算",
+              "1億ドン未満",
+              "1億100万 - 5億ドン",
+              "5億ドン以上",
+            ],
+            fee: "運用手数料",
+            values: ["予算の10%", "予算의9%", "予算の8%"],
+          },
+          note: "注：運用手数料にVAT（付加価値税）は含まれていません",
+        },
+        diagram: {
+          left: "HNT Solutionは、すべての質問にお答えする準備ができています。 <br /> 最良のサポートについては、今すぐお問い合わせください。",
+          title: "常に <span>最終的なコンバージョン効率</span> を目指します",
+        },
+      },
+      "google-ads": {
+        hero: {
+          badge: "Google Ads スペシャリスト",
+          title: "<span>Google 広告</span> パフォーマンスを最適化",
+          desc: "顧客が求めているものを検索した瞬間にアプローチ。精密なターゲティングでビジネスを拡大します。",
+          features: [
+            "検索ネットワークの最適化",
+            "パフォーマンス最大化キャンペーン",
+            "コンバージョントラッキング設定",
+            "リマーケティング戦略",
+          ],
+          btn: "無料診断を受ける",
+        },
+        types: {
+          title:
+            "マルチプラットフォーム <span>Google 広告</span> ソリューション",
+          subtitle:
+            "Googleエコシステム全体を通じて、最適なキャンペーン戦略で顧客にリーチします。",
+          items: [
+            {
+              title: "検索広告",
+              desc: "ユーザーがサービスに関連するキーワードを検索した際、結果の最上部に表示されます。",
+            },
+            {
+              title: "ディスプレイ広告",
+              desc: "数百万のウェブサイトやアプリで、視覚的なバナー広告を通じて認知を広げます。",
+            },
+            {
+              title: "動画広告 (YouTube)",
+              desc: "世界最大の動画プラットフォームで、魅力的な動画コンテンツを通じてユーザーを惹きつけます。",
+            },
+            {
+              title: "ショッピング広告",
+              desc: "検索結果に商品の写真、価格、店舗名を表示し、直接購買を促進します。",
+            },
+            {
+              title: "ローカルキャンペーン",
+              desc: "Googleマップや検索を通じて、実店舗への来店を促進します。",
+            },
+          ],
+        },
+        process: {
+          title: "<span>5ステップ</span> の最適化プロセス",
+          subtitle:
+            "広告費用対効果（ROAS）を最大化することに焦点を当てたプロフェッショナルなワークフロー。",
+          btn: "相談窓口へ",
+          steps: [
+            {
+              id: "B1",
+              title: "監査と戦略",
+              desc: "アカウント、競合他社を分析し、最適なターゲットオーディエンスを定義します。",
+            },
+            {
+              id: "B2",
+              title: "アカウント設定",
+              desc: "技術的な実装、コンバージョントラッキング、キャンペーン構造の設計を行います。",
+            },
+            {
+              id: "B3",
+              title: "クリエイティブ制作",
+              desc: "ブランドアイデンティティに合わせ、コンバージョン率の高いコピーとアセットを作成します。",
+            },
+            {
+              id: "B4",
+              title: "配信開始とモニタリング",
+              desc: "リアルタイムのパフォーマンス追跡と入札の最適化を行いながら、広告を配信します。",
+            },
+            {
+              id: "B5",
+              title: "拡大とレポート",
+              desc: "成功したキャンペーンを拡大し、ROIに基づいた透明性の高いレポートを提供します。",
+            },
+          ],
+        },
+        pricing: {
+          title: "運用 <span>代行手数料</span>",
+          desc: "月間の広告予算に基づいた、透明性の高い運用管理手数料。",
+          features: [
+            "プロフェッショナルなキーワード調査",
+            "クリエイティブな広告文作成",
+            "品質スコアの最適化",
+            "透明性の高い日次レポート",
+            "コンバージョントラッキング設定",
+            "24時間年中無休のサポート",
+          ],
+          tiers: [
+            { budget: "15万円未満", label: "15%" },
+            { budget: "15万 - 75万円", label: "12%" },
+            { budget: "75万 - 150万円", label: "10%" },
+            { budget: "150万 - 300万円", label: "8%" },
+            { budget: "300万円以上", label: "4%" },
+          ],
+          footer:
+            "すべてのプランに24時間、年中無休のテクニカルサポートと週次レポートが含まれます。",
+        },
+      },
+      "tiktok-ads": { title: "TikTok Ads" },
+      common: {
+        comingSoon: "準備中",
+        backBtn: "Facebook広告のサンプルを見る",
+      },
+    },
     nav: {
       services: "サービス",
       caseStudy: "導入事例",
@@ -3124,6 +3955,253 @@ export const translations = {
   },
 
   zh: {
+    adsDetail: {
+      "facebook-ads": {
+        hero: {
+          badge: "服务项目",
+          title: "Facebook <span>广告投放</span>",
+          desc: "Facebook 广告投放是一种能够帮助您快速准确地向目标客户推广品牌、介绍产品/服务的解决方案。",
+          features: [
+            "精准触达潜在受众",
+            "最快提升销售额",
+            "优化展示成本与转化成本",
+          ],
+          btn: "立即获取咨询",
+        },
+        usp: {
+          title: "让 <span>Facebook</span> 将您的产品 <br /> 与客户连接起来",
+        },
+        zigzag: [
+          {
+            num: "01.",
+            title: "Facebook 仍然是提高销售额最有效的营销渠道",
+            desc: "全球最大的社交网络，每日有数十亿用户访问。这是企业寻找客户的金矿。",
+            bullets: ["触达数百万用户", "精准定位"],
+          },
+          {
+            num: "02.",
+            title: "专注于您想要针对的正确客户群",
+            desc: "基于兴趣、行为和人口统计。Facebook 允许广告精准显示在购买可能性最高的人群面前。",
+          },
+          {
+            num: "03.",
+            title: "建立规范且稳固的客户漏斗",
+            desc: "不仅仅是运行广告。我们构建从品牌认知到购买行动的客户旅程。",
+          },
+        ],
+        ctaBanner: {
+          label: "不要犹豫",
+          title: "如果您想增加销售额，请立即致电我们",
+          btn: "注册咨询",
+        },
+        solutions: {
+          title:
+            "多样化的 <span>Facebook 广告</span> <br /> <span>解决方案</span>",
+          subtitle:
+            "但您是否面临以下导致企业无法充分利用 Facebook 力量的问题？",
+          items: [
+            {
+              title: "互动量",
+              desc: "增加消息、视频观看量、帖子互动、公共主页点赞或活动响应。",
+              tags: [
+                "Messenger, Instagram, WhatsApp",
+                "视频观看量",
+                "帖子互动量",
+                "转化量",
+              ],
+            },
+            {
+              title: "网站流量",
+              desc: "将用户引导至某个目的地，例如您的网站、应用或 Facebook 活动。",
+              tags: [
+                "链接点击量",
+                "落地页浏览量",
+                "Messenger, Instagram, WhatsApp",
+                "通话",
+              ],
+            },
+            {
+              title: "销量",
+              desc: "寻找可能购买您的产品或服务的人。",
+              tags: [
+                "转化量",
+                "目录销量",
+                "Messenger, Instagram, WhatsApp",
+                "通话",
+              ],
+            },
+            {
+              title: "潜在客户",
+              desc: "寻找会采取行动留下联系信息并考虑企业产品的潜在客户。",
+              tags: ["即时表单", "转化量", "Messenger, Instagram", "通话"],
+            },
+            {
+              title: "应用推广",
+              desc: "吸引新用户安装并继续使用企业的应用。",
+              tags: ["应用安装量", "应用事件"],
+            },
+            {
+              title: "知名度",
+              desc: "向最有可能记住您品牌的人展示广告。",
+              tags: ["覆盖人数", "品牌知名度", "视频观看量", "店铺位置知名度"],
+            },
+          ],
+        },
+        process: {
+          title: "HNT Solution 的 <span>Facebook 广告投放流程</span>",
+          subtitle: "始终以效率为首要目标，采用最具体的标准。",
+          steps: [
+            {
+              step: "第一步",
+              title: "接收信息",
+              desc: [
+                "分析产品、服务和竞争对手。",
+                "根据预算咨询合适的广告套餐。",
+              ],
+            },
+            {
+              step: "第二步",
+              title: "分析与规划",
+              desc: ["准确识别目标受众。", "规划预算和实施时间。"],
+            },
+            {
+              step: "第三步",
+              title: "内容与落地页",
+              desc: ["撰写吸引人的广告内容。", "设计吸睛的图片/视频横幅。"],
+            },
+            {
+              step: "第四步",
+              title: "设置与追踪",
+              desc: [
+                "在广告账户上设置系列。",
+                "关联像素代码和追踪以衡量效率。",
+              ],
+            },
+            {
+              step: "第五步",
+              title: "优化与报告",
+              desc: ["每日监控并优化广告样本。", "透明地报告每日数据。"],
+            },
+            {
+              step: "第六步",
+              title: "验收与维护",
+              desc: ["每轮活动后总结结果。", "提出维护和扩展计划。"],
+            },
+          ],
+        },
+        pricing: {
+          title: "HNT Solution <span>Facebook 广告投放套餐</span>",
+          table: {
+            header: ["实施预算", "1亿盾以下", "1.01亿 - 5亿盾", "5亿盾以上"],
+            fee: "服务费",
+            values: ["预算的10%", "预算的9%", "预算的8%"],
+          },
+          note: "注：服务费不含增值税 (VAT)",
+        },
+        diagram: {
+          left: "HNT Solution 随时准备回答您的所有问题。 <br /> 立即联系我们以获得最佳支持。",
+          title: "始终致力于 <span>最终转化效率</span>",
+        },
+      },
+      "google-ads": {
+        hero: {
+          badge: "Google Ads 专家",
+          title: "优化您的 <span>Google 广告</span> 效果",
+          desc: "在客户搜索您所提供的产品的精确时刻触达他们。通过精准定位的 Google 广告扩展您的业务。",
+          features: [
+            "搜索网络优化",
+            "Performance Max 全渠道广告",
+            "转化跟踪设置",
+            "再营销策略",
+          ],
+          btn: "获取免费审计",
+        },
+        types: {
+          title: "多平台 <span>Google 广告</span> 解决方案",
+          subtitle:
+            "我们通过量身定制的活动策略，在整个 Google 生态系统中触达您的客户。",
+          items: [
+            {
+              title: "搜索广告",
+              desc: "当客户搜索与您的产品或服务相关的关键词时，出现在搜索结果的最顶部。",
+            },
+            {
+              title: "展示广告",
+              desc: "在数百万个网站和应用上通过极具视觉冲击力的横幅广告扩大您的覆盖范围。",
+            },
+            {
+              title: "视频广告 (YouTube)",
+              desc: "在全球最大的视频平台上，通过引人入胜的视频内容吸引您的受众。",
+            },
+            {
+              title: "购物广告",
+              desc: "直接在搜索结果中展示您的产品库存，包括价格和图片。",
+            },
+            {
+              title: "本地广告系列",
+              desc: "通过在地图和搜索中展示广告，吸引客户到访您的实体店。",
+            },
+          ],
+        },
+        process: {
+          title: "我们的 <span>5步</span> 优化流程",
+          subtitle: "专注于最大化广告支出回报率 (ROAS) 的专业工作流程。",
+          btn: "联系寻求咨询",
+          steps: [
+            {
+              id: "B1",
+              title: "审计与策略",
+              desc: "分析您的账户、竞争对手，并确定最佳目标受众。",
+            },
+            {
+              id: "B2",
+              title: "账户设置",
+              desc: "技术实施、转化跟踪以及广告系列结构设计。",
+            },
+            {
+              id: "B3",
+              title: "广告创作",
+              desc: "根据您的品牌形象创作高转化率的文案和资产。",
+            },
+            {
+              id: "B4",
+              title: "启动与监控",
+              desc: "发布广告系列，进行实时性能跟踪和出价优化。",
+            },
+            {
+              id: "B5",
+              title: "扩展与报告",
+              desc: "扩展成功的广告系列，并提供基于投资回报率 (ROI) 的透明报告。",
+            },
+          ],
+        },
+        pricing: {
+          title: "服务 <span>费率结构</span>",
+          desc: "基于您每月广告预算的透明管理费。",
+          features: [
+            "专业关键词研究",
+            "创意广告文案撰写",
+            "质量得分优化",
+            "透明的每日报告",
+            "转化跟踪设置",
+            "24/7 技术支持",
+          ],
+          tiers: [
+            { budget: "1,000 美元以下", label: "15%" },
+            { budget: "1,000 - 5,000 美元", label: "12%" },
+            { budget: "5,000 - 10,000 美元", label: "10%" },
+            { budget: "10,000 - 20,000 美元", label: "8%" },
+            { budget: "20,000 美元以上", label: "4%" },
+          ],
+          footer: "所有方案均包含 24/7 技术支持和每周优化报告。",
+        },
+      },
+      "tiktok-ads": { title: "TikTok 广告" },
+      common: {
+        comingSoon: "敬请期待",
+        backBtn: "查看 Facebook 广告模板",
+      },
+    },
     nav: {
       services: "服务",
       caseStudy: "案例研究",

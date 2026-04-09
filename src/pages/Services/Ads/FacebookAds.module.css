@@ -716,10 +716,9 @@
   position: relative;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  /* Contain the x-axis slide animation */
   isolation: isolate;
 }
 
@@ -729,13 +728,26 @@
   width: 100%;
 }
 
+.solSliderTrack {
+  display: flex;
+  will-change: transform;
+  cursor: grab;
+  user-select: none;
+}
+
+.solSliderTrack:active {
+  cursor: grabbing;
+}
+
 .solSliderInner {
   display: flex;
-  min-height: 400px;
+  height: 420px;
+  flex-shrink: 0;
 }
 
 .solSliderLeft {
   width: 50%;
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -743,6 +755,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -802,7 +815,8 @@
   .solSliderInner {
     flex-direction: column;
   }
-  .solSliderLeft, .solSliderRight {
+  .solSliderLeft,
+  .solSliderRight {
     width: 100%;
   }
   .solSliderRight {
@@ -810,103 +824,479 @@
   }
 }
 
-/* ===================== */
-/* Contact Form Section  */
-/* ===================== */
-.contactSection {
-  padding: 100px 0;
-  background: rgba(10, 10, 15, 0.5);
+.solDots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 0 8px;
 }
 
-.contactGrid {
+.solDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--glass-border);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.solDotActive {
+  width: 24px;
+  border-radius: 4px;
+  background: var(--accent-primary);
+}
+
+/* ===================== */
+/* Process Section       */
+/* ===================== */
+.processGrid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 80px;
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.contactInfo h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 16px;
-  line-height: 1.3;
-}
-
-.contactInfo p {
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 32px;
-}
-
-.contactDetails {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.contactItem {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-}
-
-.contactItem svg {
-  color: var(--accent-primary);
-  flex-shrink: 0;
-}
-
-.contactFormWrap {
+.processCard {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  border-radius: 24px;
-  padding: 40px;
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
 
-.contactForm {
+.processCard:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-primary);
+  background: rgba(56, 189, 248, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+}
+
+.stepLabel {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cardList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
+}
+
+.cardList li {
+  display: flex;
+  gap: 10px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.bullet {
+  min-width: 6px;
+  height: 6px;
+  background: var(--accent-gradient);
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+@media (max-width: 1100px) {
+  .processGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================== */
+/* Pricing Table Section */
+/* ===================== */
+.pricingTitleWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 64px;
+  gap: 32px;
+}
+
+.pricingIcon {
+  width: 64px;
+  height: 64px;
+  background: var(--accent-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 8px 16px rgba(56, 189, 248, 0.3);
+}
+
+.pricingTableWrap {
+  width: 100%;
+}
+
+.pricingTable {
+  background: var(--glass-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.pricingHeader {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  background: var(--accent-primary); /* could use gradient too */
+  background: var(--accent-gradient);
+}
+
+.pricingHeaderCell {
+  padding: 24px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pricingHeaderCell:last-child {
+  border-right: none;
+}
+
+.pricingBody {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+}
+
+.pricingBodyCell {
+  padding: 24px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-right: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricingBodyCell:first-child {
+  font-weight: 700;
+}
+
+.pricingBodyCell:last-child {
+  border-right: none;
+}
+
+.pricingNote {
+  margin-top: 24px;
+  font-style: italic;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+@media (max-width: 900px) {
+  .pricingHeaderCell,
+  .pricingBodyCell {
+    padding: 16px 10px;
+    font-size: 0.9rem;
+  }
+  .pricingHeader,
+  .pricingBody {
+    grid-template-columns: 1fr 0.8fr 0.8fr 0.8fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricingTitleWrap {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .pricingTable {
+    border-radius: 12px;
+  }
+  .pricingHeaderCell,
+  .pricingBodyCell {
+    padding: 12px 6px;
+    font-size: 0.8rem;
+  }
+}
+
+/* ===================== */
+/* Diagram Section       */
+/* ===================== */
+.diagramSection {
+  padding: 100px 0;
+  background: var(--bg-primary);
+  position: relative;
+  z-index: 1; /* Stay above any body patterns */
+}
+
+:global([data-theme="light"]) .diagramSection {
+  background: #ffffff;
+}
+
+:global([data-theme="dark"]) .diagramSection {
+  background: #0a0a0f; /* Solid dark color to hide body layers */
+}
+
+.diagramHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 64px;
+  gap: 40px;
+}
+
+.diagramHeaderLeft p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 400px;
+  margin: 0;
+}
+
+.diagramHeaderRight {
+  flex: 1;
+  text-align: right;
+}
+
+.diagramTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.diagramVisualWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background: #ffffff; /* Always light to show black text in image */
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+:global([data-theme="dark"]) .diagramVisualWrap {
+  background: #f8fafc; /* Very light blue-grey for dark mode legibility */
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.diagramMainImage {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .diagramTitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .diagramHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    text-align: left;
+  }
+  .diagramHeaderLeft p {
+    max-width: 100%;
+  }
+  .diagramHeaderRight {
+    text-align: left;
+  }
+  .diagramVisualWrap {
+    padding: 20px;
+  }
+}
+
+/* ===================== */
+/* Contact Section       */
+/* ===================== */
+.serviceContactSection {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border-color);
+}
+
+:global([data-theme="dark"]) .serviceContactSection {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+:global([data-theme="light"]) .serviceContactSection {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.contactFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.contactTextSide {
+  flex: 1;
+}
+
+.contactTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.contactSubtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.contactFormSide {
+  flex: 1.5;
+}
+
+.serviceForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .formRow {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.formInput {
-  width: 100%;
-  padding: 14px 18px;
-  background: var(--bg-secondary);
+.glassInput,
+.glassTextarea {
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  padding: 18px 25px;
+  border-radius: 15px;
   color: var(--text-primary);
-  font-size: 0.95rem;
-  font-family: inherit;
-  transition: border-color 0.2s ease;
-  box-sizing: border-box;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+:global([data-theme="dark"]) .glassInput,
+:global([data-theme="dark"]) .glassTextarea {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.glassInput:focus,
+.glassTextarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+}
+
+.glassTextarea {
+  min-height: 150px;
   resize: vertical;
 }
 
-.formInput:focus {
-  outline: none;
-  border-color: var(--accent-primary);
-  background: rgba(56, 189, 248, 0.03);
+.formBottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-top: 10px;
 }
 
-.formInput::placeholder {
-  color: var(--text-secondary);
+.recaptchaContainer {
+  overflow: hidden;
+  border-radius: 4px;
 }
 
-@media (max-width: 900px) {
-  .contactGrid {
-    grid-template-columns: 1fr;
+.formSubmitBtn {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border: none;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.formSubmitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 243, 255, 0.3);
+}
+
+.successMsg {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.errorMsg {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .contactFlex {
+    flex-direction: column;
     gap: 40px;
+    text-align: center;
+  }
+  .contactTitle {
+    font-size: 2.5rem;
   }
   .formRow {
     grid-template-columns: 1fr;
+  }
+  .formBottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .formSubmitBtn {
+    width: 100%;
   }
 }

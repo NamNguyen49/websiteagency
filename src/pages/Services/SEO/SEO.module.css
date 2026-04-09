@@ -350,16 +350,6 @@
   gap: 20px;
 }
 
-.serviceForm input,
-.serviceForm textarea {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: white !important;
-  padding: 18px 25px;
-  border-radius: 15px;
-  font-size: 1rem;
-}
-
 .captchaCenter {
   display: flex;
   justify-content: center;
@@ -1091,7 +1081,7 @@
   }
 }
 
-/* Service Contact Section Styles - Copied from LandingPage */
+/* Service Contact Section Styles - Theme Aware */
 .serviceContactSection {
   padding: 100px 0;
   background: var(--bg-secondary);
@@ -1166,6 +1156,19 @@
   background: rgba(255, 255, 255, 0.05);
 }
 
+:global([data-theme="light"]) .glassInput,
+:global([data-theme="light"]) .glassTextarea {
+  background: #ffffff;
+  border: 1.5px solid rgba(15, 23, 42, 0.2);
+  color: #0f172a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+:global([data-theme="light"]) .glassInput::placeholder,
+:global([data-theme="light"]) .glassTextarea::placeholder {
+  color: #94a3b8;
+}
+
 .glassInput:focus,
 .glassTextarea:focus {
   outline: none;
@@ -1210,12 +1213,10 @@
   box-shadow: 0 15px 30px rgba(0, 243, 255, 0.3);
 }
 
-/* Responsive for Contact Section */
 @media (max-width: 1024px) {
   .contactFlex {
     flex-direction: column;
     gap: 40px;
-    text-align: center;
   }
   .formRow {
     grid-template-columns: 1fr 1fr;
