@@ -17,7 +17,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import styles from "./GoogleAds.module.css";
 import leadsImg from "../../../assets/images/Generating new leads-amico.png";
-import partnerImg from "../../../assets/images/partnerbadgeclickable.svg";
+import partnerImg from "../../../assets/images/82627e61816d2945d37cc7af3e78022c.jpg";
 
 const GoogleAds = () => {
   const { t, language } = useLanguage();
@@ -79,7 +79,7 @@ const GoogleAds = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <div>
       {/* 1. Hero Section */}
       <section className={styles.hero}>
         <div className="container">
@@ -126,13 +126,20 @@ const GoogleAds = () => {
       {/* 2. Advertising Types Grid */}
       <section className={styles.section}>
         <div className="container">
-          <div className={styles.centered}>
-            <h2
-              className={styles.sectionTitle}
-              dangerouslySetInnerHTML={{ __html: adsData.types.title }}
-            ></h2>
-          </div>
           <div className={styles.typesGrid}>
+            <div className={styles.typesTitleWrapper}>
+              <div
+                className={`${styles.typeIcon} ${styles.titleIcon}`}
+                style={{ marginBottom: "16px" }}
+              >
+                <Zap size={32} />
+              </div>
+              <h2
+                className={styles.sectionTitle}
+                dangerouslySetInnerHTML={{ __html: adsData.types.title }}
+                style={{ textAlign: "left", marginBottom: 0 }}
+              ></h2>
+            </div>
             {adsData.types.items.map((type, i) => (
               <motion.div
                 key={i}
@@ -154,10 +161,7 @@ const GoogleAds = () => {
       </section>
 
       {/* 3. Process Split Section */}
-      <section
-        className={styles.section}
-        style={{ background: "var(--bg-secondary)" }}
-      >
+      <section className={`${styles.section} ${styles.processSectionBg}`}>
         <div className="container">
           <div className={styles.processSplit}>
             <div className={styles.processLeft}>
@@ -215,6 +219,9 @@ const GoogleAds = () => {
                   </div>
                 ))}
               </div>
+              <div className={styles.pricingLogo}>
+                <img src={partnerImg} alt="Google Partner" />
+              </div>
             </div>
             <div className={styles.pricingRight}>
               {adsData.pricing.tiers.map((tier, i) => (
@@ -230,10 +237,6 @@ const GoogleAds = () => {
                   <div className={styles.tierBudget}>{tier.budget}</div>
                 </motion.div>
               ))}
-
-              <div className={styles.pricingLogo}>
-                <img src={partnerImg} alt="Google Partner" />
-              </div>
             </div>
           </div>
         </div>
