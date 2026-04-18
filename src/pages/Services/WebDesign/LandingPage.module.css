@@ -32,8 +32,8 @@
 }
 
 .heroText h1 {
-  font-size: 5rem;
-  font-weight: 900;
+  font-size: 4rem;
+  font-weight: 800;
   line-height: 1.1;
   color: var(--text-primary);
   margin-bottom: 25px;

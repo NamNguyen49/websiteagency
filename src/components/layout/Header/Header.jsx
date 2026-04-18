@@ -63,7 +63,7 @@ const Header = () => {
           title: t.nav.services_groups.ads.title,
           icon: <BarChart3 size={18} />,
           items: t.nav.services_groups.ads.items,
-          slugs: ["facebook-ads", "google-ads", "tiktok-ads"],
+          slugs: ["facebook-ads", "google-ads"],
         },
         {
           id: "marketing-ai",

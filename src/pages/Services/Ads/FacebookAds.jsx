@@ -203,7 +203,10 @@ const FacebookAds = () => {
       </section>
 
       {/* 2. USP Intro Section */}
-      <section className={styles.section} style={{ padding: "60px 0" }}>
+      <section
+        className={styles.section}
+        style={{ padding: "60px 0px 0px 0px" }}
+      >
         <div className="container">
           <div className={styles.centered}>
             <h2

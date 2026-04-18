@@ -126,10 +126,7 @@ const SEO = () => {
               <p className={styles.heroDesc}>{seoData.hero.desc}</p>
               <div className={styles.heroBtns}>
                 <button className={styles.primaryBtn}>
-                  {seoData.hero.btnPrimary} <ArrowRight size={20} />
-                </button>
-                <button className={styles.secondaryBtn}>
-                  {seoData.hero.btnSecondary}
+                  {seoData.hero.btnPrimary}
                 </button>
               </div>
             </motion.div>

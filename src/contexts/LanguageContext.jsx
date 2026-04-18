@@ -303,7 +303,7 @@ export const translations = {
         },
         ads: {
           title: "Ads",
-          items: ["Facebook Ads", "Google Ads", "TikTok Ads"],
+          items: ["Facebook Ads", "Google Ads"],
         },
         advanced: {
           title: "Marketing & AI",
@@ -1570,7 +1570,7 @@ export const translations = {
         },
         ads: {
           title: "Quảng cáo",
-          items: ["Facebook Ads", "Google Ads", "TikTok Ads"],
+          items: ["Facebook Ads", "Google Ads"],
         },
         advanced: {
           title: "Tự động hóa & AI",
@@ -2945,7 +2945,7 @@ export const translations = {
         },
         ads: {
           title: "広告運用",
-          items: ["Facebook広告", "Google広告", "TikTok広告"],
+          items: ["Facebook広告", "Google広告"],
         },
         advanced: {
           title: "AI & 自動化",
@@ -4221,7 +4221,7 @@ export const translations = {
         },
         ads: {
           title: "广告投放",
-          items: ["Facebook 广告", "Google 广告", "TikTok 广告"],
+          items: ["Facebook 广告", "Google 广告"],
         },
         advanced: {
           title: "营销与AI",
