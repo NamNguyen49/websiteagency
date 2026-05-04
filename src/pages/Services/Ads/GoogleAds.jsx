@@ -16,7 +16,7 @@ import {
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import styles from "./GoogleAds.module.css";
-import leadsImg from "../../../assets/images/Generating new leads-amico.png";
+import leadsImg from "../../../assets/images/back33.png";
 import partnerImg from "../../../assets/images/82627e61816d2945d37cc7af3e78022c.jpg";
 
 const GoogleAds = () => {

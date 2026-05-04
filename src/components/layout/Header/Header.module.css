@@ -34,7 +34,7 @@
 }
 
 .logoImage {
-  height: 60px;
+  height: 190px;
   width: auto;
   object-fit: contain;
   transition: transform 0.4s ease;
@@ -46,7 +46,7 @@
 
 .logoDark,
 .logoLight {
-  height: 60px;
+  height: 55px;
 }
 
 .navLinks {
@@ -330,11 +330,11 @@
     top: 15px;
     border-radius: 32px;
   }
-
+  
   .navContainer {
     padding: 0 1.2rem;
   }
-
+  
   .navLinks {
     position: absolute;
     top: calc(100% + 12px);
@@ -356,23 +356,23 @@
     max-height: 80vh;
     overflow-y: auto;
   }
-
+  
   .mobileActive {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-
+  
   .mobileToggle {
     display: block;
   }
-
+  
   .navItemWrapper {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
   }
-
+  
   .navLink {
     font-size: 16px;
     width: 100%;
@@ -380,7 +380,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     justify-content: space-between;
   }
-
+  
   .megaMenu,
   .simpleDropdown {
     position: static;
@@ -395,33 +395,33 @@
     flex-direction: column;
     gap: 15px;
   }
-
+  
   .megaMenuGrid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
+  
   .groupTitle {
     color: var(--text-primary);
   }
-
+  
   .groupItems {
     padding-left: 20px;
     border-left: 1px solid var(--accent-primary);
   }
-
+  
   .logoImage {
     height: 35px;
   }
-
+  
   .headerActions {
     gap: 8px;
   }
-
+  
   .desktopCta {
     display: none !important;
   }
-
+  
   .mobileCta {
     display: flex !important;
     margin-top: 16px;
@@ -429,15 +429,15 @@
     text-align: center;
     justify-content: center;
   }
-
+  
   .langLabel {
     display: none;
   }
-
+  
   .langChevron {
     display: none;
   }
-
+  
   .langBtn {
     padding: 0 8px;
     width: 40px;

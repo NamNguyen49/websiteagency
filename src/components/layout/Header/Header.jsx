@@ -115,7 +115,7 @@ const Header = () => {
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <img
-            src={theme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"}
+            src={theme === "dark" ? "/logo-dark.png" : "/logo-light.png"}
             alt="HNT Solutions Logo"
             className={`${styles.logoImage} ${theme === "dark" ? styles.logoDark : styles.logoLight}`}
           />

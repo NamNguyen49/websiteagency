@@ -260,7 +260,9 @@
 
 .pricingLogo img {
   width: 250px;
-  opacity: 0.8;
+  opacity: 1;
+  border-radius: 12px;
+  
 }
 
 [data-theme="dark"] .pricingLogo img {
@@ -355,6 +357,7 @@
   height: auto;
   position: relative;
   z-index: 2;
+  border-radius: 20%;
 }
 
 .glowBackground {
@@ -365,16 +368,16 @@
   width: 120%;
   height: 120%;
   background: radial-gradient(
-    circle,
-    rgba(var(--accent-primary-rgb), 0.2) 0%,
-    transparent 70%
+  circle,
+  rgba(var(--accent-primary-rgb), 0.2) 0%,
+  transparent 70%
   );
   filter: blur(60px);
   z-index: 1;
 }
 
 .section {
-  padding: clamp(60px, 10vw, 120px) 0;
+  padding: clamp(60px, 10vw, 60px) 0;
 }
 
 .centered {
@@ -533,45 +536,45 @@
     text-align: center;
     gap: 40px;
   }
-
+  
   .heroContent {
   }
-
+  
   .heroVisual {
     width: 60%;
     margin: 0 auto;
   }
-
+  
   .processSplit {
     flex-direction: column;
     gap: 40px;
   }
-
+  
   .processLeft {
     position: static;
     text-align: center;
   }
-
+  
   .pricingSplit {
     flex-direction: column;
     text-align: center;
     gap: 50px;
   }
-
+  
   .pricingLogo {
     justify-content: center;
   }
-
+  
   .pricingFeatureList {
     justify-items: center;
   }
-
+  
   .contactFlex {
     flex-direction: column;
     gap: 40px;
     text-align: center;
   }
-
+  
   .contactTitle {
     font-size: 2.5rem;
   }
@@ -596,37 +599,37 @@
     padding-top: 120px;
     min-height: auto;
   }
-
+  
   .heroContent h1 {
     font-size: 2.5rem;
   }
-
+  
   .heroVisual {
     width: 80%;
   }
-
+  
   .section {
     padding: 60px 0;
   }
-
+  
   .sectionTitle {
     font-size: 2rem;
   }
-
+  
   .typeCard {
     padding: 30px;
   }
-
+  
   .tierRow {
     padding: 15px 20px;
   }
-
+  
   .tierCircle {
     width: 50px;
     height: 50px;
     font-size: 1.1rem;
   }
-
+  
   .tierBudget {
     font-size: 0.9rem;
   }
@@ -636,22 +639,22 @@
   .heroContent h1 {
     font-size: 2rem;
   }
-
+  
   .heroActions {
     flex-direction: column;
     width: 100%;
   }
-
+  
   .heroActions button {
     width: 100%;
   }
-
+  
   .pricingFeatureList {
     grid-template-columns: 1fr;
     text-align: left;
     display: inline-grid;
   }
-
+  
   .typesGrid {
     grid-template-columns: 1fr;
   }

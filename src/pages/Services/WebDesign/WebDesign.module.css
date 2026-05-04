@@ -12,8 +12,8 @@
 }
 
 /* 
-  HERO ADS SECTION 
-  Fixing scale and positioning to avoid header overlap and clipping
+HERO ADS SECTION 
+Fixing scale and positioning to avoid header overlap and clipping
 */
 .heroAds {
   position: relative;
@@ -30,7 +30,7 @@
 .heroGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 80px;
   align-items: center;
   position: relative;
   z-index: 5;
@@ -90,12 +90,12 @@
   width: 150px; /* Làm dải sáng rộng hơn để khi đi chậm nhìn không bị gắt */
   height: 100%;
   background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(255, 255, 255, 0.05) 20%,
-    rgba(255, 255, 255, 0.4) 50%,
-    /* Độ sáng vừa phải, tinh tế */ rgba(255, 255, 255, 0.05) 80%,
-    transparent 100%
+  to right,
+  transparent 0%,
+  rgba(255, 255, 255, 0.05) 20%,
+  rgba(255, 255, 255, 0.4) 50%,
+  /* Độ sáng vừa phải, tinh tế */ rgba(255, 255, 255, 0.05) 80%,
+  transparent 100%
   );
   transform: skewX(-25deg);
 }
@@ -123,8 +123,8 @@
   transform: translateY(-1px);
 }
 /* 
-  Visual Layered Mockups 
-  Reducing scale and fixing Z-axis positioning
+Visual Layered Mockups 
+Reducing scale and fixing Z-axis positioning
 */
 .heroVisual {
   position: relative;
@@ -155,7 +155,7 @@
   background-color: #1e1e20;
   /* Using the single requested reference image for all panels */
   background: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80")
-    top center/cover;
+  top center/cover;
 }
 
 /* Layer 1: Back-Top (Rightmost) */
@@ -297,8 +297,8 @@
   margin: -22px 0 0 -22px;
   z-index: 15;
   box-shadow:
-    0 0 0 6px var(--bg-primary),
-    0 5px 25px rgba(56, 189, 248, 0.4);
+  0 0 0 6px var(--bg-primary),
+  0 5px 25px rgba(56, 189, 248, 0.4);
 }
 .node1 {
   transform: rotate(-32deg) translateY(-220px) rotate(32deg);
@@ -635,8 +635,8 @@
   background-position: top center;
   border-bottom: 1px solid var(--border-color);
   transition:
-    background-position 4s ease-in-out,
-    transform 0.3s ease;
+  background-position 4s ease-in-out,
+  transform 0.3s ease;
 }
 
 .sampleProjectCard:hover .sampleProjectThumb {
@@ -687,15 +687,15 @@
 }
 
 /* :global([data-theme="light"]) .portfolioShowcase {
-  background-image: url("../../../assets/images/back.png");
-  background-size: cover;
-  background-position: center;
+background-image: url("../../../assets/images/back.png");
+background-size: cover;
+background-position: center;
 }
 
 :global([data-theme="dark"]) .portfolioShowcase {
-  background-image: url("../../../assets/images/back-dark.png");
-  background-size: cover;
-  background-position: center;
+background-image: url("../../../assets/images/back-dark.png");
+background-size: cover;
+background-position: center;
 } */
 
 .processSection {
@@ -786,8 +786,8 @@
   padding: 15px 30px;
   cursor: pointer;
   transition:
-    all 0.3s ease,
-    transform 0.3s ease;
+  all 0.3s ease,
+  transform 0.3s ease;
   background: var(--bg-primary);
 }
 
@@ -890,7 +890,7 @@
     padding: 0 20px;
     width: 100%;
   }
-
+  
   .portfolioHeader h2 {
     font-size: 2.5rem;
   }
@@ -956,9 +956,9 @@
   padding: 40px;
   border-radius: 30px;
   transition:
-    border-color 0.4s ease,
-    box-shadow 0.4s ease,
-    transform 0.4s ease;
+  border-color 0.4s ease,
+  box-shadow 0.4s ease,
+  transform 0.4s ease;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1243,7 +1243,7 @@
   .mobileOnly {
     display: block !important;
   }
-
+  
   .heroAds {
     min-height: auto;
     padding: 120px 0 100px;
@@ -1252,46 +1252,46 @@
     flex-direction: column;
     align-items: center;
   }
-
+  
   .heroGrid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
+  
   .heroText {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
+  
   .heroText h1 {
     font-size: var(--h1-size);
     margin-bottom: 20px;
   }
-
+  
   .descLine1,
   .descLine2 {
     margin: 0 auto 10px;
   }
-
+  
   .heroVisual {
     display: none;
   }
-
+  
   /* Redundant stats styles removed */
-
+  
   .adsStatCard {
     padding: 20px 10px;
   }
-
+  
   .adsStatValue {
     font-size: 1.8rem;
   }
-
+  
   .portfolioShowcase {
     padding: var(--section-padding) !important;
   }
-
+  
   /* Portfolio Mobile */
   .portfolioHeader h2 {
     font-size: var(--h2-size);
@@ -1304,7 +1304,7 @@
   .sampleProjectThumb {
     height: 240px;
   }
-
+  
   /* Pricing Mobile */
   .pricingMainTitle,
   .pricingSubTitle {
@@ -1316,7 +1316,7 @@
     gap: 30px;
     padding: 0 20px;
   }
-
+  
   /* Process Mobile */
   .processGrid {
     grid-template-columns: 1fr;
@@ -1338,7 +1338,7 @@
     font-size: 1.8rem;
     min-width: 40px;
   }
-
+  
   /* Contact Mobile */
   .contactFlex {
     flex-direction: column;
@@ -1430,36 +1430,36 @@
   .heroText h1 {
     font-size: 2.5rem;
   }
-
+  
   .portfolioGridOuter {
     grid-template-columns: 1fr;
   }
-
+  
   .adsStatsGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
-
+  
   .statsWrapper {
     margin-top: 30px;
   }
-
+  
   .contactTitle {
     font-size: 2.2rem;
   }
-
+  
   .formBottom {
     flex-direction: column;
     gap: 20px;
   }
-
+  
   .recaptchaContainer {
     width: 100%;
     display: flex;
     justify-content: center;
     transform: scale(0.9);
   }
-
+  
   .formSubmitBtn {
     width: 100%;
   }
